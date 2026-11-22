@@ -1,0 +1,363 @@
+/// Status siklus hidup sesi kalibrasi. Ngikutin `docs/kontrak-api.md` §4 —
+/// kalau backend nambah nilai baru, tambahin di sini juga.
+enum CalibrationStatus { draft, menungguApproval, disetujui, perluRevisi }
+
+extension CalibrationStatusJson on CalibrationStatus {
+  static CalibrationStatus fromJson(String value) => switch (value) {
+    'draft' => CalibrationStatus.draft,
+    'menunggu_approval' => CalibrationStatus.menungguApproval,
+    'disetujui' => CalibrationStatus.disetujui,
+    'perlu_revisi' => CalibrationStatus.perluRevisi,
+    // Status yang belum dikenal dianggap draft — paling aman (nggak ngaku
+    // udah disetujui padahal belum).
+    _ => CalibrationStatus.draft,
+  };
+}
+
+/// Catatan revisi admin masih harus kelihatan buat sesi berstatus [status].
+///
+/// `perlu_revisi` jelas. `draft` juga — asal catatannya ada: server berhenti
+/// mengosongkan `catatan_revisi` & `revisi_field` waktu lembar `perlu_revisi`
+/// disimpan sebagai draf, dan baru mengosongkannya saat dikirim ulang,
+/// disetujui, atau oleh admin. Draf yang lahir dari revisi jadi tetap membawa
+/// alasan admin sampai dikirim ulang; kalau layar cuma melihat `perluRevisi`,
+/// teknisi yang menekan Simpan Draf kehilangan catatannya padahal belum
+/// dibetulkan. Draf biasa catatannya null → tetap tidak menampilkan apa pun.
+///
+/// Satu fungsi buat [CalibrationHistoryItem] dan `CalibrationDetail` supaya
+/// Riwayat, Draf, Alur Kerja, dan detail sesi nggak saling membantah.
+bool catatanRevisiTampil(CalibrationStatus status, String? catatan) {
+  if (catatan == null || catatan.trim().isEmpty) return false;
+
+  return status == CalibrationStatus.perluRevisi ||
+      status == CalibrationStatus.draft;
+}
+
+/// Keputusan hasil kalibrasi. `null` kalau sesi belum sampai titik penentu
+/// (masih draft / belum ada pengukuran).
+enum Keputusan { pass, fail }
+
+/// Titik waktu dari backend → `DateTime` LOKAL. Null-aman: field-nya belum ada
+/// di respons backend lama.
+DateTime? _waktu(Object? raw) =>
+    raw is String ? DateTime.tryParse(raw)?.toLocal() : null;
+
+/// Satu baris riwayat kalibrasi — versi ringkas dari respons
+/// `GET /api/calibrations` (§4 `docs/kontrak-api.md`), cuma field yang
+/// dibutuhin layar Riwayat.
+class CalibrationHistoryItem {
+  const CalibrationHistoryItem({
+    required this.id,
+    required this.namaAlat,
+    required this.namaTeknisi,
+    this.tanggalKalibrasi,
+    required this.status,
+    this.profil,
+    this.namaAlatKemampuan,
+    this.keputusan,
+    this.nomorSertifikat,
+    this.catatanRevisi,
+    this.certificateId,
+    this.namaPelanggan,
+    this.dikirimPada,
+    this.diperiksaPada,
+    this.diubahPada,
+    this.nomorSesi,
+    this.nomorSeri,
+    this.statusSertifikat,
+    this.tersembunyi = false,
+    this.nomorOrder,
+    this.nomorOrderDiketahui = false,
+    this.equipmentId,
+  });
+
+  final int id;
+  final String namaAlat;
+
+  /// Kode profil lembar kerja sesi ini (`tits`, `conductivity_meter`, …), dari
+  /// `equipment.profil`. Lihat [CalibrationDetail.profil] soal kenapa nebak
+  /// dari [namaAlat] nggak cukup. Null buat respons backend lama.
+  final String? profil;
+
+  /// Nama JENIS alat menurut lampiran akreditasi (`pH Meter`, `Oven`,
+  /// `Temperature Indicator tanpa Sensor`), dari `equipment.nama_alat_kemampuan`.
+  ///
+  /// Bedanya sama [namaAlat]: yang itu nama alat PELANGGAN dan bentuknya bebas
+  /// — "pH Meter Mettler Toledo", "Turbidimeter Hach", "Visible
+  /// Spectrofotometer". Buat kepala kelompok di layar Draf yang dibutuhin
+  /// justru jenisnya, dan nurunin jenis dari [profil] berarti nulis tabel
+  /// `ph_meter` → "pH Meter" di dalam APK — tabel yang pasti ketinggalan tiap
+  /// alat baru masuk lewat `POST /api/categories/{kode}/kemampuan`.
+  ///
+  /// Null buat respons backend lama — layar jatuh ke [namaAlat].
+  final String? namaAlatKemampuan;
+
+  final String namaTeknisi;
+
+  /// PT pemilik alat. Dipakai layar antrean approval buat ngelompokkin
+  /// kiriman per perusahaan — admin mikirnya "beresin punya Maju Jaya dulu",
+  /// bukan per teknisi. Null buat respons backend lama.
+  final String? namaPelanggan;
+
+  /// Tanggal kalender kalibrasi. **Boleh null.**
+  ///
+  /// Kolomnya di backend nullable sejak migrasi
+  /// `2026_07_23_120300_make_tanggal_kalibrasi_nullable_on_calibration_sessions_table`
+  /// — justru supaya draf boleh disimpen setengah jadi, sebelum teknisi tau
+  /// alatnya bakal dikerjain kapan.
+  ///
+  /// Dulu dibaca `DateTime.parse(json['tanggal_kalibrasi'] as String)`. Buat
+  /// draf tanpa tanggal cast-nya melempar, `parseListAman` nelen lemparannya,
+  /// dan barisnya DILEWAT diam-diam: dashboard ngitung draf itu, daftar
+  /// Riwayat & antrean nggak nampilinnya. Dua angka di satu app yang saling
+  /// membantah, tanpa satu pun pesan error yang bisa dikejar.
+  final DateTime? tanggalKalibrasi;
+  final CalibrationStatus status;
+
+  /// Cuma keisi kalau [status] `disetujui` (sesi udah dihitung backend).
+  final Keputusan? keputusan;
+
+  /// Cuma keisi kalau sertifikatnya udah terbit.
+  final String? nomorSertifikat;
+
+  /// Catatan dari admin waktu nolak sesi. Ikut terbawa ke `draft` kalau lembar
+  /// revisinya disimpan sebagai draf — lihat [catatanRevisiTampil].
+  final String? catatanRevisi;
+
+  /// Catatan revisi admin perlu ditampilkan di baris ini.
+  bool get bawaCatatanRevisi => catatanRevisiTampil(status, catatanRevisi);
+
+  /// Id baris sertifikat. SEJAK 16 Okt 2026 terisi begitu `approve` balik:
+  /// server membuat baris placeholder (status `gagal`) sebelum job PDF jalan.
+  /// JANGAN dipakai sebagai tanda "sudah terbit" — pakai [sertifikatTerbit]
+  /// (dari status sertifikat) atau `pdf_url`.
+  final int? certificateId;
+
+  /// Titik waktu — **punya jam**, beda dari [tanggalKalibrasi] yang cuma
+  /// tanggal kalender (kolomnya `date` di backend, jamnya nggak pernah ada).
+  ///
+  /// Adanya karena beberapa sesi masuk di HARI yang sama nggak bisa dibedain
+  /// mana yang terbaru: yang kelihatan cuma `10 Agt 2026` berulang-ulang,
+  /// padahal urutan itu yang nentuin mana yang diperiksa duluan.
+  ///
+  /// Null buat respons backend lama — layar jatuh ke tanggal saja.
+  final DateTime? dikirimPada;
+
+  final DateTime? diperiksaPada;
+
+  final DateTime? diubahPada;
+
+  /// Nomor sesi (`KAL/2026/09/0012`) — yang disebut orang lab waktu nanya
+  /// "sesi yang mana". Null buat respons backend lama.
+  final String? nomorSesi;
+
+  /// No. Seri alat: versi lembar kerja (`alat_serial_number`) duluan, jatuh ke
+  /// yang terdaftar di data alat (`equipment.serial_number`). Dua-duanya bisa
+  /// kosong — alat pelanggan nggak selalu punya nomor seri.
+  final String? nomorSeri;
+
+  /// Status sertifikat sesi ini, kode mentah dari server: `terbit`,
+  /// `dibatalkan`, `menunggu_generate`, `gagal` — dan mungkin nilai baru yang
+  /// belum dikenal APK ini. Null = belum ada sertifikat sama sekali.
+  ///
+  /// Sengaja `String`, bukan enum: status yang belum dikenal tetap harus bisa
+  /// ditampilkan apa adanya, bukan dijatuhin diam-diam ke salah satu nilai
+  /// yang dikenal (sertifikat batal kebaca "Terbit" itu jauh lebih mahal
+  /// daripada lencana bertulisan kode mentah).
+  final String? statusSertifikat;
+
+  /// Sertifikat benar-benar sudah terbit (PDF jadi). Bukan `certificateId != null`.
+  bool get sertifikatTerbit => statusSertifikat == 'terbit';
+
+  /// Sesi sudah disetujui tapi sertifikatnya belum bisa dikirim: barisnya
+  /// belum ada, masih di antrean, atau GAGAL digenerate.
+  ///
+  /// `certificateId` saja tidak cukup. Baris sertifikat lahir saat disetujui,
+  /// jadi sertifikat yang gagal tetap punya id — dan alur kerja dulu
+  /// menganggapnya siap kirim, sehingga tombol "Coba generate lagi" di layar
+  /// sertifikat tidak pernah terjangkau dari aplikasi (CAL/2026/10/0015,
+  /// 9 Okt 2026). Status yang belum dikenal APK ini TIDAK dihitung "belum
+  /// jadi", supaya perilaku lama tetap untuk nilai baru dari server.
+  bool get sertifikatBelumJadi =>
+      certificateId == null ||
+      statusSertifikat == 'gagal' ||
+      statusSertifikat == 'menunggu_generate';
+
+  /// Disembunyikan dari Riwayat AKUN YANG LOGIN (keputusan pemilik 8 Okt 2026).
+  ///
+  /// Cuma soal tampilan per akun — sesi & sertifikatnya tetap utuh di server,
+  /// dan akun lain tetap melihatnya. Server lama yang belum ngirim kuncinya =
+  /// `false`, jadi nggak ada baris yang mendadak ilang waktu APK baru ketemu
+  /// server lama.
+  final bool tersembunyi;
+
+  /// Order Number sertifikat — diisi Master Data (admin) atau super admin,
+  /// BUKAN teknisi (K-49-14). Server menolak approve tanpa ini (422
+  /// `nomor_order_wajib`).
+  final String? nomorOrder;
+
+  /// Server memang mengirim kunci `nomor_order`. Server lama yang belum
+  /// mengirimnya TIDAK boleh dibaca "kosong": tombol Setujui jadi menahan
+  /// semua sesi padahal servernya tidak mensyaratkan apa-apa.
+  final bool nomorOrderDiketahui;
+
+  /// Id alat di master (`equipment.id`) — identitas alat yang sebenarnya.
+  ///
+  /// Dipakai layar Arsip untuk menentukan "alat yang sama" (satu baris per
+  /// alat). Nomor seri TIDAK cukup: itu isian teks bebas teknisi, jadi "-" atau
+  /// "N/A" bisa sama untuk dua alat berbeda. Null buat respons lama.
+  final int? equipmentId;
+
+  /// Order Number pasti kosong menurut server → Setujui minta diisi dulu.
+  bool get perluNomorOrder =>
+      nomorOrderDiketahui && (nomorOrder == null || nomorOrder!.trim().isEmpty);
+
+  /// Cocok sama kata yang diketik di kolom cari Riwayat?
+  ///
+  /// Dicocokkan ke yang biasa disebut orang waktu nyari satu sesi: nomor sesi,
+  /// nama alat, nama pelanggan, nomor sertifikat, dan No. Seri. Tanpa beda
+  /// huruf besar/kecil, spasi di ujung dipotong. Kata kosong = semua cocok.
+  bool cocokDengan(String kata) {
+    final kunci = kata.trim().toLowerCase();
+    if (kunci.isEmpty) return true;
+    bool ada(String? teks) =>
+        teks != null && teks.toLowerCase().contains(kunci);
+    return ada(nomorSesi) ||
+        ada(namaAlat) ||
+        ada(namaPelanggan) ||
+        ada(nomorSertifikat) ||
+        ada(nomorSeri);
+  }
+
+  /// Kapan baris ini TERAKHIR bergerak, menurut statusnya sekarang.
+  ///
+  /// Satu getter, bukan tiga tanggal berjejer di layar: yang dicari orang itu
+  /// "mana yang paling baru", bukan riwayat lengkapnya. Sesi yang udah
+  /// diperiksa dinilai dari waktu diperiksa, yang masih nunggu dari waktu
+  /// dikirim, dan draft yang belum pernah dikirim dari waktu terakhir diubah.
+  DateTime? get waktuTerakhir => switch (status) {
+    CalibrationStatus.disetujui ||
+    CalibrationStatus.perluRevisi => diperiksaPada ?? dikirimPada ?? diubahPada,
+    _ => dikirimPada ?? diubahPada,
+  };
+
+  /// [hapusCatatanRevisi] ada karena `catatanRevisi: null` nggak bisa dibedain
+  /// dari "nggak diubah" — dipakai tiruan kirim ulang di `MockStore`.
+  CalibrationHistoryItem copyWith({
+    CalibrationStatus? status,
+    Keputusan? keputusan,
+    String? catatanRevisi,
+    bool hapusCatatanRevisi = false,
+    int? certificateId,
+    bool? tersembunyi,
+  }) => CalibrationHistoryItem(
+    id: id,
+    namaAlat: namaAlat,
+    profil: profil,
+    namaAlatKemampuan: namaAlatKemampuan,
+    namaTeknisi: namaTeknisi,
+    tanggalKalibrasi: tanggalKalibrasi,
+    status: status ?? this.status,
+    keputusan: keputusan ?? this.keputusan,
+    nomorSertifikat: nomorSertifikat,
+    catatanRevisi: hapusCatatanRevisi
+        ? null
+        : catatanRevisi ?? this.catatanRevisi,
+    certificateId: certificateId ?? this.certificateId,
+    namaPelanggan: namaPelanggan,
+    dikirimPada: dikirimPada,
+    diperiksaPada: diperiksaPada,
+    diubahPada: diubahPada,
+    nomorSesi: nomorSesi,
+    nomorSeri: nomorSeri,
+    statusSertifikat: statusSertifikat,
+    tersembunyi: tersembunyi ?? this.tersembunyi,
+    nomorOrder: nomorOrder,
+    nomorOrderDiketahui: nomorOrderDiketahui,
+    equipmentId: equipmentId,
+  );
+
+  factory CalibrationHistoryItem.fromJson(Map<String, dynamic> json) {
+    final hasil = json['hasil'] as Map<String, dynamic>?;
+    final equipment = json['equipment'] as Map<String, dynamic>?;
+    final teknisi = json['teknisi'] as Map<String, dynamic>?;
+
+    // Nomor sertifikat datang BERSARANG di `sertifikat.nomor`, bukan sebagai
+    // `nomor_sertifikat` di tingkat atas — kunci itu nggak ada sama sekali di
+    // respons `GET /api/calibrations` (diadu ke server asli 21 Agt 2026).
+    //
+    // Selama ini dibaca dari tingkat atas, jadi nilainya SELALU null buat
+    // setiap sesi yang sertifikatnya udah terbit. Efeknya kelihatan sebagai
+    // "nomornya nggak muncul": lencana Alur Kerja jatuh ke tulisan umum
+    // "Disetujui" (`sesi.nomorSertifikat ?? l10n.alurStatusDisetujui`), dan
+    // baris riwayat kehilangan satu-satunya penanda yang bisa diadu ke
+    // sertifikat cetak.
+    //
+    // Tiga model tetangga yang baca sertifikat dari respons yang sama —
+    // `arsip.dart`, `folder.dart`, `calibration_detail.dart` — semuanya udah
+    // baca `sertifikat['nomor']`. Yang ini ketinggalan sendirian.
+    //
+    // Test nggak nangkep karena `MockHistoryService` ngisi `nomorSertifikat`
+    // langsung lewat konstruktor, jadi `fromJson` yang salah itu nggak pernah
+    // kelewatan jalur mock.
+    final sertifikat = json['sertifikat'] as Map<String, dynamic>?;
+
+    // Sengaja `is String`, bukan `as String?`: cast masih melempar kalau suatu
+    // hari kunci ini datang sebagai angka/objek — dan yang nelen lemparannya
+    // `parseListAman`, persis jalur yang bikin draf ilang senyap. Nggak
+    // di-`toLocal()` juga: kolomnya `date`, jamnya selalu 00:00, dan digeser
+    // zona waktu bikin tanggalnya kecetak mundur sehari di Jakarta.
+    final tanggal = json['tanggal_kalibrasi'];
+
+    // String kosong dianggap nggak ada — kolom seri di lembar kerja sering
+    // dikirim `""`, dan itu nggak boleh menutupi seri yang terdaftar di alat.
+    String? isi(Object? raw) =>
+        raw is String && raw.trim().isNotEmpty ? raw : null;
+
+    return CalibrationHistoryItem(
+      id: (json['id'] as num).toInt(),
+      namaAlat: equipment?['nama_alat'] as String? ?? '—',
+      profil: equipment?['profil'] as String?,
+      namaAlatKemampuan: equipment?['nama_alat_kemampuan'] as String?,
+      namaTeknisi: teknisi?['nama'] as String? ?? '—',
+      tanggalKalibrasi: tanggal is String ? DateTime.tryParse(tanggal) : null,
+      status: CalibrationStatusJson.fromJson(json['status'] as String),
+      keputusan: switch (hasil?['keputusan']) {
+        'PASS' => Keputusan.pass,
+        'FAIL' => Keputusan.fail,
+        _ => null,
+      },
+      // Tingkat atas tetap dipakai sebagai cadangan: kalau suatu hari backend
+      // nambahin kuncinya, yang kebaca tetap nomor yang bener — bukan null.
+      nomorSertifikat:
+          sertifikat?['nomor'] as String? ??
+          json['nomor_sertifikat'] as String?,
+      catatanRevisi: json['catatan_revisi'] as String?,
+      certificateId: (json['certificate_id'] as num?)?.toInt(),
+      namaPelanggan:
+          (json['pelanggan'] as Map<String, dynamic>?)?['nama'] as String?,
+      // ISO 8601 dari backend (UTC) → dijadiin waktu LOKAL. Tanpa `toLocal()`
+      // jamnya kecetak mundur 7 jam di Jakarta, dan itu justru bikin urutan
+      // "yang terbaru" kelihatan salah — persis masalah yang mau dipecahin.
+      dikirimPada: _waktu(json['submitted_at']),
+      diperiksaPada: _waktu(json['reviewed_at']),
+      diubahPada: _waktu(json['updated_at']),
+      nomorSesi: isi(json['nomor_sesi']),
+      nomorSeri:
+          isi(json['alat_serial_number']) ?? isi(equipment?['serial_number']),
+      statusSertifikat: isi(sertifikat?['status']),
+      // `== true`, bukan cast: server lama nggak ngirim kuncinya (= false), dan
+      // nilai aneh apa pun juga dibaca "tidak tersembunyi" — lebih aman baris
+      // kelihatan daripada ilang tanpa jejak.
+      tersembunyi: json['tersembunyi'] == true,
+      nomorOrder: isi(json['nomor_order']),
+      nomorOrderDiketahui: json.containsKey('nomor_order'),
+      // `is num`, bukan cast: nilai aneh dibaca "tidak diketahui", bukan
+      // membuang barisnya lewat `parseListAman`.
+      equipmentId: switch (equipment?['id']) {
+        final num id => id.toInt(),
+        _ => null,
+      },
+    );
+  }
+}

@@ -1,0 +1,90 @@
+name: metrology_studio
+description: "Metrology Studio — pusat kendali data & olah data lab (Windows & tablet Android)."
+# Aplikasi internal, bukan paket untuk pub.dev.
+publish_to: 'none'
+
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # Versinya di-pin flutter_localizations — `any` supaya pub yang mencocokkan
+  # (pola yang sama dengan pubspec app lapangan).
+  intl: any
+  flutter_riverpod: ^3.3.2
+
+  # Dependensi untuk `lib/shared/*`: lapisan data bersama (ApiClient, token,
+  # auth, izin, model & layanan data acuan, layar data acuan) yang di repo asal
+  # berupa paket terpisah, di sini disalin ke dalam proyek supaya bisa dibangun
+  # mandiri. Studio TIDAK menyalakan Firebase dan TIDAK memakai push; paketnya
+  # tetap ada karena kode bersama mengimpor tipenya. Lihat `lib/inti/penimpaan.dart`.
+  http: ^1.6.0
+  path_provider: ^2.1.6
+  package_info_plus: ^8.1.1
+  open_filex: ^4.7.0
+  flutter_secure_storage: ^10.3.1
+  firebase_core: ^4.13.0
+  firebase_messaging: ^16.5.0
+  connectivity_plus: ^6.1.0
+  shared_preferences: ^2.3.2
+
+  # Grid sel "Asli Excel" (ST-T-015, `lib/widget/grid/grid_sel.dart`):
+  # TableView dua arah tervirtualisasi + baris/kolom terkunci + merge.
+  # Paket resmi flutter/packages; izin dependensi dari pemilik proyek
+  # 13 Okt 2026 (rencana S1b). Hanya di Studio — app lapangan tidak memakainya.
+  two_dimensional_scrollables: ^0.5.5
+
+  # Pemilih berkas master (.xlsm/.xlsx/.csv) di layar "Unggah master". Sudah
+  # terpasang di sini langsung.
+  file_picker: ^8.1.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # Uji E2E di perangkat/desktop sungguhan melawan server API lokal
+  # (`integration_test/alur_studio_test.dart`). Paket SDK Flutter, bukan
+  # dependensi pihak ketiga; tidak ikut ke build aplikasi.
+  integration_test:
+    sdk: flutter
+
+flutter:
+  # Generator l10n Studio sendiri (`l10n.yaml` → `lib/l10n/studio_l10n.dart`).
+  # Teks layar data acuan tetap dari `AppLocalizations` di `lib/shared/l10n/`.
+  generate: true
+
+  uses-material-design: true
+
+  # Inter (teks) dan IBM Plex Mono (angka), lisensi di assets/fonts/LICENSE-*.txt.
+  # Lihat `lib/tema/font_studio.dart`.
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+    - family: IBMPlexMono
+      fonts:
+        - asset: assets/fonts/IBMPlexMono-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/IBMPlexMono-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/IBMPlexMono-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/IBMPlexMono-Bold.ttf
+          weight: 700
+
+  assets:
+    # Tanda merek di sidebar & layar masuk — diperkecil dari ikon peluncur
+    # Studio (sumber yang sama dengan mipmap Android & app_icon.ico Windows).
+    - assets/merek/ikon-studio.png

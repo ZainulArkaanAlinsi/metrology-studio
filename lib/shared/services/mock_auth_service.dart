@@ -1,0 +1,212 @@
+import '../models/user.dart';
+import 'auth_service.dart';
+
+/// Auth palsu buat kerja duluan sebelum endpoint auth dari backend jadi.
+/// Response-nya sengaja dibikin **persis sama bentuknya** dengan yang
+/// dijanjiin di `docs/kontrak-api.md` dan diparse lewat `User.fromJson` —
+/// jadi kalau kontraknya ditepati, ganti ke API asli nggak bakal ngagetin.
+///
+/// HAPUS file ini begitu `ApiAuthService` jalan.
+class MockAuthService implements AuthService {
+  /// [jeda] bisa dinolkan dari test yang **nggak** lagi menguji state loading.
+  ///
+  /// Sejak provider berdata akun ikut `ref.watch(authProvider)`, layar yang
+  /// dulu nggak nyentuh auth sama sekali sekarang ikut menyalakan [me] di
+  /// latar. `ref.watch` itu berlangganan, bukan menunggu — jadi jedanya nggak
+  /// pernah ikut ter-`await` sama test-nya, dan timernya hidup lebih lama dari
+  /// pohon widget yang lagi diuji. Yang muncul bukan assertion yang gagal,
+  /// tapi "A Timer is still pending even after the widget tree was disposed"
+  /// di test yang isinya nggak ada hubungannya sama auth.
+  MockAuthService({this.jeda = const Duration(milliseconds: 600)});
+
+  /// Akun tes. Password semuanya `rahasia123`.
+  static final List<Map<String, dynamic>> _akun = [
+    {
+      'id': 1,
+      'nama': 'Budi Santoso',
+      // Inisial yang tercetak sebagai "Technician ID" — dikirim backend
+      // lewat `User::kodeTeknisi()`, bukan dipotong di layar.
+      'kode_teknisi': 'BS',
+      'email': 'admin@example.com',
+      'employee_id': 'SDK-0001',
+      'role': 'admin',
+      'status': 'aktif',
+      'department': 'Quality Control',
+      'organization_id': 1,
+    },
+    {
+      'id': 2,
+      'nama': 'Andi Pratama',
+      // Inisial yang tercetak sebagai "Technician ID" — dikirim backend
+      // lewat `User::kodeTeknisi()`, bukan dipotong di layar.
+      'kode_teknisi': 'AP',
+      'email': 'teknisi@example.com',
+      'employee_id': 'SDK-0002',
+      'role': 'teknisi',
+      'status': 'aktif',
+      'department': 'Kalibrasi',
+      'organization_id': 1,
+    },
+    {
+      'id': 3,
+      'nama': 'Citra Dewi',
+      // Inisial yang tercetak sebagai "Technician ID" — dikirim backend
+      // lewat `User::kodeTeknisi()`, bukan dipotong di layar.
+      'kode_teknisi': 'CD',
+      'email': 'viewer@example.com',
+      'employee_id': 'SDK-0003',
+      'role': 'viewer',
+      'status': 'aktif',
+      'department': 'Manajemen',
+      'organization_id': 1,
+    },
+    // Akun yang udah daftar tapi belum di-approve admin — buat nguji bahwa
+    // akun pending beneran ditolak masuk.
+    {
+      'id': 4,
+      'nama': 'Dewi Lestari',
+      // Inisial yang tercetak sebagai "Technician ID" — dikirim backend
+      // lewat `User::kodeTeknisi()`, bukan dipotong di layar.
+      'kode_teknisi': 'DL',
+      'email': 'pending@example.com',
+      'employee_id': 'SDK-0004',
+      'role': 'teknisi',
+      'status': 'pending',
+      'department': 'Kalibrasi',
+      'organization_id': 1,
+    },
+    // Super admin — semua aksi admin & teknisi (K-49-14; gerbang pengesahan
+    // 26 Sep dicabut 15 Okt, K-50-07). Ada di sini supaya menu & layar khusus perannya bisa dipotret dan
+    // diuji; tanpa akun ini seluruh jalur super admin tidak pernah dirender.
+    {
+      'id': 5,
+      'nama': 'Eko Wibowo',
+      'kode_teknisi': 'EW',
+      'email': 'superadmin@example.com',
+      'employee_id': 'SDK-0005',
+      'role': 'super_admin',
+      'status': 'aktif',
+      'department': 'Manajemen Mutu',
+      'organization_id': 1,
+    },
+  ];
+
+  static const _password = 'rahasia123';
+
+  /// Jeda palsu — biar state `loading` di UI beneran keuji, bukan cuma teori.
+  final Duration jeda;
+
+  @override
+  Future<AuthSession> login({
+    required String identifier,
+    required String password,
+  }) async {
+    await Future<void>.delayed(jeda);
+
+    final key = identifier.trim().toLowerCase();
+    final json = _akun.where((u) {
+      return (u['email'] as String).toLowerCase() == key ||
+          (u['employee_id'] as String).toLowerCase() == key;
+    }).firstOrNull;
+
+    // Password per-akun: seed pakai default `_password`, tapi bisa diubah lewat
+    // resetPassword / dipilih sendiri waktu register.
+    final expected = (json?['password'] as String?) ?? _password;
+    if (json == null || password != expected) {
+      throw const AuthException('ID pegawai / email atau password salah.');
+    }
+
+    final user = User.fromJson(json);
+
+    // Akun pending ditolak di sini. Kalau ini cuma disembunyiin di UI,
+    // orang masih bisa nembak API langsung — makanya backend WAJIB nolak juga.
+    if (user.status == UserStatus.pending) {
+      throw const AuthException(
+        'Akun kamu belum disetujui admin. Tunggu konfirmasi dulu ya.',
+      );
+    }
+    if (user.status == UserStatus.nonaktif) {
+      throw const AuthException('Akun kamu dinonaktifkan. Hubungi admin.');
+    }
+
+    return AuthSession(token: 'mock-token-${json['id']}', user: user);
+  }
+
+  // Nggak ada `register()` — lihat `auth_service.dart`. Mock-nya ikut dicabut
+  // supaya dia nggak terus menjanjikan alur yang servernya sendiri sudah tolak.
+
+  @override
+  Future<void> requestPasswordReset(String email) async {
+    await Future<void>.delayed(jeda);
+
+    if (_cariAkun(email) == null) {
+      throw const AuthException('Email ini nggak terdaftar.');
+    }
+  }
+
+  @override
+  Future<void> resetPassword({
+    required String email,
+    required String newPassword,
+  }) async {
+    await Future<void>.delayed(jeda);
+
+    final akun = _cariAkun(email);
+    if (akun == null) {
+      throw const AuthException('Email ini nggak terdaftar.');
+    }
+    // Password beneran keganti — habis ini login pakai password baru bakal
+    // sukses, yang lama ditolak. Bukan sekadar layar "berhasil".
+    akun['password'] = newPassword;
+  }
+
+  Map<String, dynamic>? _cariAkun(String email) {
+    final key = email.trim().toLowerCase();
+    return _akun
+        .where((u) => (u['email'] as String).toLowerCase() == key)
+        .firstOrNull;
+  }
+
+  @override
+  Future<User> me(String token) async {
+    await Future<void>.delayed(jeda);
+
+    final json = _akun.firstWhere(
+      (u) => token == 'mock-token-${u['id']}',
+      // `ApiException` ber-status 401, PERSIS kayak backend asli — bukan
+      // `AuthException` polos.
+      //
+      // Bedanya penting sejak `AuthController.build()` mbedain "token ditolak
+      // server" dari "server nggak kejangkau": cuma yang pertama yang boleh
+      // ngehapus token. Mock yang ngelempar AuthException polos bikin token
+      // basi kebaca sebagai gangguan jaringan, lalu ditinggal di HP.
+      orElse: () =>
+          throw const ApiException('Sesi kamu sudah berakhir.', status: 401),
+    );
+
+    return User.fromJson(json);
+  }
+
+  @override
+  Future<void> logout(String token) async {
+    await Future<void>.delayed(jeda);
+  }
+
+  /// Pura-puranya user ini lagi login di 3 perangkat (HP lama, HP baru, tablet
+  /// lab) — biar angka "sesi dicabut" di UI ada yang diuji, bukan cuma 0.
+  @override
+  Future<int> logoutAll(String token) async {
+    await Future<void>.delayed(jeda);
+
+    if (gagalLogoutAll) {
+      throw const AuthException('Server nggak nyaut. Coba lagi sebentar.');
+    }
+
+    return 3;
+  }
+
+  /// Dipakai test buat nguji yang paling penting: **kalau nyabut sesi gagal,
+  /// user nggak boleh dikeluarin diam-diam** — dia bakal ngira HP-nya yang
+  /// ilang udah aman padahal belum.
+  bool gagalLogoutAll = false;
+}

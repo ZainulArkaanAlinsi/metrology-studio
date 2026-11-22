@@ -1,0 +1,10339 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for English (`en`).
+class AppLocalizationsEn extends AppLocalizations {
+  AppLocalizationsEn([String locale = 'en']) : super(locale);
+
+  @override
+  String get appTagline => 'Precision Calibration Management';
+
+  @override
+  String get loginIdentifierLabel => 'Employee ID / Email';
+
+  @override
+  String get loginIdentifierHint => 'SDK-0001 or name@example.com';
+
+  @override
+  String get passwordLabel => 'Password';
+
+  @override
+  String get forgotPasswordLink => 'Forgot Password?';
+
+  @override
+  String get loginSubmit => 'Sign in';
+
+  @override
+  String get loginNoAccount => 'Don\'t have an account?';
+
+  @override
+  String get loginRegisterLink => 'Register';
+
+  @override
+  String get loginIdentifierRequired => 'Employee ID or email is required.';
+
+  @override
+  String get passwordRequired => 'Password is required.';
+
+  @override
+  String get errorNoConnection => 'Can\'t reach the server. Please try again.';
+
+  @override
+  String get registerTitle => 'Register Account';
+
+  @override
+  String get registerSubtitle => 'Create your technician profile';
+
+  @override
+  String get nameLabel => 'Full Name';
+
+  @override
+  String get nameHint => 'e.g. Andi Pratama';
+
+  @override
+  String get employeeIdLabel => 'Employee ID';
+
+  @override
+  String get departmentLabel => 'Department';
+
+  @override
+  String get departmentHint => 'Select department';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get emailHint => 'name@example.com';
+
+  @override
+  String get passwordHelper => 'At least 8 characters';
+
+  @override
+  String get registerSubmit => 'Register';
+
+  @override
+  String get registerHaveAccount => 'Already have an account?';
+
+  @override
+  String get registerLoginLink => 'Log in';
+
+  @override
+  String get nameRequired => 'Name is required.';
+
+  @override
+  String get employeeIdRequired => 'Employee ID is required.';
+
+  @override
+  String get departmentRequired => 'Please select a department.';
+
+  @override
+  String get emailRequired => 'Email is required.';
+
+  @override
+  String get emailInvalid => 'Invalid email format.';
+
+  @override
+  String get passwordTooShort => 'Password must be at least 8 characters.';
+
+  @override
+  String get registerSuccessTitle => 'Registration submitted';
+
+  @override
+  String get registerSuccessBody =>
+      'Your account is still awaiting admin approval. You can\'t sign in until an admin approves it and assigns your role.\n\nContact an admin if you don\'t hear back for a while.';
+
+  @override
+  String get registerSuccessDismiss => 'Got it';
+
+  @override
+  String get forgotTitle => 'Forgot Password';
+
+  @override
+  String get forgotSubtitle => 'Verify your email, then set a new password';
+
+  @override
+  String get forgotBody =>
+      'Enter the email you used to register. If it matches, you can create a new password right here.';
+
+  @override
+  String get forgotSubmit => 'Continue';
+
+  @override
+  String get backToLogin => 'Back to Login';
+
+  @override
+  String get resetNewPassTitle => 'Set New Password';
+
+  @override
+  String resetNewPassSubtitle(String email) {
+    return 'Create a new password for $email';
+  }
+
+  @override
+  String get newPasswordLabel => 'New Password';
+
+  @override
+  String get confirmPasswordLabel => 'Confirm New Password';
+
+  @override
+  String get passwordMismatch => 'Passwords don\'t match.';
+
+  @override
+  String get resetSubmit => 'Save new password';
+
+  @override
+  String get resetDoneTitle => 'Password changed';
+
+  @override
+  String get resetDoneBody =>
+      'Your password has been updated. Sign in with your new password now.';
+
+  @override
+  String get backToLoginCaps => 'Back to login';
+
+  @override
+  String get languageLabel => 'Language';
+
+  @override
+  String get navDashboard => 'Dashboard';
+
+  @override
+  String get navEquipment => 'Equipment';
+
+  @override
+  String get navHistory => 'History';
+
+  @override
+  String get navNotifications => 'Notifications';
+
+  @override
+  String get navProfile => 'Profile';
+
+  @override
+  String get dashGreeting => 'Hello,';
+
+  @override
+  String get dashTotalDevices => 'Total devices';
+
+  @override
+  String get dashOverdue => 'Overdue';
+
+  @override
+  String get dashPendingApproval => 'Pending approval';
+
+  @override
+  String get dashCalibrationDraft => 'Calibration drafts';
+
+  @override
+  String get dashCertsThisMonth => 'Certificates this month';
+
+  @override
+  String get dashLabScope => 'Lab-wide';
+
+  @override
+  String get dashTotalCerts => 'Certificates';
+
+  @override
+  String dashCertsThisMonthSub(int count) {
+    return '$count this month';
+  }
+
+  @override
+  String get dashCalibrationMine => 'My calibrations';
+
+  @override
+  String get dashCalibrationLab => 'Lab calibrations';
+
+  @override
+  String dashTrendUp(int count) {
+    return '$count more completed than last period';
+  }
+
+  @override
+  String dashTrendDown(int count) {
+    return '$count fewer completed than last period';
+  }
+
+  @override
+  String get dashTrendFlat => 'Same as last period';
+
+  @override
+  String get dashQuickActions => 'Quick actions';
+
+  @override
+  String get dashStartCalibration => 'Start calibration';
+
+  @override
+  String get dashAddDevice => 'Add device';
+
+  @override
+  String get dashRetry => 'Try again';
+
+  @override
+  String get dashSessionExpired =>
+      'Your session has expired. Please sign in again.';
+
+  @override
+  String get dashLoadFailed => 'Failed to load the dashboard.';
+
+  @override
+  String dashOverdueWarning(int count) {
+    return '$count device(s) past their calibration due date. Measurements from overdue devices can\'t be relied upon.';
+  }
+
+  @override
+  String get dashEmptyTitle => 'No data yet';
+
+  @override
+  String get dashEmptyBodyInput =>
+      'No devices registered yet. Start by adding your first measuring device.';
+
+  @override
+  String get dashEmptyBodyReadonly => 'There\'s nothing to show yet.';
+
+  @override
+  String get snackCalibInputSoon => 'Calibration input is planned for week 4.';
+
+  @override
+  String get profAccountInfo => 'Account Info';
+
+  @override
+  String get profRoleLabel => 'Role';
+
+  @override
+  String get profChangePhotoSheet => 'Profile Photo';
+
+  @override
+  String get profChooseGallery => 'Choose from gallery';
+
+  @override
+  String get profTakePhoto => 'Take a photo';
+
+  @override
+  String get profRemovePhoto => 'Remove photo';
+
+  @override
+  String get profPhotoUpdated => 'Profile photo updated.';
+
+  @override
+  String get profPhotoRemoved => 'Profile photo removed.';
+
+  @override
+  String get profPhotoFailed => 'Couldn\'t pick the photo. Try again.';
+
+  @override
+  String get profAdminMenu => 'Admin Menu';
+
+  @override
+  String get profUserManagement => 'User Management';
+
+  @override
+  String get profUserManagementSub => 'Planned for phase 3';
+
+  @override
+  String get profOrgData => 'Organization Data';
+
+  @override
+  String get profOrgDataSub =>
+      'Name, address & accreditation no. printed on certificates';
+
+  @override
+  String get profTandaTangan => 'Certificate Signature';
+
+  @override
+  String get profTandaTanganSub => 'Signature printed on issued certificates';
+
+  @override
+  String get profCustomers => 'Customers';
+
+  @override
+  String get profCustomersSub => 'Manage the lab\'s customer list';
+
+  @override
+  String get profStandards => 'Reference Standards';
+
+  @override
+  String get profStandardsSub =>
+      'Manage the lab\'s reference/standard equipment';
+
+  @override
+  String get profPreferensi => 'Preferences';
+
+  @override
+  String get profTema => 'Theme';
+
+  @override
+  String get profTemaTerang => 'Light';
+
+  @override
+  String get profTemaGelap => 'Dark';
+
+  @override
+  String get profTemaSistem => 'Follow system';
+
+  @override
+  String get profBahasa => 'Language';
+
+  @override
+  String get rumusTitle => 'Calibration Formulas';
+
+  @override
+  String get rumusKetBatasan =>
+      'What you can change here are the parameters and versions — the calculation itself lives in the program and is not edited from the app. Every change becomes a new version so past results stay explainable.';
+
+  @override
+  String get rumusKosong => 'No formulas recorded yet.';
+
+  @override
+  String get rumusCobaLagi => 'Try again';
+
+  @override
+  String rumusVersiBerlaku(int nomor) {
+    return 'Version $nomor in effect';
+  }
+
+  @override
+  String get rumusTanpaVersiBerlaku => 'No version in effect';
+
+  @override
+  String rumusJumlahVersi(int jumlah) {
+    return '$jumlah version(s)';
+  }
+
+  @override
+  String rumusVersiKe(int nomor) {
+    return 'Version $nomor';
+  }
+
+  @override
+  String get rumusStatusAktif => 'Active';
+
+  @override
+  String get rumusStatusDraft => 'Draft';
+
+  @override
+  String get rumusStatusArsip => 'Archived';
+
+  @override
+  String rumusBerlakuSejak(String mulai) {
+    return 'In effect since $mulai';
+  }
+
+  @override
+  String rumusBerlakuRentang(String mulai, String selesai) {
+    return 'In effect $mulai – $selesai';
+  }
+
+  @override
+  String get rumusDibuatSistem => 'Created by the system';
+
+  @override
+  String rumusDibuatOleh(String nama) {
+    return 'Published by $nama';
+  }
+
+  @override
+  String get rumusTerbitkanVersi => 'Publish new version';
+
+  @override
+  String get rumusTerbitkan => 'Publish';
+
+  @override
+  String get rumusBatal => 'Cancel';
+
+  @override
+  String get rumusAktifkan => 'Activate';
+
+  @override
+  String get rumusAktifkanJudul => 'Activate this version?';
+
+  @override
+  String get rumusAktifkanKet =>
+      'This version will be used for calculations from its effective date, and the previous version\'s range is closed.';
+
+  @override
+  String get rumusFormKet =>
+      'A new version is published, not overwritten. Results already issued keep pointing at the version used at the time.';
+
+  @override
+  String get rumusBerlakuDari => 'Effective from';
+
+  @override
+  String get rumusParameter => 'Parameters';
+
+  @override
+  String get rumusCatatan => 'Change note';
+
+  @override
+  String get rumusCatatanHint =>
+      'Why the rule changed — this is what gets read during an audit.';
+
+  @override
+  String get rumusLangsungAktif => 'Activate immediately';
+
+  @override
+  String get rumusLangsungAktifKet =>
+      'If off, the version is saved as a draft — not used for calculations yet, so it is safe to try.';
+
+  @override
+  String rumusVersiTerbit(int nomor) {
+    return 'Version $nomor published.';
+  }
+
+  @override
+  String get profRumus => 'Calibration Formulas';
+
+  @override
+  String get profRumusSub => 'Parameters & calculation version history';
+
+  @override
+  String get ruanganTitle => 'Lab Rooms';
+
+  @override
+  String get ruanganTambah => 'Add room';
+
+  @override
+  String get ruanganUbah => 'Edit room';
+
+  @override
+  String get ruanganKosong =>
+      'No rooms recorded yet. While this is empty, lab sessions run without a room — so there is no answer to where the work was done or whether conditions were within limits.';
+
+  @override
+  String get ruanganKode => 'Code';
+
+  @override
+  String get ruanganNama => 'Room name';
+
+  @override
+  String get ruanganLokasi => 'Location';
+
+  @override
+  String get ruanganSyarat => 'Environmental limits';
+
+  @override
+  String get ruanganSuhuMin => 'Temp min (°C)';
+
+  @override
+  String get ruanganSuhuMaks => 'Temp max (°C)';
+
+  @override
+  String get ruanganRhMin => 'RH min (%)';
+
+  @override
+  String get ruanganRhMaks => 'RH max (%)';
+
+  @override
+  String get ruanganAktif => 'Active';
+
+  @override
+  String get ruanganAktifKet =>
+      'Inactive ones are kept, not deleted — older sessions point here.';
+
+  @override
+  String get ruanganNonaktif => 'Inactive';
+
+  @override
+  String get ruanganWajib => 'Code and name are required.';
+
+  @override
+  String get ruanganRentangKebalik => 'Minimum cannot be greater than maximum.';
+
+  @override
+  String get ruanganBatal => 'Cancel';
+
+  @override
+  String get ruanganSimpan => 'Save';
+
+  @override
+  String get metodeTitle => 'Calibration Methods';
+
+  @override
+  String get metodeTambah => 'Add method';
+
+  @override
+  String get metodeUbah => 'Edit method';
+
+  @override
+  String get metodeKosong =>
+      'No calibration methods (work instructions) recorded yet.';
+
+  @override
+  String get metodeKode => 'Method code';
+
+  @override
+  String get metodeRevisi => 'Revision';
+
+  @override
+  String get metodeRevisiKet =>
+      'The certificate prints the revision in force when the calibration was performed.';
+
+  @override
+  String get metodeNama => 'Method name';
+
+  @override
+  String get metodeBerlaku => 'Effective from';
+
+  @override
+  String get metodeBerlakuKosong => 'Not set';
+
+  @override
+  String metodeBerlakuMulai(String tanggal) {
+    return 'Effective from $tanggal';
+  }
+
+  @override
+  String get metodeAktifKet =>
+      'Inactive ones are kept — older certificates cite this method.';
+
+  @override
+  String get profRuangan => 'Lab Rooms';
+
+  @override
+  String get profRuanganSub => 'Rooms & their environmental limits';
+
+  @override
+  String get profMetode => 'Calibration Methods';
+
+  @override
+  String get profMetodeSub => 'Work instructions (IK) & revisions';
+
+  @override
+  String get profArsip => 'Archive';
+
+  @override
+  String get profArsipSub => 'Company folders, instruments & certificate files';
+
+  @override
+  String get profDesignSystem => 'Design System';
+
+  @override
+  String get profDesignSystemSub => 'Color, typography & component catalog';
+
+  @override
+  String get profAppInfo => 'App Info';
+
+  @override
+  String get profEnvironment => 'Environment';
+
+  @override
+  String get profApiBaseUrl => 'API base URL';
+
+  @override
+  String get profSecurity => 'Security';
+
+  @override
+  String get profLogoutAll => 'Sign out of all devices';
+
+  @override
+  String get profLogoutAllSub =>
+      'For when your phone is lost. Every session is revoked — other phones, tablets, including this one.';
+
+  @override
+  String get profLogout => 'Sign out';
+
+  @override
+  String get profLogoutAllConfirmTitle => 'Sign out of all devices?';
+
+  @override
+  String get profLogoutAllConfirmBody =>
+      'All your sessions will be revoked, including on this phone — you\'ll be asked to sign in again.\n\nUse this if your phone is lost or stolen.';
+
+  @override
+  String get profCancel => 'Cancel';
+
+  @override
+  String get profRevokeAll => 'Revoke all sessions';
+
+  @override
+  String profSessionsRevoked(int count) {
+    return '$count session(s) revoked. Please sign in again.';
+  }
+
+  @override
+  String get profAllSessionsRevoked =>
+      'All sessions revoked. Please sign in again.';
+
+  @override
+  String profRevokeFailed(String message) {
+    return 'Couldn\'t revoke sessions: $message';
+  }
+
+  @override
+  String get equipLoadFailed => 'Couldn\'t load the device list.';
+
+  @override
+  String get equipSearchHint => 'Search device name';
+
+  @override
+  String get equipFilterKategoriHint => 'Category';
+
+  @override
+  String get equipFilterStatusHint => 'Status';
+
+  @override
+  String get equipFilterSemua => 'All';
+
+  @override
+  String get equipStatusAktif => 'Active';
+
+  @override
+  String get equipStatusOverdue => 'Overdue';
+
+  @override
+  String get equipStatusNonaktif => 'Inactive';
+
+  @override
+  String get equipEmptyTitle => 'No devices yet';
+
+  @override
+  String get equipEmptyBody => 'Add your first device using the button below.';
+
+  @override
+  String get equipRetry => 'Retry';
+
+  @override
+  String get equipAdd => 'Add device';
+
+  @override
+  String get equipEdit => 'Edit device';
+
+  @override
+  String get equipMuatLebihBanyak => 'Load more';
+
+  @override
+  String get equipDeleteConfirmTitle => 'Delete device?';
+
+  @override
+  String equipDeleteConfirmBody(String nama) {
+    return '\"$nama\" will be permanently deleted.';
+  }
+
+  @override
+  String equipDeleteFailed(String pesan) {
+    return 'Couldn\'t delete: $pesan';
+  }
+
+  @override
+  String get equipNamaAlat => 'Device name';
+
+  @override
+  String get equipSerialNumber => 'Serial number';
+
+  @override
+  String get equipKategori => 'Category';
+
+  @override
+  String get equipKategoriHint => 'Choose a device category';
+
+  @override
+  String get equipPelanggan => 'Customer';
+
+  @override
+  String get equipPelangganHint => 'Choose a customer';
+
+  @override
+  String get equipPelangganCariHint => 'Search company name';
+
+  @override
+  String get equipPelangganGagal => 'Couldn\'t load the customer list.';
+
+  @override
+  String get equipPelangganKosong => 'No customer found.';
+
+  @override
+  String get equipNamaAlatKemampuan => 'Device Type (Calibration Capability)';
+
+  @override
+  String get equipNamaAlatKemampuanHint =>
+      'Choose device type (optional, for accurate CMC)';
+
+  @override
+  String get equipNamaAlatKemampuanKosong =>
+      'This category has no calibration capabilities yet';
+
+  @override
+  String get equipNamaAlatKemampuanGagal =>
+      'Couldn\'t load calibration capabilities.';
+
+  @override
+  String get equipCatatan => 'Notes';
+
+  @override
+  String get equipMerk => 'Brand';
+
+  @override
+  String get equipModel => 'Model/Type';
+
+  @override
+  String get equipNoIdentifikasi => 'Identification no.';
+
+  @override
+  String get equipRangeMin => 'Range min.';
+
+  @override
+  String get equipRangeMax => 'Range max.';
+
+  @override
+  String get equipSatuan => 'Unit';
+
+  @override
+  String get equipRentangOtomatis =>
+      'Filled in from lab\'s master data. Edit it if the customer\'s unit differs.';
+
+  @override
+  String get equipRentangPilihan =>
+      'Ranges from lab\'s master data — tap the one matching the customer\'s unit:';
+
+  @override
+  String equipRentangChip(String min, String maks, String satuan) {
+    return '$min–$maks $satuan';
+  }
+
+  @override
+  String equipRentangChipBerparameter(
+    String parameter,
+    String min,
+    String maks,
+    String satuan,
+  ) {
+    return '$parameter · $min–$maks $satuan';
+  }
+
+  @override
+  String get equipResolusi => 'Resolution';
+
+  @override
+  String get equipResolusiRentang => 'Resolution per point';
+
+  @override
+  String get equipResolusiRentangHint =>
+      'Fill this in when the device is NOT uniform — the resolution or the unit changes between points. Leave it empty when the single resolution above already says everything. This decides the unit on each worksheet row and the decimals printed on the certificate.';
+
+  @override
+  String get equipResolusiBentukTitik => 'Standard point';
+
+  @override
+  String get equipResolusiBentukMaks => 'Upper bound';
+
+  @override
+  String get equipResolusiTitik => 'Standard point';
+
+  @override
+  String get equipResolusiMaks => 'Upper bound';
+
+  @override
+  String get equipResolusiMaksKosong => 'empty = last band';
+
+  @override
+  String get equipResolusiTambahBaris => 'Add resolution row';
+
+  @override
+  String get equipResolusiHapusBaris => 'Delete row';
+
+  @override
+  String get equipResolusiBarisWajib => 'Required, greater than 0.';
+
+  @override
+  String get equipResolusiTitikWajib => 'Required.';
+
+  @override
+  String get equipResolusiBarisAdaYangSalah =>
+      'Check the resolution rows below.';
+
+  @override
+  String get equipToleransi => 'Tolerance';
+
+  @override
+  String get equipToleransiWajib => 'Tolerance is required.';
+
+  @override
+  String get equipToleransiWajibHint =>
+      'A device without a tolerance can\'t be calibrated — there\'s no way to decide PASS/FAIL.';
+
+  @override
+  String get equipToleransiTidakDivonisHint =>
+      'This device type gets no PASS/FAIL verdict — the master stops at U95%. Leaving it empty is fine.';
+
+  @override
+  String get equipLokasi => 'Location';
+
+  @override
+  String get equipStatus => 'Status';
+
+  @override
+  String get equipSave => 'Save';
+
+  @override
+  String equipSaveFailed(String pesan) {
+    return 'Couldn\'t save: $pesan';
+  }
+
+  @override
+  String get historyEmptyTitle => 'No history yet';
+
+  @override
+  String get historyEmptyBody =>
+      'Completed calibration sessions will show up here.';
+
+  @override
+  String get authServerTakTerjangkau => 'Nggak bisa menghubungi server.';
+
+  @override
+  String get authServerTakTerjangkauPesan =>
+      'Sesi kamu masih tersimpan — nggak perlu masuk ulang. Cek koneksi, lalu coba lagi.';
+
+  @override
+  String get historyLoadFailed => 'Couldn\'t load history.';
+
+  @override
+  String get historySessionExpired =>
+      'Your session expired. Please sign in again.';
+
+  @override
+  String get historyRetry => 'Retry';
+
+  @override
+  String get historySegarkan => 'Refresh list';
+
+  @override
+  String get historyPeringatanJudul => 'Check this before approving';
+
+  @override
+  String get historyPeringatanBody =>
+      'The system re-checked this session and found things worth a second look. You can still approve — but the certificate will be issued on this data.';
+
+  @override
+  String get historyPeringatanBatal => 'Check again';
+
+  @override
+  String get historyPeringatanLanjut => 'Approve anyway';
+
+  @override
+  String historyCertNumber(String nomor) {
+    return 'Certificate no. $nomor';
+  }
+
+  @override
+  String get historyStatusPass => 'PASS';
+
+  @override
+  String get historyStatusFail => 'FAIL';
+
+  @override
+  String get historyStatusDraft => 'Draft';
+
+  @override
+  String get historyStatusMenungguApproval => 'Pending approval';
+
+  @override
+  String get historyStatusPerluRevisi => 'Needs revision';
+
+  @override
+  String get statusAktif => 'Active';
+
+  @override
+  String get statusOverdue => 'Overdue';
+
+  @override
+  String get statusNonaktif => 'Inactive';
+
+  @override
+  String get statusDisetujui => 'Approved';
+
+  @override
+  String get statusBaru => 'New';
+
+  @override
+  String get statusDiproses => 'In progress';
+
+  @override
+  String get statusSelesai => 'Done';
+
+  @override
+  String get statusDibatalkan => 'Cancelled';
+
+  @override
+  String get historyApprove => 'Approve';
+
+  @override
+  String get historyReject => 'Reject';
+
+  @override
+  String historyApproveFailed(String pesan) {
+    return 'Couldn\'t approve: $pesan';
+  }
+
+  @override
+  String get historyRejectDialogTitle => 'Reject this calibration session?';
+
+  @override
+  String get historyRejectDialogHint =>
+      'Rejection reason (required, the technician will see this)';
+
+  @override
+  String get historyRejectDialogSubmit => 'Reject session';
+
+  @override
+  String get historyRejectDialogCancel => 'Cancel';
+
+  @override
+  String get historyRejectDialogEmpty => 'Rejection reason is required.';
+
+  @override
+  String historyRejectFailed(String pesan) {
+    return 'Couldn\'t reject: $pesan';
+  }
+
+  @override
+  String historyCatatanRevisi(String catatan) {
+    return 'Revision note: $catatan';
+  }
+
+  @override
+  String get historyViewCertificate => 'View certificate';
+
+  @override
+  String get certTitle => 'Certificate';
+
+  @override
+  String get certLoadFailed => 'Couldn\'t load certificate.';
+
+  @override
+  String get certStatusMenungguGenerate => 'Still generating, hang on';
+
+  @override
+  String get certStatusGagal => 'Generation failed';
+
+  @override
+  String get certRetry => 'Retry generate';
+
+  @override
+  String get certOpenPdf => 'View PDF';
+
+  @override
+  String get certQrJudul => 'Verification QR';
+
+  @override
+  String get certQrIsi =>
+      'Scan to check this certificate against our records. Works without logging in.';
+
+  @override
+  String get certQrBelumAda =>
+      'The QR isn\'t available yet — the server hasn\'t issued a verification token for this certificate.';
+
+  @override
+  String certOpenFailed(String message) {
+    return 'No app found to open the PDF: $message';
+  }
+
+  @override
+  String get certBelumTerbit => 'Certificate not issued yet';
+
+  @override
+  String certQrToken(String token) {
+    return 'QR token: $token';
+  }
+
+  @override
+  String get certRingkasanTitle => 'Result Summary';
+
+  @override
+  String get certIdentitasTitle => 'Session Details';
+
+  @override
+  String get certTanggalKalibrasi => 'Calibration date';
+
+  @override
+  String get certTeknisi => 'Technician';
+
+  @override
+  String get certLokasi => 'Calibration location';
+
+  @override
+  String get certMetode => 'Calibration method';
+
+  @override
+  String get certReportTitle => 'Calibration Report';
+
+  @override
+  String get certColStandard => 'Standard Value';
+
+  @override
+  String get certColUut => 'Unit Under Test';
+
+  @override
+  String get certColKoreksi => 'Correction';
+
+  @override
+  String get certColU95 => 'U95% (±)';
+
+  @override
+  String get certStandarDipakai => 'Standard used';
+
+  @override
+  String get certBelumDihitung =>
+      'The measurement points haven\'t been calculated by the backend yet, so the report table can\'t be shown.';
+
+  @override
+  String get certDisclaimer =>
+      '— Calibration results are not to be announced and only apply to related tools —';
+
+  @override
+  String get certLihatDetail => 'View calculation detail';
+
+  @override
+  String get detailTitle => 'Calibration Result Detail';
+
+  @override
+  String get detailLoadFailed => 'Couldn\'t load calibration detail.';
+
+  @override
+  String get detailPaneEmptyTitle => 'No session selected';
+
+  @override
+  String get detailPaneEmptyBody =>
+      'Pick a session on the left to see its measurement points here.';
+
+  @override
+  String detailNomorSesi(String nomor) {
+    return 'Session no. $nomor';
+  }
+
+  @override
+  String get detailKondisiLingkungan => 'Environmental Condition & Standard';
+
+  @override
+  String get detailStandarAcuan => 'Reference standard';
+
+  @override
+  String get detailSuhuRuang => 'Room temperature';
+
+  @override
+  String get detailKelembaban => 'Humidity';
+
+  @override
+  String get detailLokasi => 'Calibration location';
+
+  @override
+  String get detailLokasiLab => 'At the lab';
+
+  @override
+  String get detailLokasiOnsite => 'At customer site (onsite)';
+
+  @override
+  String get detailTitikUkurTitle => 'Measurement Points';
+
+  @override
+  String get detailBelumDihitung =>
+      'This session hasn\'t been calculated by the server yet — results will show up once it\'s processed.';
+
+  @override
+  String get detailLihatSertifikat => 'View certificate';
+
+  @override
+  String detailTitikLabel(int index, String nilai) {
+    return 'Point $index · $nilai';
+  }
+
+  @override
+  String get detailProsesHitung => 'Calculation steps';
+
+  @override
+  String get detailProsesCatatan =>
+      'Formulas are copied from the lab\'s master workbook; the numbers come from the server, not the phone.';
+
+  @override
+  String get detailRumusTypeA => '= STDEV / repeatability divisor';
+
+  @override
+  String get detailRumusTypeB =>
+      '= SQRT(sum of squares of the components below)';
+
+  @override
+  String get detailVeff => 'Effective degrees of freedom';
+
+  @override
+  String get detailJumlahPengulangan => 'Readings taken';
+
+  @override
+  String get detailKolStandard => 'Standard';
+
+  @override
+  String get detailKolU95 => 'U95%';
+
+  @override
+  String get detailRataRata => 'Average';
+
+  @override
+  String get detailError => 'Error';
+
+  @override
+  String get detailKoreksi => 'Correction';
+
+  @override
+  String get detailStandarDeviasi => 'Standard deviation';
+
+  @override
+  String get detailMaxStdev => 'Max STDEV';
+
+  @override
+  String get detailMaxStdevSebelum => 'Before adjustment';
+
+  @override
+  String get detailTypeA => 'Type A';
+
+  @override
+  String get detailTypeB => 'Type B';
+
+  @override
+  String get detailKomponenTypeB => 'Type B component breakdown';
+
+  @override
+  String get detailToleransi => 'Tolerance';
+
+  @override
+  String get detailKetidakpastianGabungan => 'Combined uncertainty (uc)';
+
+  @override
+  String get detailFaktorCakupan => 'Coverage factor (k)';
+
+  @override
+  String get detailU95 => 'Expanded uncertainty (U95%)';
+
+  @override
+  String get detailAwal => 'Start';
+
+  @override
+  String get detailAkhir => 'End';
+
+  @override
+  String get detailNilaiTerkoreksi => 'Corrected value';
+
+  @override
+  String get detailU95Lingkungan => 'U95%';
+
+  @override
+  String get detailThermohygro => 'Thermohygrometer';
+
+  @override
+  String get detailMetode => 'Method';
+
+  @override
+  String get detailSuhuLarutan => 'Solution temp.';
+
+  @override
+  String get detailSebelumAdjustment => 'Before adjustment (as found)';
+
+  @override
+  String get detailSesudahAdjustment => 'After adjustment (certified)';
+
+  @override
+  String get detailAlatBantu => 'Heat source';
+
+  @override
+  String get detailTipePencelupan => 'Immersion type';
+
+  @override
+  String get detailTipeSensor => 'Standard sensor type';
+
+  @override
+  String get bannerStandarTanpaNama => 'Unnamed standard';
+
+  @override
+  String bannerStandarLewat(String nama, int hari) {
+    return '$nama — certificate expired $hari days ago';
+  }
+
+  @override
+  String bannerStandarSegera(String nama, int hari) {
+    return '$nama — certificate expires in $hari days';
+  }
+
+  @override
+  String get detailUjiTitikEs => 'Ice point test (30 min)';
+
+  @override
+  String detailTitikEsKe(Object ke) {
+    return 'X$ke';
+  }
+
+  @override
+  String get detailRentangTitikEs => 'Range (Tmax − Tmin)';
+
+  @override
+  String get detailPembacaanStandar => 'Standard reading (lab probe)';
+
+  @override
+  String get detailPembacaanUut => 'UUT reading (customer instrument)';
+
+  @override
+  String get detailAsFoundCatatan =>
+      'Documents the state the instrument arrived in — not part of the certified result.';
+
+  @override
+  String get detailPerluVerifikasi =>
+      'Some OCR readings still need confirming — this session can\'t be approved yet.';
+
+  @override
+  String get detailVerifikasiTombol => 'I\'ve checked these readings';
+
+  @override
+  String get detailVerifikasiSukses =>
+      'Readings confirmed. This session can now be reviewed by an admin.';
+
+  @override
+  String detailVerifikasiGagal(String pesan) {
+    return 'Couldn\'t confirm: $pesan';
+  }
+
+  @override
+  String get arsipTitle => 'Archive';
+
+  @override
+  String get arsipCariPerusahaan => 'Search company...';
+
+  @override
+  String get arsipPerusahaanKosong => 'No companies yet.';
+
+  @override
+  String get arsipFolderKosong => 'This folder is empty.';
+
+  @override
+  String get arsipLoadGagal => 'Couldn\'t load the archive.';
+
+  @override
+  String get arsipRetry => 'Retry';
+
+  @override
+  String arsipRingkasPerusahaan(int alat, int sertifikat) {
+    return '$alat instruments · $sertifikat certificates';
+  }
+
+  @override
+  String arsipRingkasFolder(int subfolder, int berkas) {
+    return '$subfolder folders · $berkas files';
+  }
+
+  @override
+  String get arsipFolderBaru => 'New folder';
+
+  @override
+  String get arsipNamaFolder => 'Folder name';
+
+  @override
+  String get arsipNamaFolderHint => 'e.g. 2026';
+
+  @override
+  String get arsipBuat => 'Create';
+
+  @override
+  String get arsipBatal => 'Cancel';
+
+  @override
+  String get arsipSimpan => 'Save';
+
+  @override
+  String get arsipGantiNama => 'Rename';
+
+  @override
+  String get arsipHapus => 'Delete';
+
+  @override
+  String get arsipHapusJudul => 'Delete this folder?';
+
+  @override
+  String arsipHapusIsi(String nama) {
+    return 'Folder \"$nama\" will be removed. Only empty folders can be deleted.';
+  }
+
+  @override
+  String get arsipTakBisaHapus => 'Move or delete its contents first.';
+
+  @override
+  String get arsipFolderSistem => 'Company folder — managed automatically.';
+
+  @override
+  String get arsipBerkasTanpaSertifikat => 'No certificate yet';
+
+  @override
+  String get arsipDibuat => 'Folder created.';
+
+  @override
+  String get arsipDiubah => 'Folder renamed.';
+
+  @override
+  String get arsipDihapus => 'Folder deleted.';
+
+  @override
+  String get certSuksesJudul => 'Certificate created';
+
+  @override
+  String get certSuksesNomor => 'Certificate number';
+
+  @override
+  String get certAksiPdf => 'Download PDF';
+
+  @override
+  String get certAksiExcel => 'Export Excel';
+
+  @override
+  String get certAksiQr => 'QR code';
+
+  @override
+  String get certAksiSalinTautan => 'Copy verification link';
+
+  @override
+  String get certAksiEmail => 'Send email';
+
+  @override
+  String get certAksiWhatsapp => 'Share via WhatsApp';
+
+  @override
+  String get certAksiTutup => 'Done';
+
+  @override
+  String get certQrModalJudul => 'Certificate QR';
+
+  @override
+  String get certQrScanUntukVerifikasi => 'Scan to verify';
+
+  @override
+  String get certQrSimpanPng => 'Save PNG';
+
+  @override
+  String get certTautanDisalin => 'Verification link copied.';
+
+  @override
+  String certPngDisimpan(String lokasi) {
+    return 'QR saved to $lokasi';
+  }
+
+  @override
+  String certGagalBuka(String tujuan) {
+    return 'Couldn\'t open $tujuan on this device.';
+  }
+
+  @override
+  String get certBelumAdaTautan =>
+      'The backend hasn\'t issued a verification token yet, so there\'s no link to share.';
+
+  @override
+  String certPesanBagikan(String nomor, String tautan) {
+    return 'Hello,\n\nYour calibration certificate has been generated.\n\nCertificate Number:\n$nomor\n\nVerification Link:\n$tautan\n\nScan the QR code or open the link above.\n\nThank you.';
+  }
+
+  @override
+  String certSubjekEmail(String nomor) {
+    return 'Calibration Certificate $nomor';
+  }
+
+  @override
+  String get alurTitle => 'Workflow';
+
+  @override
+  String get alurSub =>
+      'From the technician\'s entry to the certificate landing in the client\'s inbox.';
+
+  @override
+  String get alurPilihSesi =>
+      'Pick a session on the left to see where it stands.';
+
+  @override
+  String get alurCari => 'Search device or technician...';
+
+  @override
+  String get alurKosong => 'No calibration sessions yet.';
+
+  @override
+  String get alurSesiBaru => 'New calibration';
+
+  @override
+  String get alurTahapLembarKerja => 'Worksheet';
+
+  @override
+  String get alurTahapPerhitungan => 'Calculation & approval';
+
+  @override
+  String get alurTahapSertifikat => 'Certificate issued';
+
+  @override
+  String get alurTahapKirim => 'Sent to client';
+
+  @override
+  String get alurBukaLembarKerja => 'Open worksheet';
+
+  @override
+  String get alurBukaPerhitungan => 'Open calculation sheet';
+
+  @override
+  String get alurLihatSertifikat => 'View certificate';
+
+  @override
+  String get alurKirimPelanggan => 'Send to client';
+
+  @override
+  String get alurDetailSesi => 'Session details';
+
+  @override
+  String get alurStatusDisetujui => 'Approved';
+
+  @override
+  String get alurSertifikatDigenerate =>
+      'The certificate is still being generated on the server. Reload in a moment.';
+
+  @override
+  String alurCatatanRevisi(String catatan) {
+    return 'Sent back by the admin: $catatan';
+  }
+
+  @override
+  String get alurLangkahSekarang => 'You are here';
+
+  @override
+  String get alurLangkahSelesai => 'Done';
+
+  @override
+  String get panelSeksiOperasional => 'Operations';
+
+  @override
+  String get panelSeksiDokumen => 'Documents';
+
+  @override
+  String get panelSeksiSistem => 'System';
+
+  @override
+  String get panelCariMenu => 'Search menu...';
+
+  @override
+  String get panelMenuKosong => 'No menu matches that.';
+
+  @override
+  String get panelSinkronAktif => 'Live sync on';
+
+  @override
+  String get panelSinkronMati => 'Live sync off';
+
+  @override
+  String get panelTema => 'Toggle theme';
+
+  @override
+  String panelSubjudul(String akreditasi) {
+    return 'Desktop · $akreditasi';
+  }
+
+  @override
+  String get panelRingkasan => 'Overview';
+
+  @override
+  String get panelRingkasanSub => 'Where the lab stands right now.';
+
+  @override
+  String get panelBukaAntrean => 'Open approval queue';
+
+  @override
+  String get panelSebaranStatus => 'Session status spread';
+
+  @override
+  String get panelPerluTindakLanjut => 'FOLLOW UP';
+
+  @override
+  String panelSesiSelesai(int count) {
+    return '$count sessions completed';
+  }
+
+  @override
+  String panelMasihDraft(int count) {
+    return 'Plus $count still in draft';
+  }
+
+  @override
+  String panelTotalSepanjangMasa(int count) {
+    return 'All-time total $count';
+  }
+
+  @override
+  String get panelStatusBelumLengkap =>
+      '\"Needs revision\" isn\'t in the dashboard response yet — backend request pending.';
+
+  @override
+  String get arsipPetunjukPindah => 'Press and hold an item to move it.';
+
+  @override
+  String get arsipTakBisaDipindah =>
+      'Auto-generated folder — its place follows the client/year.';
+
+  @override
+  String arsipFolderDipindah(String tujuan) {
+    return 'Folder moved into \"$tujuan\".';
+  }
+
+  @override
+  String arsipBerkasDipindah(String tujuan) {
+    return 'File moved into \"$tujuan\".';
+  }
+
+  @override
+  String get orgTitle => 'Organization Data';
+
+  @override
+  String get orgNama => 'Company name';
+
+  @override
+  String get orgAlamat => 'Address';
+
+  @override
+  String get orgTelepon => 'Phone';
+
+  @override
+  String get orgEmail => 'Email';
+
+  @override
+  String get orgNoAkreditasi => 'Accreditation no.';
+
+  @override
+  String get orgAkreditasi => 'Accreditation Status';
+
+  @override
+  String get orgAkreditasiBerlaku => 'Valid';
+
+  @override
+  String get orgAkreditasiKadaluarsa => 'Expired';
+
+  @override
+  String get orgStandarAkreditasi => 'Accreditation standard';
+
+  @override
+  String get orgStandarAkreditasiHint => 'e.g. ISO/IEC 17025:2017';
+
+  @override
+  String get orgAkreditasiMulai => 'Valid from';
+
+  @override
+  String get orgAkreditasiBerakhir => 'Valid until';
+
+  @override
+  String get orgPilihTanggal => 'Choose a date';
+
+  @override
+  String get orgSave => 'Save';
+
+  @override
+  String get orgSaved => 'Organization data saved.';
+
+  @override
+  String orgSaveFailed(String pesan) {
+    return 'Couldn\'t save: $pesan';
+  }
+
+  @override
+  String get orgLoadFailed => 'Couldn\'t load organization data.';
+
+  @override
+  String get orgRetry => 'Retry';
+
+  @override
+  String get standarTitle => 'Reference Standards';
+
+  @override
+  String get standarLoadFailed => 'Couldn\'t load reference standards.';
+
+  @override
+  String get standarAdd => 'Add standard';
+
+  @override
+  String get standarEdit => 'Edit standard';
+
+  @override
+  String get standarEmptyTitle => 'No reference standards yet';
+
+  @override
+  String get standarEmptyBody =>
+      'Add your first standard using the button below.';
+
+  @override
+  String get standarRetry => 'Retry';
+
+  @override
+  String get standarBerlaku => 'Valid';
+
+  @override
+  String get standarKadaluarsa => 'Expired';
+
+  @override
+  String get standarDeleteConfirmTitle => 'Delete reference standard?';
+
+  @override
+  String standarDeleteConfirmBody(String nama) {
+    return '\"$nama\" will be permanently deleted.';
+  }
+
+  @override
+  String standarDeleteFailed(String pesan) {
+    return 'Couldn\'t delete: $pesan';
+  }
+
+  @override
+  String standarSaveFailed(String pesan) {
+    return 'Couldn\'t save: $pesan';
+  }
+
+  @override
+  String get standarFaktorCakupanInvalid =>
+      'Coverage factor (k) must be at least 1 — usually 2.';
+
+  @override
+  String get standarNama => 'Standard name';
+
+  @override
+  String get standarMerk => 'Brand';
+
+  @override
+  String get standarModel => 'Model/Type';
+
+  @override
+  String get standarSerialNumber => 'Serial number';
+
+  @override
+  String get standarNoSertifikat => 'Certificate no.';
+
+  @override
+  String get standarTertelusurKe => 'Traceable to';
+
+  @override
+  String get standarTertelusurKeHint => 'e.g. SNSU-BSN';
+
+  @override
+  String get standarBerlakuSampai => 'Valid until';
+
+  @override
+  String get standarKetidakpastianTitle =>
+      'Uncertainty (from the standard\'s certificate)';
+
+  @override
+  String get standarKetidakpastian => 'Uncertainty (expanded)';
+
+  @override
+  String get standarSatuanKetidakpastian => 'Unit';
+
+  @override
+  String get standarFaktorCakupan => 'Coverage factor (k)';
+
+  @override
+  String get standarDrift => 'Annual drift';
+
+  @override
+  String get standarSave => 'Save';
+
+  @override
+  String get custTitle => 'Customers';
+
+  @override
+  String get custSearchHint => 'Search customer name';
+
+  @override
+  String get custEmptyTitle => 'No customers yet';
+
+  @override
+  String get custEmptyBody => 'Add your first customer using the button below.';
+
+  @override
+  String get custLoadFailed => 'Couldn\'t load customers.';
+
+  @override
+  String get custRetry => 'Retry';
+
+  @override
+  String get custAdd => 'Add customer';
+
+  @override
+  String get custEdit => 'Edit customer';
+
+  @override
+  String get custNama => 'Customer name';
+
+  @override
+  String get custAlamat => 'Address';
+
+  @override
+  String get custContactPerson => 'Contact person';
+
+  @override
+  String get custTelepon => 'Phone';
+
+  @override
+  String get custEmail => 'Email';
+
+  @override
+  String get custSave => 'Save';
+
+  @override
+  String get custCancel => 'Cancel';
+
+  @override
+  String get custDelete => 'Delete';
+
+  @override
+  String get custDeleteConfirmTitle => 'Delete customer?';
+
+  @override
+  String custDeleteConfirmBody(String nama) {
+    return '\"$nama\" will be permanently deleted.';
+  }
+
+  @override
+  String custDeleteFailed(String pesan) {
+    return 'Couldn\'t delete: $pesan';
+  }
+
+  @override
+  String custSaveFailed(String pesan) {
+    return 'Couldn\'t save: $pesan';
+  }
+
+  @override
+  String custEquipmentCount(int jumlah) {
+    return '$jumlah devices';
+  }
+
+  @override
+  String get custFieldRequired => 'Required.';
+
+  @override
+  String get calibTitle => 'Calibration Input';
+
+  @override
+  String get calibKategori => 'Category';
+
+  @override
+  String get calibKategoriHint => 'Choose a device category';
+
+  @override
+  String get calibAlat => 'Device';
+
+  @override
+  String get calibAlatHint => 'Choose a device';
+
+  @override
+  String get calibAlatKosong => 'No devices in this category.';
+
+  @override
+  String get calibStandar => 'Reference Standard';
+
+  @override
+  String get calibStandarHint => 'Choose a reference standard';
+
+  @override
+  String get calibStandarKadaluarsa => 'expired';
+
+  @override
+  String get calibTanggal => 'Calibration date';
+
+  @override
+  String get calibNomorOrder => 'Order number';
+
+  @override
+  String get calibNomorOrderHint => 'e.g. 2405.13.A (optional)';
+
+  @override
+  String get calibTanggalTerima => 'Equipment received date';
+
+  @override
+  String get calibLokasi => 'Calibration location';
+
+  @override
+  String get calibLokasiLab => 'At the lab';
+
+  @override
+  String get calibLokasiOnsite => 'At customer site (onsite)';
+
+  @override
+  String get calibSuhuRuang => 'Room temperature (°C)';
+
+  @override
+  String get calibKelembaban => 'Humidity (%)';
+
+  @override
+  String calibTitikUkur(int index) {
+    return 'Measurement point $index';
+  }
+
+  @override
+  String get calibNilaiTarget => 'Target value';
+
+  @override
+  String get calibSatuan => 'Unit';
+
+  @override
+  String calibPembacaan(int index) {
+    return 'Reading $index';
+  }
+
+  @override
+  String get calibTambahTitik => 'Add measurement point';
+
+  @override
+  String get calibHapusTitik => 'Remove measurement point';
+
+  @override
+  String get calibTambahPembacaan => '+ Add reading';
+
+  @override
+  String get calibValidasiKategori => 'Choose a category first.';
+
+  @override
+  String get calibValidasiAlat => 'Choose a device first.';
+
+  @override
+  String get calibValidasiStandar => 'Choose a reference standard first.';
+
+  @override
+  String get calibValidasiAngka => 'Enter a valid number.';
+
+  @override
+  String get calibValidasiPembacaan =>
+      'Each measurement point needs at least 2 numeric readings.';
+
+  @override
+  String get calibSimpanDraft => 'Save draft';
+
+  @override
+  String get calibKirimApproval => 'Submit for approval';
+
+  @override
+  String calibDraftTitikDilewat(int jumlah) {
+    return 'Draft saved, but $jumlah rows were not saved because their reference value is still empty. Fill the reference value in if the readings on those rows should be kept.';
+  }
+
+  @override
+  String get calibBerhasilDraft => 'Calibration draft saved.';
+
+  @override
+  String get calibBerhasilApproval =>
+      'Calibration session submitted for approval.';
+
+  @override
+  String get kirimTertahanRilisWajib =>
+      'A mandatory update must be installed before this session can be sent. Save a draft first — your entries are kept.';
+
+  @override
+  String calibGagal(String pesan) {
+    return 'Couldn\'t save: $pesan';
+  }
+
+  @override
+  String get calibLoadPilihanGagal =>
+      'Couldn\'t load category/standard options.';
+
+  @override
+  String get calibRetry => 'Retry';
+
+  @override
+  String get calibPilihKategoriTitle => 'Choose Equipment Category';
+
+  @override
+  String get calibPilihKategoriSubtitle =>
+      'Pick the measurement group first, then the specific instrument type.';
+
+  @override
+  String get calibKategoriKosong => 'No categories yet.';
+
+  @override
+  String calibJumlahAlat(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: 's',
+      one: '',
+    );
+    return '$jumlah instrument type$_temp0';
+  }
+
+  @override
+  String get calibPilihInstrumenTitle => 'Choose Instrument Type';
+
+  @override
+  String get calibInstrumenKosong =>
+      'This category doesn\'t have any calibration capability data yet.';
+
+  @override
+  String get calibInstrumenMetodeLabel => 'Method';
+
+  @override
+  String get calibCariInstrumenHint => 'Search instrument type...';
+
+  @override
+  String get calibInstrumenTidakDitemukan => 'No matching instrument type.';
+
+  @override
+  String get calibTambahAlatCta =>
+      'Instrument not on the list? Add it yourself.';
+
+  @override
+  String calibTambahAlatDariCari(String nama) {
+    return 'Add \"$nama\" as a new instrument';
+  }
+
+  @override
+  String get calibTambahAlatJudul => 'Add Instrument Type';
+
+  @override
+  String get calibTambahAlatLabel => 'INSTRUMENT NAME';
+
+  @override
+  String get calibTambahAlatHint =>
+      'Type it exactly as written on the instrument';
+
+  @override
+  String get calibTambahAlatKosong => 'Enter the instrument name first.';
+
+  @override
+  String get calibTambahAlatPeringatanJudul => 'Read this before saving';
+
+  @override
+  String get calibTambahAlatPeringatanIsi =>
+      'An instrument you add yourself has no accredited limit from the lab scope yet. The session still runs and the certificate still prints — but the ± figure comes from the generic route, and it can come out SMALLER than what we normally print for registered instruments. Nothing errors out; the number just looks too good. You may still continue, but tell an admin so this instrument gets registered properly.';
+
+  @override
+  String get calibTambahAlatSimpan => 'Save & use';
+
+  @override
+  String get calibTambahAlatBatal => 'Cancel';
+
+  @override
+  String calibTambahAlatBerhasil(String nama) {
+    return '\"$nama\" is on the list now — ready to pick.';
+  }
+
+  @override
+  String calibTambahAlatKembar(String nama) {
+    return '\"$nama\" already exists in this category. Close this box and look for it in the list.';
+  }
+
+  @override
+  String calibTambahAlatGagal(String pesan) {
+    return 'Couldn’t add the instrument: $pesan';
+  }
+
+  @override
+  String get calibInstrumenTanpaCmc => 'No CMC range yet';
+
+  @override
+  String get calibTiNama => 'Temperature Indicator';
+
+  @override
+  String get calibTiKartuRingkas =>
+      'Two kinds — first pick whether the sensor is calibrated too';
+
+  @override
+  String get calibTiGerbangPengantar =>
+      'First pick whether the sensor is calibrated too. Everything on the next sheet follows this choice — the measuring points, the reference standards, right down to the uncertainty formula. Picking wrong raises no error at all, so settle it here.';
+
+  @override
+  String get calibTiTanpaSensorJudul => 'Without Sensor';
+
+  @override
+  String get calibTiTanpaSensorKeterangan =>
+      'The sensor is NOT calibrated. The calibrator is wired into the indicator terminals and stands in for the sensor, so only the indicator reading is checked.';
+
+  @override
+  String get calibTiDenganSensorJudul => 'With Sensor';
+
+  @override
+  String get calibTiDenganSensorKeterangan =>
+      'The sensor IS calibrated. Sensor and indicator are checked as one chain — the sensor goes into the medium alongside the reference thermometer, so the reading covers the whole chain.';
+
+  @override
+  String calibTiRentang(String rentang) {
+    return 'Measuring range $rentang';
+  }
+
+  @override
+  String calibTiCmc(String cmc, int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah capability rows',
+      one: '1 capability row',
+    );
+    return 'CMC $cmc · $_temp0';
+  }
+
+  @override
+  String get calibTiBelumSiap => 'Not on this server yet';
+
+  @override
+  String calibTiBelumSiapPesan(String varian) {
+    return 'The \"$varian\" worksheet is not on the server in use yet. Tell an admin first — forcing it open now would hand you another instrument\'s sheet, and nothing would error out.';
+  }
+
+  @override
+  String get phCalibTitle => 'pH Meter Calibration';
+
+  @override
+  String get phCalibThermohygro => 'Thermohygrometer used';
+
+  @override
+  String get phCalibThermohygroHint => 'e.g. TH-3';
+
+  @override
+  String get phCalibThermohygroCustom => 'Other (enter manually)';
+
+  @override
+  String get phCalibStandarSesi => 'Reference Standard (Thermometer & Sensor)';
+
+  @override
+  String get phCalibStandarSesiHint =>
+      'Used for environmental conditions (temp/humidity)';
+
+  @override
+  String get phCalibStandarBuffer => 'Buffer standard for this point';
+
+  @override
+  String get phCalibStandarBufferHint => 'Choose a buffer solution';
+
+  @override
+  String get phCalibValidasiStandarBuffer =>
+      'Choose a buffer standard for every point (4, 7, 10) first.';
+
+  @override
+  String get phCalibKondisiLingkungan => 'Environmental Conditions';
+
+  @override
+  String get phCalibSuhuAwal => 'Start temperature (°C)';
+
+  @override
+  String get phCalibSuhuAkhir => 'End temperature (°C)';
+
+  @override
+  String get phCalibKelembabanAwal => 'Start humidity (%)';
+
+  @override
+  String get phCalibKelembabanAkhir => 'End humidity (%)';
+
+  @override
+  String phCalibTitikBuffer(String label) {
+    return 'pH $label buffer';
+  }
+
+  @override
+  String get phCalibNilaiStandar => 'Reference value (temp-corrected)';
+
+  @override
+  String get phCalibNilaiStandarHelper =>
+      'Copy from the worksheet — the buffer value after temperature correction, not the round number.';
+
+  @override
+  String get phCalibNilaiStandarSebelum => 'As-found reference value';
+
+  @override
+  String get phCalibSebelumAdjustment => 'Before adjustment (as found)';
+
+  @override
+  String get phCalibSesudahAdjustment => 'After adjustment (as left)';
+
+  @override
+  String get phCalibIdMerk => 'Brand';
+
+  @override
+  String get phCalibIdType => 'Type';
+
+  @override
+  String get phCalibIdNoSeri => 'Serial no.';
+
+  @override
+  String get phCalibIdRentang => 'Measuring range';
+
+  @override
+  String get phCalibIdResolusi => 'Resolution';
+
+  @override
+  String get phCalibIdCustomer => 'Customer name';
+
+  @override
+  String get phCalibFotoMembaca => 'Reading the numbers from your photo…';
+
+  @override
+  String get phCalibIdentitasCustomer => 'Customer Details';
+
+  @override
+  String get phCalibIdNamaAlat => 'Device name';
+
+  @override
+  String get phCalibIdKapasitasMax => 'Max. capacity';
+
+  @override
+  String get phCalibIdAlamatCustomer => 'Customer address';
+
+  @override
+  String get phCalibIdCertificateNumber => 'Certificate no.';
+
+  @override
+  String get phCalibIdOrderNumber => 'Order no.';
+
+  @override
+  String get phCalibIdTechnicianId => 'Technician ID';
+
+  @override
+  String get phCalibIdCalibrationMethod => 'Calibration method';
+
+  @override
+  String get phCalibIssuanceDate => 'Issuance date';
+
+  @override
+  String get phCalibCalculatedBy => 'Calculated by (initials)';
+
+  @override
+  String get phCalibCalculatedByHint => 'e.g. NR';
+
+  @override
+  String get phCalibSignedBy => 'Signed by (full name)';
+
+  @override
+  String get phCalibSignedByHint => 'e.g. Alex Misramto';
+
+  @override
+  String get phCalibLiveJudul => 'Point at the table';
+
+  @override
+  String get phCalibLivePetunjuk =>
+      'Point the camera at the worksheet table. Numbers that are recognised will float on screen.';
+
+  @override
+  String get phCalibLivePakai => 'Use these numbers';
+
+  @override
+  String get phCalibLiveTanpaKamera =>
+      'No camera found on this phone. You can still type the values in.';
+
+  @override
+  String get phCalibCaraJudul => 'How do you want to fill this in?';
+
+  @override
+  String get phCalibCaraSub =>
+      'Pick once. You can still use the camera button later on the data page.';
+
+  @override
+  String get phCalibCaraFoto => 'Photograph the worksheet';
+
+  @override
+  String get phCalibCaraFotoKeterangan =>
+      'Snap the filled-in table — the fields populate automatically';
+
+  @override
+  String get phCalibCaraManual => 'Type it in';
+
+  @override
+  String get phCalibCaraManualKeterangan => 'Fill each field yourself';
+
+  @override
+  String get phCalibCaraCatatan =>
+      'Values from a photo must still be checked before submitting. An issued certificate cannot be changed.';
+
+  @override
+  String phCalibFotoHeaderHasil(int jumlah) {
+    return 'Plus $jumlah fields outside the table (conditions, notes, standards used) — please check them.';
+  }
+
+  @override
+  String get phCalibOcrBelumDikonfirmasi => 'From camera — please check';
+
+  @override
+  String get phCalibOcrKonfirmasi => 'Confirm';
+
+  @override
+  String phCalibPembacaanKe(int index) {
+    return 'Reading $index';
+  }
+
+  @override
+  String get phCalibSuhu => 'Temp.';
+
+  @override
+  String get phCalibValidasiLingkungan =>
+      'Fill in the environmental conditions (temperature & humidity) first.';
+
+  @override
+  String phCalibValidasiPembacaan(int minimum) {
+    return 'Each buffer point needs at least $minimum valid after-adjustment readings.';
+  }
+
+  @override
+  String get phCalibValidasiNilaiAcuan =>
+      'Fill in the temperature-corrected reference value for every buffer point.';
+
+  @override
+  String get phCalibLangkahIdentitas => 'Identity & conditions';
+
+  @override
+  String get phCalibLangkahHasil => 'Calibration results';
+
+  @override
+  String phCalibLangkahKe(int nomor, int total) {
+    return 'Step $nomor of $total';
+  }
+
+  @override
+  String get phCalibIdentitasAlat => 'Instrument Identity';
+
+  @override
+  String get phCalibPengerjaan => 'Job Details';
+
+  @override
+  String get phCalibPelangganOtomatis =>
+      'Customer details follow the selected instrument — the certificate is filed under the right company automatically.';
+
+  @override
+  String get phCalibKoreksiSuhu => 'Temperature correction (°C)';
+
+  @override
+  String get phCalibKoreksiKelembaban => 'Humidity correction (%)';
+
+  @override
+  String get phCalibU95Suhu => 'Temperature U95%';
+
+  @override
+  String get phCalibU95Kelembaban => 'Humidity U95%';
+
+  @override
+  String get phCalibDariSertifikatTh =>
+      'From the thermohygrometer certificate — the server derives the environmental U95% from these.';
+
+  @override
+  String get phCalibLanjutkan => 'Continue';
+
+  @override
+  String get phCalibKembali => 'Back';
+
+  @override
+  String get phCalibDisertifikasi => 'Certified';
+
+  @override
+  String get phCalibDokumentasi => 'Documentation';
+
+  @override
+  String get phCalibDihitungServer =>
+      'Averages, uncertainty budget, environmental U95% and the PASS/FAIL call are all computed by the server.';
+
+  @override
+  String get phCalibOpsional => 'Optional';
+
+  @override
+  String get notifEmptyTitle => 'No notifications yet';
+
+  @override
+  String get notifEmptyBody =>
+      'Due-date reminders & approval updates will show up here.';
+
+  @override
+  String get notifLoadFailed => 'Couldn\'t load notifications.';
+
+  @override
+  String get notifSessionExpired =>
+      'Your session expired. Please sign in again.';
+
+  @override
+  String get notifRetry => 'Retry';
+
+  @override
+  String get notifMarkedRead => 'Marked as read.';
+
+  @override
+  String get notifTypeDueDate => 'Due date';
+
+  @override
+  String get notifTypeApproval => 'Approval';
+
+  @override
+  String get notifTypeRevision => 'Revision';
+
+  @override
+  String get teknisiTitle => 'Technicians';
+
+  @override
+  String get teknisiFilterSemua => 'All';
+
+  @override
+  String get teknisiFilterPending => 'Pending';
+
+  @override
+  String get teknisiFilterAktif => 'Active';
+
+  @override
+  String get teknisiFilterNonaktif => 'Inactive';
+
+  @override
+  String get teknisiKosong => 'No accounts in this filter yet.';
+
+  @override
+  String get teknisiLoadGagal => 'Could not load accounts.';
+
+  @override
+  String get teknisiRetry => 'Try again';
+
+  @override
+  String get teknisiSetujui => 'Approve';
+
+  @override
+  String get teknisiTolak => 'Deactivate';
+
+  @override
+  String get certKirimEmail => 'Send to customer';
+
+  @override
+  String get emailTitle => 'Send Certificate';
+
+  @override
+  String get emailHanyaAdmin => 'Only admins can send certificates.';
+
+  @override
+  String get emailKeLabel => 'To';
+
+  @override
+  String get emailKeHint => 'customer@company.com';
+
+  @override
+  String get emailCcLabel => 'Cc (optional)';
+
+  @override
+  String emailPisahKoma(int maks) {
+    return 'Separate multiple addresses with commas. Max $maks each.';
+  }
+
+  @override
+  String get emailKirim => 'Send now';
+
+  @override
+  String get emailMengirim =>
+      'Sending — this waits until the mail server actually accepts it.';
+
+  @override
+  String get emailTerkirim => 'Certificate sent.';
+
+  @override
+  String get emailKeKosong => 'Enter at least one recipient.';
+
+  @override
+  String emailAlamatSalah(String alamat) {
+    return 'Not a valid email address: $alamat';
+  }
+
+  @override
+  String emailKebanyakan(int maks) {
+    return 'Max $maks addresses.';
+  }
+
+  @override
+  String get emailRiwayatJudul => 'Send history';
+
+  @override
+  String get emailRiwayatKosong => 'Never sent yet.';
+
+  @override
+  String get emailRiwayatBerhasil => 'Sent';
+
+  @override
+  String get emailRiwayatGagal => 'Failed';
+
+  @override
+  String emailRiwayatOleh(String nama) {
+    return 'by $nama';
+  }
+
+  @override
+  String get emailGagalMuat => 'Couldn\'t load the send history.';
+
+  @override
+  String get emailRetry => 'Try again';
+
+  @override
+  String get emailFormatJudul => 'What to send';
+
+  @override
+  String get emailFormatPdf => 'PDF';
+
+  @override
+  String get emailFormatExcel => 'Excel';
+
+  @override
+  String get emailFormatTautan => 'Link';
+
+  @override
+  String get emailFormatPdfKet =>
+      'The official document, attached to the email.';
+
+  @override
+  String get emailFormatExcelKet =>
+      'Spreadsheet version, attached — for customers who process the data further.';
+
+  @override
+  String get emailFormatTautanKet =>
+      'Verification link only, no attachment. The customer downloads it from that page.';
+
+  @override
+  String get ttdTitle => 'Certificate Signature';
+
+  @override
+  String get ttdHanyaAdmin =>
+      'Only admins can manage the certificate signature.';
+
+  @override
+  String get ttdBelumAda => 'No signature uploaded yet';
+
+  @override
+  String get ttdBelumAdaIsi =>
+      'Certificates will print without a signature until one is uploaded.';
+
+  @override
+  String get ttdUnggah => 'Upload signature';
+
+  @override
+  String get ttdGanti => 'Replace';
+
+  @override
+  String get ttdHapus => 'Delete';
+
+  @override
+  String get ttdHapusKonfirmJudul => 'Delete the signature?';
+
+  @override
+  String get ttdHapusKonfirmIsi =>
+      'New certificates will print without a signature until you upload another one. Certificates already issued keep theirs.';
+
+  @override
+  String get ttdHanyaPng =>
+      'PNG only — JPG has no transparent background, so it prints as a white box covering the signature line.';
+
+  @override
+  String get ttdPosisiJudul => 'Print position';
+
+  @override
+  String get ttdPosisiIsi =>
+      'Applies to every certificate, not just one. Already-issued certificates keep the position they were printed with.';
+
+  @override
+  String ttdGeserX(String nilai) {
+    return 'Horizontal ($nilai mm)';
+  }
+
+  @override
+  String ttdGeserY(String nilai) {
+    return 'Vertical ($nilai mm)';
+  }
+
+  @override
+  String ttdLebar(String nilai) {
+    return 'Width ($nilai mm)';
+  }
+
+  @override
+  String get ttdArahX => 'negative = left';
+
+  @override
+  String get ttdArahY => 'positive = up';
+
+  @override
+  String get ttdSimpanPosisi => 'Save position';
+
+  @override
+  String get ttdPosisiTersimpan => 'Print position saved.';
+
+  @override
+  String get ttdTerunggah => 'Signature uploaded.';
+
+  @override
+  String get ttdTerhapus => 'Signature deleted.';
+
+  @override
+  String get ttdGagalMuat => 'Couldn\'t load the signature settings.';
+
+  @override
+  String get ttdRetry => 'Try again';
+
+  @override
+  String get teknisiResetPassword => 'Reset password';
+
+  @override
+  String get teknisiEdit => 'Edit account';
+
+  @override
+  String teknisiEditJudul(String nama) {
+    return 'Edit $nama';
+  }
+
+  @override
+  String get teknisiEditNama => 'Full name';
+
+  @override
+  String get teknisiEditEmail => 'Email';
+
+  @override
+  String get teknisiEditEmployeeId => 'Employee ID';
+
+  @override
+  String get teknisiEditDepartment => 'Department (optional)';
+
+  @override
+  String get teknisiEditRole => 'Role';
+
+  @override
+  String get teknisiEditSimpan => 'Save';
+
+  @override
+  String get teknisiEditNamaKosong => 'Name can\'t be empty.';
+
+  @override
+  String get teknisiEditEmailKosong => 'Email can\'t be empty.';
+
+  @override
+  String get teknisiEditEmailSalah =>
+      'That doesn\'t look like an email address.';
+
+  @override
+  String get teknisiEditEmployeeIdKosong =>
+      'Employee ID can\'t be empty — it\'s what they log in with.';
+
+  @override
+  String get teknisiDiubah => 'Account updated.';
+
+  @override
+  String get teknisiPilihRole => 'Choose a role for this account';
+
+  @override
+  String get teknisiPilihRoleBatal => 'Cancel';
+
+  @override
+  String get teknisiDisetujui => 'Account approved.';
+
+  @override
+  String get teknisiDitolak => 'Account deactivated.';
+
+  @override
+  String get teknisiPasswordDireset =>
+      'Password reset. Tell the new password to the account owner directly.';
+
+  @override
+  String get teknisiResetPasswordJudul => 'Reset account password';
+
+  @override
+  String teknisiResetPasswordIsi(String nama) {
+    return 'Set a new password for $nama. Their sessions on every device will be revoked.';
+  }
+
+  @override
+  String get teknisiResetPasswordLabel => 'New password';
+
+  @override
+  String get teknisiResetPasswordHelper =>
+      'At least 8 characters. The backend sends no email — tell them directly.';
+
+  @override
+  String get teknisiResetPasswordTerlaluPendek =>
+      'Password must be at least 8 characters.';
+
+  @override
+  String get teknisiGagal => 'Action failed. Please try again.';
+
+  @override
+  String get teknisiKonfirmTolakJudul => 'Deactivate this account?';
+
+  @override
+  String get teknisiKonfirmTolakIsi =>
+      'They will be signed out of every device and can no longer sign in. Past calibration records stay intact.';
+
+  @override
+  String get teknisiTanpaEmployeeId => 'No employee ID';
+
+  @override
+  String get teknisiHanyaAdmin => 'Only admins can manage accounts.';
+
+  @override
+  String get menuUtama => 'Main menu';
+
+  @override
+  String get menuMasterData => 'Master Data';
+
+  @override
+  String get menuPengaturan => 'Settings';
+
+  @override
+  String get sheetTutup => 'Close';
+
+  @override
+  String get sheetCobaLagi => 'Try again';
+
+  @override
+  String get sheetKirimBerhasil => 'Sent!';
+
+  @override
+  String get sheetKirimBerhasilPesan =>
+      'The session is now in the admin approval queue.';
+
+  @override
+  String get sheetKirimGagal => 'There is a problem';
+
+  @override
+  String get sheetDraftBerhasil => 'Draft saved';
+
+  @override
+  String get sheetDraftBerhasilPesan =>
+      'You can pick it up again anytime from history.';
+
+  @override
+  String get phCalibTitikLengkap => 'This point is complete';
+
+  @override
+  String get dashCalibrationDone => 'Calibrations done';
+
+  @override
+  String get dashWorkChart => 'Workload trend';
+
+  @override
+  String get tugasTitle => 'My Tasks';
+
+  @override
+  String get tugasKosong => 'No equipment assigned to you yet.';
+
+  @override
+  String get tugasLoadGagal => 'Could not load your task queue.';
+
+  @override
+  String get tugasRetry => 'Try again';
+
+  @override
+  String tugasJumlahAlat(int jumlah) {
+    return '$jumlah items';
+  }
+
+  @override
+  String get tugasTelat => 'Past due date';
+
+  @override
+  String get tugasMasuk => 'Received';
+
+  @override
+  String get tugasJanji => 'Due';
+
+  @override
+  String get tugasBelumDitugaskan => 'Unassigned';
+
+  @override
+  String get dashSummaryOrg => 'Organization summary';
+
+  @override
+  String get dashSummaryYours => 'Your summary';
+
+  @override
+  String get snackAddDeviceSoon => 'Adding devices is planned for week 3.';
+
+  @override
+  String get dashStartPhCalibration => 'pH meter calibration';
+
+  @override
+  String get lkTitle => 'Calibration Worksheet';
+
+  @override
+  String get lkSubtitleDraft => 'Continue draft';
+
+  @override
+  String get lkSubtitleRevisi => 'Revise — returned by admin';
+
+  @override
+  String get lkLoadGagal => 'Couldn\'t load the worksheet form.';
+
+  @override
+  String get lkRetry => 'Retry';
+
+  @override
+  String get lkPilihAlat => 'Choose equipment';
+
+  @override
+  String get lkAlatKosong => 'No equipment available yet.';
+
+  @override
+  String get lkRuanganGagal => 'Couldn\'t load the room list.';
+
+  @override
+  String get lkContohNamaTempat => 'Example: PT. Niaga Contoh';
+
+  @override
+  String get lkBelumPilihAlat =>
+      'Choose the equipment first — the identity and owner fields fill in automatically.';
+
+  @override
+  String get lkOtomatis => 'Filled automatically';
+
+  @override
+  String get lkLegendaJudul => 'What the field colors mean';
+
+  @override
+  String get lkLegendaRingkasWajib => 'Required';
+
+  @override
+  String get lkLegendaRingkasTerisi => 'Filled';
+
+  @override
+  String get lkLegendaRingkasOpsional => 'Optional';
+
+  @override
+  String get lkLegendaRingkasOtomatis => 'Automatic';
+
+  @override
+  String get lkLegendaWajibKosongJudul =>
+      'Required, still empty (orange, * mark)';
+
+  @override
+  String get lkLegendaWajibKosongIsi =>
+      'Fill this in before sending. A figure-deciding column left empty on a row you used blocks the send. An empty equipment identity (serial number, brand, type, …) does not block the send, but it is printed on the certificate — complete it.';
+
+  @override
+  String get lkLegendaWajibTerisiJudul => 'Required, filled (soft green)';
+
+  @override
+  String get lkLegendaWajibTerisiIsi =>
+      'Already filled in. Nothing more to do here.';
+
+  @override
+  String get lkLegendaOpsionalJudul => 'Optional (no color)';
+
+  @override
+  String get lkLegendaOpsionalIsi =>
+      'Can stay empty. A draft can always be saved half-finished.';
+
+  @override
+  String get lkLegendaOtomatisJudul => 'Automatic (blue-grey)';
+
+  @override
+  String get lkLegendaOtomatisIsi =>
+      'Calculated by the server or read-only (e.g. Order Number). You cannot edit it here.';
+
+  @override
+  String get lkLegendaIdentitas =>
+      'Equipment identity printed on the certificate (serial number, brand, type, capacity, resolution, location, calibration date, customer) is colored by its content: green when filled, orange while empty. A lock icon = filled automatically from the equipment record; if empty, complete it in the equipment record.';
+
+  @override
+  String get lkLengkapiDiDataAlat => 'Complete it in the equipment record';
+
+  @override
+  String get lkLegendaTanda =>
+      'A * after a label also marks a required field or an equipment identity, so the meaning does not depend on color alone. Only fields the app checks before sending and equipment identities printed on the certificate are marked.';
+
+  @override
+  String get lkKosong => '—';
+
+  @override
+  String get lkPilihTanggal => 'Choose date';
+
+  @override
+  String get lkHapusTanggal => 'Clear date';
+
+  @override
+  String get lkKondisiLingkungan => 'Environment Condition';
+
+  @override
+  String get lkWaktu => 'Time';
+
+  @override
+  String get lkSuhu => 'Temperature';
+
+  @override
+  String get lkKelembaban => 'Humidity';
+
+  @override
+  String get lkTekanan => 'Pressure';
+
+  @override
+  String get lkAwal => 'First';
+
+  @override
+  String get lkAkhir => 'End';
+
+  @override
+  String get lkGalatFotoTerlaluBesar =>
+      'The photo is too large for this phone. Please take it again.';
+
+  @override
+  String get lkPindaiGagalFoto =>
+      'The photo could not be read. Try taking it again.';
+
+  @override
+  String get lkPindaiTanpaGeometri =>
+      'This sheet\'s cell coordinates are not on the server yet.';
+
+  @override
+  String get lkPindaiMarkerHilang =>
+      'The four corner markers were not found. Make sure the whole sheet is in frame and well lit.';
+
+  @override
+  String get lkPindaiTerlaluMiring =>
+      'The photo is too skewed. Shoot it more square-on above the sheet.';
+
+  @override
+  String get lkFotoTabel => 'Photograph this table';
+
+  @override
+  String get lkFotoTabelGagal => 'The photo couldn\'t be read. Take it again.';
+
+  @override
+  String get lkFotoTabelTanpaJangkar =>
+      'No reading could be placed with certainty. Make sure the standard-value column (left) and the repeat headers (numbers 1..5, or X1 / Repeat 1) are in frame — all of them, none cut off. You can still type the values manually.';
+
+  @override
+  String get lkTabelBelumDisimpan =>
+      'The numbers in this table are recorded on the sheet but are NOT sent to the server yet — there is no column for them. Keep the paper.';
+
+  @override
+  String get lkMatriksFotoTanpaJangkar =>
+      'No reading could be placed with certainty. Make sure the left-hand column of quantity names (Temp. Disk 1, Indikator Pressure, …) and the time-point headers along the top are in frame — all of them, none cut off. A row whose name could not be read is never filled.';
+
+  @override
+  String get lkGridFotoTanpaJangkar =>
+      'No reading could be placed with certainty. Make sure the No. column (the thermocouple numbers, on the left) and the repeat headers along the top are in frame — all of them, none cut off. Rows whose number you have not typed in yet are never filled from a photo.';
+
+  @override
+  String lkGridFotoNomorKembar(String nomor) {
+    return 'This set point can\'t be photographed: thermocouple number $nomor is used on more than one row, so there is no way to tell which row a reading belongs to. Fix the duplicated number first.';
+  }
+
+  @override
+  String lkFotoTabelKolomHilang(String kolom) {
+    return 'The $kolom column header couldn\'t be read, so nothing was filled in — forcing it risks numbers landing in the neighbouring column unnoticed. Retake the photo with the unit row of the table header in frame.';
+  }
+
+  @override
+  String lkFotoTabelBarisKembar(String baris) {
+    return 'This sheet\'s table can\'t be photographed: row marker $baris is used more than once, so there\'s no way to tell which row a reading belongs to. This is the sheet\'s shape, not your photo — retaking won\'t help. Fill it in by hand.';
+  }
+
+  @override
+  String get lkFotoTabelKosong =>
+      'The table was recognised, but its cells are still empty — no handwritten numbers were found inside. Fill in the sheet first, then photograph it.';
+
+  @override
+  String get lkFotoTabelTanpaJangkarKeBawah =>
+      'No reading could be placed with certainty. Make sure the Repeat column (left) and the solution headers along the top are in frame — without them the numbers cannot be placed safely. You can still type the values manually.';
+
+  @override
+  String lkFotoTabelTerisi(int terisi) {
+    return '$terisi cells filled from the photo. All are flagged for checking — compare them with the paper.';
+  }
+
+  @override
+  String lkFotoTabelSebagian(int terisi, int terbuang) {
+    return '$terisi cells filled; $terbuang numbers skipped because their position was uncertain. Type the empty ones manually.';
+  }
+
+  @override
+  String lkFotoTabelError(String pesan) {
+    return 'Table photo failed: $pesan';
+  }
+
+  @override
+  String lkPindaiTemplateGagal(String pesan) {
+    return 'Couldn\'t load the scan template: $pesan';
+  }
+
+  @override
+  String get lkPindaiTemplateMemuat => 'Preparing scan…';
+
+  @override
+  String get lkPindaiQrHilang =>
+      'The sheet\'s version QR code could not be read. Old forms without a QR cannot be scanned — reprint the sheet, or type the values manually.';
+
+  @override
+  String get lkPindaiQrLembarLain =>
+      'The QR belongs to a different sheet or version. Retaking the photo won\'t help — make sure you have the right sheet.';
+
+  @override
+  String get lkPindaiBuram =>
+      'The photo is blurry. Hold the phone steadier and take it again.';
+
+  @override
+  String get lkPindaiGelap =>
+      'Too dark. Find brighter light, then take the photo again.';
+
+  @override
+  String get lkPindaiSilau =>
+      'So bright the numbers washed out. Reduce direct light, then take the photo again.';
+
+  @override
+  String get lkPindaiPantulan =>
+      'There is glare on the sheet. Shift its position slightly, then take the photo again.';
+
+  @override
+  String get lkPindaiKejauhan =>
+      'The photo is too far away — the numbers are too small to read. Move the phone closer and take it again.';
+
+  @override
+  String lkPindaiTerpakai(int terisi) {
+    return '$terisi cells filled from the scan. Cells that already had values were left untouched.';
+  }
+
+  @override
+  String lkPindaiBugAplikasi(String pesan) {
+    return 'Scan rejected by the server: $pesan This is an app defect, not your photo — report it to the team and type the values manually for now.';
+  }
+
+  @override
+  String get lkRepeat => 'Repeat';
+
+  @override
+  String get lkUsageCheckKosong => 'No reference standards in master data yet.';
+
+  @override
+  String get lkUsageCheckKeterangan => 'Notes';
+
+  @override
+  String get lkStandarPerTitik => 'Point standard';
+
+  @override
+  String get lkStandarKadaluarsa => 'certificate expired';
+
+  @override
+  String lkStandarTitikDipakai(String label, String standar) {
+    return 'Point $label — $standar';
+  }
+
+  @override
+  String get lkStandarTitikGanti => 'Change';
+
+  @override
+  String lkStandarSemuaTitikDipakai(String standar) {
+    return 'All points — $standar';
+  }
+
+  @override
+  String get lkStandarTitikTercetak => 'As printed on the worksheet';
+
+  @override
+  String antreanSemuaPt(int jumlah) {
+    return 'All companies ($jumlah)';
+  }
+
+  @override
+  String get kirimLewatJudul => 'Send via';
+
+  @override
+  String get kirimLewatEmail => 'Email';
+
+  @override
+  String get kirimLewatWa => 'WhatsApp';
+
+  @override
+  String get waKeLabel => 'WhatsApp number';
+
+  @override
+  String get waKeHint => '08123456789';
+
+  @override
+  String get waKeKosong => 'Enter at least one WhatsApp number.';
+
+  @override
+  String get waNomorSalah => 'One of the numbers isn\'t in a readable format.';
+
+  @override
+  String get waKirim => 'Open WhatsApp';
+
+  @override
+  String get waTercatat => 'Send recorded in the history.';
+
+  @override
+  String get waTakBisaDibuka => 'WhatsApp can\'t be opened on this device.';
+
+  @override
+  String get waKetPdf =>
+      'WhatsApp can\'t carry attachments, so a direct PDF download link is sent instead.';
+
+  @override
+  String get waKetExcel => 'A direct download link for the Excel file is sent.';
+
+  @override
+  String get waKetTautan =>
+      'The verification page link is sent — the customer views the certificate there and downloads it themselves.';
+
+  @override
+  String get tolakJudul => 'Send back to technician';
+
+  @override
+  String get tolakPetunjuk =>
+      'Pick what needs fixing. The fields you flag get highlighted on the technician\'s worksheet, so they don\'t have to hunt for them.';
+
+  @override
+  String get tolakDariPemeriksaan => 'From the validation check';
+
+  @override
+  String get tolakAlasanUmum => 'Other reasons';
+
+  @override
+  String get tolakAlasanSerial => 'Serial number doesn\'t match';
+
+  @override
+  String get tolakAlasanIdentitas => 'Equipment identity incomplete';
+
+  @override
+  String get tolakAlasanPemilik => 'Owner details wrong';
+
+  @override
+  String get tolakAlasanEnv => 'Env. Condition incomplete';
+
+  @override
+  String get tolakAlasanThermohygro => 'Thermohygro not selected';
+
+  @override
+  String get tolakAlasanPembacaan => 'Readings look wrong, redo them';
+
+  @override
+  String get tolakAlasanUsageCheck => 'Usage Check not ticked';
+
+  @override
+  String get tolakCatatanTambahan => 'Extra note (optional)';
+
+  @override
+  String get tolakCatatanHint => 'Say why, so it doesn\'t happen again.';
+
+  @override
+  String get tolakPratinjau => 'What the technician will see';
+
+  @override
+  String get tolakKirim => 'Send back to technician';
+
+  @override
+  String get lkPerluDibetulin => 'Admin asked you to fix this';
+
+  @override
+  String get lkBannerRevisiTanpaKolom =>
+      'Admin sent this worksheet back. Read the note below.';
+
+  @override
+  String get lkCatatanAdmin => 'ADMIN\'S NOTE';
+
+  @override
+  String lkRevisiJumlahKolom(int jumlah) {
+    return '$jumlah field(s) flagged for correction.';
+  }
+
+  @override
+  String get lkBannerRevisi =>
+      'Admin sent this worksheet back. The flagged fields below are the ones to fix.';
+
+  @override
+  String get lkStandarBelumTerdaftar =>
+      'not registered in the standards master';
+
+  @override
+  String antreanMasukBaru(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah new worksheets in the approval queue',
+      one: '1 new worksheet in the approval queue',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get lkThermohygroKosong => 'No thermohygro units registered yet.';
+
+  @override
+  String lkHalamanKe(int nomor, int dari) {
+    return 'Page $nomor of $dari';
+  }
+
+  @override
+  String get lkHalamanLanjut => 'Next page';
+
+  @override
+  String get lkHalamanKembali => 'Back';
+
+  @override
+  String get lkPilih => 'Choose';
+
+  @override
+  String get lkKirim => 'Submit to admin';
+
+  @override
+  String get lkSimpanDraft => 'Save as draft';
+
+  @override
+  String get lkBerhasilKirim => 'Worksheet submitted to admin.';
+
+  @override
+  String get lkBerhasilDraft => 'Saved as draft.';
+
+  @override
+  String lkGagalKirim(String pesan) {
+    return 'Couldn\'t save: $pesan';
+  }
+
+  @override
+  String get sesiBerakhirMasukLagi =>
+      'Your session has ended, please sign in again.';
+
+  @override
+  String get lkSemuaOpsional =>
+      'Any field you can\'t fill in the field may be left blank — the worksheet can still be submitted.';
+
+  @override
+  String get lkBagianBelumBisaDiisi => 'NOT FILLABLE YET';
+
+  @override
+  String get pindaiReviewJudul => 'Check Scan Result';
+
+  @override
+  String pindaiRingkasan(int total, int kuning, int merah, int kosong) {
+    return '$total cells read · $kuning need checking · $merah unreadable · $kosong empty';
+  }
+
+  @override
+  String get pindaiCatatanKuning =>
+      'Handwriting is never marked safe automatically — so it\'s normal for almost every cell to need checking. Compare each number with the cropped photo beside it.';
+
+  @override
+  String get pindaiPakaiAngka => 'Use these numbers';
+
+  @override
+  String get pindaiDitahanServer =>
+      'Some cells could not be read. Fix them, or type the sheet manually.';
+
+  @override
+  String pindaiRepeat(int nomor) {
+    return 'Repeat $nomor';
+  }
+
+  @override
+  String pindaiTerbaca(String teks) {
+    return 'Read as: $teks';
+  }
+
+  @override
+  String pindaiNormalisasi(String catatan) {
+    return 'Server adjusted: $catatan';
+  }
+
+  @override
+  String pindaiKoreksiGagal(String pesan) {
+    return 'The numbers were kept, but the correction log failed to send: $pesan';
+  }
+
+  @override
+  String get pindaiAlasanMeluber =>
+      'the writing spills out of its box and may have been read from the next column';
+
+  @override
+  String get pindaiAlasanLuarRentang =>
+      'the number is outside the sensible range for this point';
+
+  @override
+  String get pindaiAlasanMagnitudo =>
+      'the number is far from this point’s standard value';
+
+  @override
+  String get pindaiAlasanKoreksiKarakter => 'a letter was guessed as a digit';
+
+  @override
+  String get pindaiAlasanDesimalBanyak =>
+      'more decimals than the instrument resolution';
+
+  @override
+  String get pindaiAlasanBukanKelipatan =>
+      'an instrument with this resolution cannot produce that number';
+
+  @override
+  String get pindaiAlasanJauhDariRepeat =>
+      'far off from the other repeats in this row';
+
+  @override
+  String get pindaiAlasanSebarTakDiuji =>
+      'too few repeats were read to compare';
+
+  @override
+  String get pindaiAlasanBanyakSubstitusi =>
+      'too many characters had to be guessed';
+
+  @override
+  String get pindaiAlasanKarakterAsing =>
+      'contains a character that is not a digit';
+
+  @override
+  String get pindaiAlasanBentukTakWajar =>
+      'the number shape does not make sense';
+
+  @override
+  String get pindaiAlasanDigitBanyak => 'too many digits for this column';
+
+  @override
+  String get pindaiAlasanPemisahTakWajar =>
+      'the decimal separator sits in an odd place';
+
+  @override
+  String get pindaiAlasanDesimalAmbigu =>
+      'unclear whether that dot is a decimal point or a thousands separator';
+
+  @override
+  String get pindaiAlasanMinusTengah =>
+      'a minus sign in the middle of the number';
+
+  @override
+  String get pindaiAlasanMinusTakBoleh => 'this column cannot be negative';
+
+  @override
+  String lkRepeatMenyimpang(String titik) {
+    return 'At point $titik one reading is far off from the other repeats — check it, two digits may have been swapped while typing. A single number like this can throw the certificate uncertainty off by hundreds of times.';
+  }
+
+  @override
+  String lkPenentuAngkaKosong(String field) {
+    return '$field has not been chosen yet. Without it the server cannot compute a single point — every row comes back uncalculated. Send anyway?';
+  }
+
+  @override
+  String get lkPindaiBelumDiukur =>
+      'This sheet has no cell-measurement file yet, so scanning is not available. Fill it in manually as usual.';
+
+  @override
+  String get lkPindaiBelumDiverifikasi =>
+      'The printed sheet has never been checked against a real photo, so scanning is held back. Fill it in manually as usual.';
+
+  @override
+  String lkPindaiKurangKotak(int jumlah) {
+    return '$jumlah cells have no coordinates yet, so scanning is held back to stop readings landing in the wrong box.';
+  }
+
+  @override
+  String get lkPindaiLembar => 'Scan worksheet';
+
+  @override
+  String lkPindaiBelumSiap(String alasan) {
+    return 'Not scannable yet: $alasan';
+  }
+
+  @override
+  String get lkPratinjauJudul => 'PRELIMINARY RESULTS';
+
+  @override
+  String get lkPratinjauCatatan =>
+      'Computed by the server from what\'s filled in right now, not on the phone. These numbers can change as other rows are filled.';
+
+  @override
+  String get lkPratinjauGagalBasi =>
+      'Last preview failed — the numbers below do not include your latest changes.';
+
+  @override
+  String get lkPratinjauKolomTitik => 'Point';
+
+  @override
+  String get lkPratinjauKolomRata => 'Mean';
+
+  @override
+  String get lkPratinjauKolomKoreksi => 'Correction';
+
+  @override
+  String get lkPratinjauKolomU95 => 'U95';
+
+  @override
+  String get lkPratinjauBelumDihitung => 'NOT COMPUTED YET';
+
+  @override
+  String lkPratinjauTitikKe(int nomor) {
+    return 'Point $nomor';
+  }
+
+  @override
+  String get lkKeluarTanpaSimpan => 'Leave without saving?';
+
+  @override
+  String get lkKeluarTanpaSimpanBody => 'What you\'ve typed will be lost.';
+
+  @override
+  String get lkKeluarBatal => 'Keep editing';
+
+  @override
+  String get lkKeluarLanjut => 'Leave';
+
+  @override
+  String lkSuhuDiLuarRentang(String min, String max) {
+    return 'Outside this room\'s range ($min–$max).';
+  }
+
+  @override
+  String get navFolderManager => 'Folders';
+
+  @override
+  String get folderTitle => 'Folder Manager';
+
+  @override
+  String get folderEmptyTitle => 'No folders yet';
+
+  @override
+  String get folderEmptyBody =>
+      'Folders are created automatically per client as certificates are issued.';
+
+  @override
+  String get folderLoadFailed => 'Couldn\'t load folders.';
+
+  @override
+  String get folderRetry => 'Retry';
+
+  @override
+  String get folderIsiKosong => 'This folder is empty.';
+
+  @override
+  String folderJumlahFolder(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: 's',
+      one: '',
+    );
+    return '$jumlah folder$_temp0';
+  }
+
+  @override
+  String folderJumlahFile(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: 's',
+      one: '',
+    );
+    return '$jumlah file$_temp0';
+  }
+
+  @override
+  String get folderOtomatis => 'Created automatically';
+
+  @override
+  String get folderUnduh => 'Download';
+
+  @override
+  String get folderSertifikatBelumSiap =>
+      'The certificate PDF is still being generated.';
+
+  @override
+  String get folderBukaBerkas => 'Open file';
+
+  @override
+  String get folderBagikanBerkas => 'Share certificate';
+
+  @override
+  String folderUnduhGagal(String pesan) {
+    return 'Couldn\'t download: $pesan';
+  }
+
+  @override
+  String get notifTandaiSemua => 'Mark all as read';
+
+  @override
+  String get notifSemuaDibaca => 'All notifications marked as read.';
+
+  @override
+  String get notifKategoriJatuhTempo => 'Due date';
+
+  @override
+  String get notifKategoriMenungguApproval => 'Waiting for approval';
+
+  @override
+  String get notifKategoriDisetujui => 'Approved';
+
+  @override
+  String get notifKategoriPerluRevisi => 'Needs revision';
+
+  @override
+  String get notifKategoriSertifikat => 'Certificate issued';
+
+  @override
+  String get notifKategoriUmum => 'Info';
+
+  @override
+  String get phCalibCaraScan => 'Live scan';
+
+  @override
+  String get phCalibCaraScanKeterangan =>
+      'Point the camera — numbers float over the preview';
+
+  @override
+  String get folderBuat => 'New folder';
+
+  @override
+  String get folderBuatJudul => 'New folder';
+
+  @override
+  String get folderNamaLabel => 'Folder name';
+
+  @override
+  String get folderGantiNama => 'Rename';
+
+  @override
+  String get folderGantiNamaJudul => 'Rename folder';
+
+  @override
+  String get folderHapus => 'Delete';
+
+  @override
+  String get folderHapusJudul => 'Delete this folder?';
+
+  @override
+  String folderHapusBody(String nama) {
+    return '\"$nama\" will be removed. This can\'t be undone.';
+  }
+
+  @override
+  String get folderBatal => 'Cancel';
+
+  @override
+  String get folderSimpan => 'Save';
+
+  @override
+  String get folderHapusLanjut => 'Delete';
+
+  @override
+  String get folderSistemDikunci =>
+      'Created automatically — the name follows the client/year and can\'t be changed.';
+
+  @override
+  String get folderNamaKosong => 'Enter a folder name.';
+
+  @override
+  String get antreanTitle => 'Approval queue';
+
+  @override
+  String get antreanKosong => 'Nothing waiting for approval';
+
+  @override
+  String get antreanKosongBody =>
+      'Worksheets submitted by technicians show up here.';
+
+  @override
+  String get antreanGagal => 'Couldn\'t load the queue.';
+
+  @override
+  String antreanOleh(String nama) {
+    return 'by $nama';
+  }
+
+  @override
+  String get waktuHariIni => 'Today';
+
+  @override
+  String get waktuKemarin => 'Yesterday';
+
+  @override
+  String get tanggalKosong => '—';
+
+  @override
+  String get waktuBaruSaja => 'Just now';
+
+  @override
+  String waktuMenitLalu(int menit) {
+    return '$menit min ago';
+  }
+
+  @override
+  String waktuJamLalu(int jam) {
+    return '$jam hours ago';
+  }
+
+  @override
+  String waktuHariLalu(int hari) {
+    return '$hari days ago';
+  }
+
+  @override
+  String get drafTitle => 'Drafts';
+
+  @override
+  String get drafSubjudul => 'Worksheets saved but not submitted yet';
+
+  @override
+  String get drafCariHint => 'Search equipment or customer';
+
+  @override
+  String drafGrupJumlah(int jumlah) {
+    return '$jumlah drafts';
+  }
+
+  @override
+  String drafDisimpan(String waktu) {
+    return 'Saved $waktu';
+  }
+
+  @override
+  String get drafKosongJudul => 'No drafts saved';
+
+  @override
+  String get drafKosongBody =>
+      'Worksheets you save with SAVE DRAFT wait for you here.';
+
+  @override
+  String get drafCariKosong => 'No draft matches that.';
+
+  @override
+  String get drafGagal => 'Couldn\'t load the drafts.';
+
+  @override
+  String get perhitTitle => 'Calculation sheet';
+
+  @override
+  String get perhitIdentitasAlat => 'EQUIPMENT IDENTITY';
+
+  @override
+  String get perhitIdentitasCustomer => 'CUSTOMER IDENTITY';
+
+  @override
+  String get perhitKondisi => 'ENVIRONMENTAL CONDITION CALCULATION';
+
+  @override
+  String get perhitHasil => 'CALIBRATION RESULT DATA';
+
+  @override
+  String get perhitNamaAlat => 'Equipment name';
+
+  @override
+  String get perhitMerk => 'Brand';
+
+  @override
+  String get perhitType => 'Type';
+
+  @override
+  String get perhitNoSeri => 'Serial no.';
+
+  @override
+  String get perhitRentang => 'Measuring range';
+
+  @override
+  String get perhitKapasitas => 'Max. capacity';
+
+  @override
+  String get perhitResolusi => 'Resolution';
+
+  @override
+  String get perhitCustNama => 'Customer name';
+
+  @override
+  String get perhitCustAlamat => 'Address';
+
+  @override
+  String get perhitTglTerima => 'Received date';
+
+  @override
+  String get perhitTglKalibrasi => 'Calibration date';
+
+  @override
+  String get perhitSuhuRuangan => 'Room temperature';
+
+  @override
+  String get perhitKelembaban => 'Humidity';
+
+  @override
+  String get perhitAwal => 'Start';
+
+  @override
+  String get perhitAkhir => 'End';
+
+  @override
+  String get perhitAverage => 'Average';
+
+  @override
+  String get perhitObserved => 'observed (before temp. correction)';
+
+  @override
+  String get perhitIndexed => 'Indexed Value';
+
+  @override
+  String get perhitCorrection => 'Correction';
+
+  @override
+  String get perhitDelta => 'Δ';
+
+  @override
+  String get perhitU95Std => 'U95% Std TH';
+
+  @override
+  String get perhitU95Sertifikat => 'U95% Certificate';
+
+  @override
+  String get perhitThermohygro => 'Thermohygro Used';
+
+  @override
+  String get perhitThermohygroKosong =>
+      'Not selected yet — correction & U95% stay empty until it is.';
+
+  @override
+  String get perhitStandard => 'Standard';
+
+  @override
+  String get perhitRepeat => 'Repeat';
+
+  @override
+  String get perhitStdev => 'STDEV';
+
+  @override
+  String get perhitMaxStdev => 'MAX STDEV';
+
+  @override
+  String get perhitCorrectionCatatan =>
+      'On this sheet Correction = Average − Standard. On the certificate the sign is reversed.';
+
+  @override
+  String get perhitStandardCatatan =>
+      'Standard is the buffer value at the solution temperature, not the nominal value.';
+
+  @override
+  String get perhitGagal => 'Couldn\'t load the calculation sheet.';
+
+  @override
+  String get perhitPeriksa => 'Check';
+
+  @override
+  String get perhitSetujui => 'Approve';
+
+  @override
+  String get perhitTolak => 'Reject';
+
+  @override
+  String get perhitMemeriksa => 'Recalculating from the raw readings…';
+
+  @override
+  String get perhitTemuanJudul => 'Check findings';
+
+  @override
+  String get perhitTemuanBersih => 'No findings. Safe to approve.';
+
+  @override
+  String get perhitTingkatError => 'Blocks issuance';
+
+  @override
+  String get perhitTingkatPeringatan => 'Needs confirmation';
+
+  @override
+  String get perhitTingkatInfo => 'Info';
+
+  @override
+  String get perhitApproveDiblokir =>
+      'There are findings that block issuance. Approve is disabled.';
+
+  @override
+  String get perhitKonfirmasiJudul => 'Warnings found. Continue?';
+
+  @override
+  String get perhitKonfirmasiBody =>
+      'Approving anyway issues the certificate with the saved numbers.';
+
+  @override
+  String get perhitKonfirmasiBatal => 'Check again';
+
+  @override
+  String get perhitKonfirmasiLanjut => 'Approve anyway';
+
+  @override
+  String get perhitTolakJudul => 'Send back for revision';
+
+  @override
+  String get perhitTolakLabel => 'What needs fixing?';
+
+  @override
+  String get perhitTolakKosong => 'Write what the technician has to fix.';
+
+  @override
+  String get perhitTolakKirim => 'Send back';
+
+  @override
+  String get perhitDisetujui => 'Approved. The certificate is being generated.';
+
+  @override
+  String get perhitDitolak => 'Sent back to the technician.';
+
+  @override
+  String get perhitKolomAdmin => 'ADMINISTRATIVE FIELDS';
+
+  @override
+  String get perhitNomorOrder => 'Order Number';
+
+  @override
+  String get perhitPilihThermohygro => 'Thermohygro used';
+
+  @override
+  String get perhitSimpanAdmin => 'Save';
+
+  @override
+  String get perhitAdminTersimpan => 'Administrative fields saved.';
+
+  @override
+  String get sertPratinjau => 'Certificate preview';
+
+  @override
+  String get sertHasilJudul => 'Calibration Report';
+
+  @override
+  String get sertKolStandard => 'Standard Value';
+
+  @override
+  String get sertKolUut => 'Unit Under Test';
+
+  @override
+  String get sertKolCorrection => 'Correction';
+
+  @override
+  String get sertKolU95 => 'U95%, k=2';
+
+  @override
+  String get sertU95Baris => 'Uncertainty U95% = ±';
+
+  @override
+  String sertFaktorCakupan(String k) {
+    return 'Coverage factor (k) = $k, confidence level 95 %';
+  }
+
+  @override
+  String get sertKolRemark => 'Remark';
+
+  @override
+  String get sertStandarJudul => 'Standard Used';
+
+  @override
+  String get sertKolName => 'Name';
+
+  @override
+  String get sertKolMerk => 'Merk/Type';
+
+  @override
+  String get sertKolSerial => 'Serial Number';
+
+  @override
+  String get sertKolTraceable => 'Traceable to SI through';
+
+  @override
+  String get sertFooterTerbit => 'Issuance Date';
+
+  @override
+  String get sertFooterTtd => 'Signed by';
+
+  @override
+  String get sertFooterJabatan => 'Position';
+
+  @override
+  String get sertFooterKode => 'Document code';
+
+  @override
+  String get sertUnduhPdf => 'PDF';
+
+  @override
+  String get sertUnduhExcel => 'EXCEL';
+
+  @override
+  String get sertLihatQr => 'QR CODE';
+
+  @override
+  String get sertBelumTerbit => 'The certificate file isn\'t ready yet.';
+
+  @override
+  String get sertGagalMuat => 'Couldn\'t load the certificate.';
+
+  @override
+  String sertUnduhGagal(String pesan) {
+    return 'Couldn\'t download: $pesan';
+  }
+
+  @override
+  String get sertQrJudul => 'Certificate QR';
+
+  @override
+  String get sertQrBody =>
+      'Scan to open the verification page for this certificate.';
+
+  @override
+  String get sertCorrectionCatatan =>
+      'On the certificate Correction = Standard − Average — the reverse of the calculation sheet.';
+
+  @override
+  String get importTitle => 'Import Excel';
+
+  @override
+  String get importPilihTipe => 'What are you importing?';
+
+  @override
+  String get importTipeCustomers => 'Clients / companies';
+
+  @override
+  String get importTipeStandards => 'Reference standards';
+
+  @override
+  String get importTipeEquipments => 'Equipment';
+
+  @override
+  String get importUrutanCatatan =>
+      'Import order: clients → standards → equipment. Equipment needs its company to exist first.';
+
+  @override
+  String get importPilihFile => 'Choose file';
+
+  @override
+  String importFileTerpilih(String nama) {
+    return 'File: $nama';
+  }
+
+  @override
+  String get importUjiCoba => 'Dry run';
+
+  @override
+  String get importTerapkan => 'Apply now';
+
+  @override
+  String get importUlangi => 'Choose another file';
+
+  @override
+  String get importBelumAdaFile => 'Choose an .xlsx file first.';
+
+  @override
+  String get importSedangJalan => 'Reading the file…';
+
+  @override
+  String get importRingkasan => 'Summary';
+
+  @override
+  String get importDibaca => 'read';
+
+  @override
+  String get importDibuat => 'created';
+
+  @override
+  String get importDiperbarui => 'updated';
+
+  @override
+  String get importDilewati => 'skipped';
+
+  @override
+  String get importUjiCobaCatatan =>
+      'Dry run — nothing has been saved yet. Check the rows below, then apply.';
+
+  @override
+  String get importSelesai => 'Import applied.';
+
+  @override
+  String get importTanpaPerubahan => 'Nothing would change — no need to apply.';
+
+  @override
+  String get importKolomDikenal => 'Recognised columns';
+
+  @override
+  String get importKolomDiabaikan => 'Ignored columns';
+
+  @override
+  String importBarisKe(int nomor) {
+    return 'Row $nomor';
+  }
+
+  @override
+  String importGagal(String pesan) {
+    return 'Import failed: $pesan';
+  }
+
+  @override
+  String get lkKirimAdmin => 'Submit';
+
+  @override
+  String get lkScanMemproses => 'AI is reading the table…';
+
+  @override
+  String lkPengulanganRingkas(int n) {
+    return '${n}x';
+  }
+
+  @override
+  String get lkPengulanganTooltip => 'Number of repeat columns';
+
+  @override
+  String lkPengulanganPilihan(int n) {
+    return '$n repetitions';
+  }
+
+  @override
+  String get lkUbahPengulanganJudul => 'Change repetitions?';
+
+  @override
+  String lkUbahPengulanganPesan(int n) {
+    return 'The results table will have $n columns. Numbers already typed are KEPT. If you reduce the count, hidden repetition columns are not sent (they come back if you increase it again).';
+  }
+
+  @override
+  String get lkUbahPengulanganLanjut => 'Change';
+
+  @override
+  String get lkPengulanganBatal => 'Cancel';
+
+  @override
+  String lkSuhuWajib(String titik) {
+    return 'Reading filled without solution temperature at point $titik. Temperature is required — the reference value shifts with it.';
+  }
+
+  @override
+  String lkJamTidakTerbaca(String kolom) {
+    return 'Time column $kolom is not in a readable format. Just type the digits — the colons appear on their own (e.g. 0830 becomes 08:30). Leave it empty if that time point was not taken.';
+  }
+
+  @override
+  String lkStandarBelumDicentang(String titik) {
+    return 'Point $titik has readings but its reference standard is not ticked — those numbers cannot be calculated. Tick the standard, or clear the row if this instrument does not use that point.';
+  }
+
+  @override
+  String lkSetPointKosong(String titik) {
+    return 'Point $titik has readings but its Setpoint box is empty or not a valid number — the WHOLE row, including the readings already entered, will not be submitted. Fill in the setpoint, or clear the row if that point is not used.';
+  }
+
+  @override
+  String lkPembacaanTakTerpulih(int jumlah) {
+    return '$jumlah saved readings had no matching row on this sheet and were not restored. Check the table before submitting.';
+  }
+
+  @override
+  String get lkSesiLamaGagalDimuat =>
+      'This sheet\'s saved entries couldn\'t be loaded. What you see does NOT include the earlier readings and notes yet.';
+
+  @override
+  String get lkMuatUlangSesiLama => 'Reload';
+
+  @override
+  String get lkTimpaSesiLamaJudul => 'Saved entries not loaded';
+
+  @override
+  String get lkTimpaSesiLamaIsi =>
+      'Saving now replaces what is already stored on the server with what is on this screen — earlier readings and notes that didn\'t load will be lost. Reload first.';
+
+  @override
+  String get lkSimpanTetap => 'Save anyway';
+
+  @override
+  String lkPembacaanJauhDariTitik(String titik) {
+    return 'Readings at point $titik are more than 10× off the point value — check the unit, or the decimal place. If the reading really is that value, switch to the row with the correct unit first.';
+  }
+
+  @override
+  String get detailTanpaVonis => 'NO PASS/FAIL';
+
+  @override
+  String get statusTanpaKeputusan => 'No pass/fail';
+
+  @override
+  String get detailEditAdmin => 'Edit sheet';
+
+  @override
+  String get detailPerbaikiRevisi => 'Fix worksheet';
+
+  @override
+  String get detailLanjutkanDraft => 'Continue draft';
+
+  @override
+  String get lkTitikAlternatifSatuan => 'Locked: alternate unit';
+
+  @override
+  String get lkTitikAlternatifSatuanBantuan =>
+      'This row is an alternate unit of the same standard, so only one of the two gets filled. Want to use this unit instead? Clear every entry in the other row first — this one unlocks on its own.';
+
+  @override
+  String get lkResolusiKosong => 'Resolution: ( )';
+
+  @override
+  String lkResolusiNilai(String nilai, String satuan) {
+    return 'Resolution: $nilai $satuan';
+  }
+
+  @override
+  String get lkSlotTanpaLarutan => 'no standard registered';
+
+  @override
+  String lkIsianTitikKebuang(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other:
+          '$jumlah point(s) are not on this instrument’s sheet — their entries were discarded',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get lkKonfirmasiJudul => 'Check the numbers before sending';
+
+  @override
+  String get lkKonfirmasiCatatan =>
+      'Averages of the After adjustment readings. Correction and uncertainty are computed by the server once this is sent.';
+
+  @override
+  String get lkKonfirmasiDariFoto =>
+      'Some numbers in this table came from a photo and you checked each one. By sending, you confirm they match the instrument.';
+
+  @override
+  String lkKonfirmasiGagalTandai(String pesan) {
+    return 'Sent, but marking them as checked failed: $pesan. Open the session in History and tap \"I\'ve checked these readings\".';
+  }
+
+  @override
+  String lkKonfirmasiBaris(int terisi, int total, String rata) {
+    return '$terisi of $total boxes · average $rata';
+  }
+
+  @override
+  String get lkKonfirmasiBarisKosong => 'Not filled in';
+
+  @override
+  String get lkKonfirmasiPeriksaLagi => 'Check again';
+
+  @override
+  String get lkKonfirmasiKirim => 'Send now';
+
+  @override
+  String get lkPeringatanAngkaJudul => 'These readings look implausible';
+
+  @override
+  String get lkPeringatanAngkaLanjut => 'The reading really is that — send';
+
+  @override
+  String get lkGantiSatuanJudul => 'Switching units clears the table';
+
+  @override
+  String lkGantiSatuanPesan(String dari, String ke) {
+    return '$dari uses different standard solutions than $ke, so the table rows change and any readings you entered are discarded. A $dari value is not a $ke value.';
+  }
+
+  @override
+  String get lkGantiSatuanBatal => 'Cancel';
+
+  @override
+  String get lkGantiSatuanLanjut => 'Switch & clear';
+
+  @override
+  String get emailRiwayatBelumKeluar => 'Not sent yet';
+
+  @override
+  String emailKontakKosong(String pt) {
+    return '$pt has no email in the customer record. Add it in the admin panel → Customers so it can be picked here.';
+  }
+
+  @override
+  String emailKontakKosongWa(String pt) {
+    return '$pt has no WhatsApp number in the customer record. Add it in the admin panel → Customers so it can be picked here.';
+  }
+
+  @override
+  String get dashLiveWorkspace => 'Live workspace';
+
+  @override
+  String dashGreetingName(String name) {
+    return 'Hi, $name';
+  }
+
+  @override
+  String dashActiveTasks(int count) {
+    return '$count active tasks';
+  }
+
+  @override
+  String get dashSpin3d => 'Swipe the object to rotate it';
+
+  @override
+  String get onbSkip => 'Skip';
+
+  @override
+  String get onbNext => 'Next';
+
+  @override
+  String get onbEnter => 'Enter workspace';
+
+  @override
+  String get onbStep1Title => 'Every instrument, one place.';
+
+  @override
+  String get onbStep1Body =>
+      'Pick an instrument, start the calibration, and watch its status without waiting for somebody else\'s report.';
+
+  @override
+  String get onbStep2Title => 'Photograph the worksheet.';
+
+  @override
+  String get onbStep2Body =>
+      'Readings on paper are picked up straight from your camera. No retyping — and the photo never leaves your phone.';
+
+  @override
+  String get onbStep3Title => 'Certificates land sooner.';
+
+  @override
+  String get onbStep3Body =>
+      'Send to the admin once the data is complete. Approval and issuing happen in this same app.';
+
+  @override
+  String get profSwipeHint => 'Swipe for the next section';
+
+  @override
+  String get profSectionWorkspace => 'WORKSPACE';
+
+  @override
+  String get profSectionSystem => 'SYSTEM';
+
+  @override
+  String get profSectionAccount => 'ACCOUNT';
+
+  @override
+  String get profPreferensiSub => 'Tune how this device works for you.';
+
+  @override
+  String get profAdminMenuSub => 'Manage the lab\'s core records.';
+
+  @override
+  String get profLabSettings => 'Lab setup';
+
+  @override
+  String get profLabSettingsSub => 'Methods, rooms, and working formulas.';
+
+  @override
+  String get profSecuritySub => 'Device status and account access.';
+
+  @override
+  String profSectionOf(int current, int total) {
+    return 'Section $current of $total';
+  }
+
+  @override
+  String get profChangePhoto => 'Change profile photo';
+
+  @override
+  String get profChangePhotoSub => 'Taken from your gallery or camera';
+
+  @override
+  String get profTechnicianCode => 'Technician code';
+
+  @override
+  String get profTechnicianCodeSub => 'Printed on the certificates you sign';
+
+  @override
+  String get acHitung => 'Calculate';
+
+  @override
+  String get acSimpanKirim => 'Save & Send';
+
+  @override
+  String get acHasilOlahData => 'Processed Result';
+
+  @override
+  String get acCatatan => 'Notes:';
+
+  @override
+  String get acSetPointWajib => 'Set Point is required.';
+
+  @override
+  String get acPilihAlatDulu => 'Select the Equipment before saving.';
+
+  @override
+  String get acIsiMinimalSatuBlok =>
+      'Fill in at least one block: Temperature (disk/indicator) or Pressure.';
+
+  @override
+  String get acSesiLoginHabis => 'Your session expired, please sign in again.';
+
+  @override
+  String get acTerkirimKeAdmin => 'Autoclave session sent to the admin.';
+
+  @override
+  String acGagalMenyimpan(String pesan) {
+    return 'Failed to save: $pesan';
+  }
+
+  @override
+  String acGagalMenghitung(String pesan) {
+    return 'Failed to calculate: $pesan';
+  }
+
+  @override
+  String acGagalMuatAlat(String pesan) {
+    return 'Failed to load the equipment list: $pesan';
+  }
+
+  @override
+  String get acDiLuarKertas =>
+      'Not on the printed form — Pressure Disk Logger download';
+
+  @override
+  String get acPetunjukDiskLogger =>
+      'These numbers are downloaded from the disk logger, not written in the field. Leaving them empty is fine: the sheet still submits, and the pressure calculation waits until they are complete.';
+
+  @override
+  String get acNamaOtomatis => 'Name: (from the signed-in technician account)';
+
+  @override
+  String get acPetunjukPilihAlat => 'select equipment';
+
+  @override
+  String get lkAlatBaru => 'New equipment';
+
+  @override
+  String get lkAlatKosongAjakan =>
+      'No equipment for this worksheet yet. Register it first — the type and category are already filled in.';
+
+  @override
+  String lkAlatBaruTersimpan(String nama) {
+    return 'Equipment \"$nama\" saved and selected for this worksheet.';
+  }
+
+  @override
+  String get dinamisPerluDiperiksa => 'Needs checking';
+
+  @override
+  String dinamisPerluDiperiksaKeyakinan(int persen) {
+    return 'Needs checking — $persen% confidence';
+  }
+
+  @override
+  String dinamisPerluDiperiksaJumlah(int count) {
+    return '$count values need checking before saving';
+  }
+
+  @override
+  String get dinamisTercetak => 'Pre-printed';
+
+  @override
+  String get dinamisBelumTerbaca => 'Not read';
+
+  @override
+  String get dinamisTanpaLabel => 'No label';
+
+  @override
+  String get dinamisTanpaJudulKolom => 'Column';
+
+  @override
+  String get dinamisLihatAsal => 'Show where this came from';
+
+  @override
+  String get dokBacaJudul => 'Read worksheet';
+
+  @override
+  String get dokBacaAjakan =>
+      'Photograph the worksheet. The form follows what\'s on the sheet — no template needed.';
+
+  @override
+  String get dokBacaTombolFoto => 'Photograph sheet';
+
+  @override
+  String get dokBacaSedang => 'Reading the sheet…';
+
+  @override
+  String get dokBacaUlangFoto => 'Retake photo';
+
+  @override
+  String get dokBacaMulaiLagi => 'Start over';
+
+  @override
+  String get dokBacaNamaAlatLabel => 'Equipment name (optional)';
+
+  @override
+  String get dokBacaNamaAlatBantuan =>
+      'Only a hint for the AI. If the sheet says otherwise, the sheet wins.';
+
+  @override
+  String get dokSimpanTombol => 'Save corrections';
+
+  @override
+  String get dokSimpanSedang => 'Saving…';
+
+  @override
+  String dokSimpanBerhasil(int jumlah) {
+    return '$jumlah corrections saved';
+  }
+
+  @override
+  String get dokSimpanBelumAda => 'Nothing corrected yet';
+
+  @override
+  String get dokReviewTakBisaDitunjuk =>
+      'Can\'t point to where this value came from';
+
+  @override
+  String get dokReviewKetukUntukSorot =>
+      'Tap a value to see where it came from';
+
+  @override
+  String fotoReviewJudul(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah readings',
+      one: '1 reading',
+    );
+    return 'Check $_temp0';
+  }
+
+  @override
+  String get fotoReviewPengantar =>
+      'The readings below were taken from the photo and are not in the sheet yet. Compare each one against its image crop, fix what is wrong, then tap Insert. Handwriting is never treated as certain — however high the percentage.';
+
+  @override
+  String get fotoReviewMasukkan => 'Insert into sheet';
+
+  @override
+  String get fotoReviewKetikSendiri =>
+      'Type it yourself — the reading cannot be trusted';
+
+  @override
+  String fotoReviewKeyakinan(int persen) {
+    return 'Confidence $persen%';
+  }
+
+  @override
+  String get fotoReviewKeyakinanTakAda => 'Confidence not reported';
+
+  @override
+  String fotoReviewMasihKosong(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah cells are still empty and must be filled.',
+      one: '1 cell is still empty and must be filled.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get skemaDinamisJudul => 'Unrecognised sheet';
+
+  @override
+  String get skemaDinamisPengantar =>
+      'This sheet has no fixed shape in the app yet, so its contents were read straight from the photo. Check every field before saving — nothing here is treated as certain.';
+
+  @override
+  String get skemaDinamisTanpaSatuan => 'no unit';
+
+  @override
+  String skemaDinamisTabel(int nomor) {
+    return 'Table $nomor';
+  }
+
+  @override
+  String get skemaDinamisSimpan => 'Save what was read';
+
+  @override
+  String skemaDinamisMasihKosong(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah red-verdict fields are still empty and must be filled.',
+      one: '1 red-verdict field is still empty and must be filled.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get skemaDinamisKosong =>
+      'No fields or tables were read from this photo. Try again with the whole sheet in frame.';
+
+  @override
+  String get petaKolomJudul => 'What each column means';
+
+  @override
+  String get petaKolomPengantar =>
+      'The app can see how many columns the sheet has, but it cannot know which one is the reference value and which are instrument readings. That is your call. Getting it backwards flips the sign of the correction on the certificate, with numbers that still look reasonable.';
+
+  @override
+  String get petaKolomAbaikan => 'Ignore';
+
+  @override
+  String get petaKolomNilaiAcuan => 'Reference value';
+
+  @override
+  String get petaKolomPembacaan => 'Reading';
+
+  @override
+  String get petaKolomSatuan => 'Unit';
+
+  @override
+  String get petaKolomSatuanBantu =>
+      'Typed, not read off the sheet — a wrong unit changes what every number means.';
+
+  @override
+  String get petaKolomSatuanWajib => 'The unit is still empty.';
+
+  @override
+  String petaKolomKolomKe(int nomor) {
+    return 'Column $nomor';
+  }
+
+  @override
+  String petaKolomContoh(String nilai) {
+    return 'sample: $nilai';
+  }
+
+  @override
+  String get petaKolomTanpaAcuan =>
+      'No column has been marked as the reference value yet.';
+
+  @override
+  String get petaKolomAcuanDobel =>
+      'Two columns are marked as the reference value. A measurement point has only one.';
+
+  @override
+  String petaKolomPembacaanKurang(int jumlah) {
+    return 'At least $jumlah reading columns are needed — a single number has no spread to compute.';
+  }
+
+  @override
+  String petaKolomRingkas(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah measurement points will be filled in',
+      one: '1 measurement point will be filled in',
+    );
+    return '$_temp0.';
+  }
+
+  @override
+  String petaKolomDilewat(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah rows were skipped because their reference value is empty',
+      one: '1 row was skipped because its reference value is empty',
+    );
+    return '$_temp0.';
+  }
+
+  @override
+  String get petaKolomTerapkan => 'Fill measurement points';
+
+  @override
+  String get calibBacaFoto => 'Read from sheet photo';
+
+  @override
+  String get calibBacaFotoGagal =>
+      'That photo could not be read. Try again with the whole sheet in frame.';
+
+  @override
+  String get calibBacaFotoTanpaTabel =>
+      'No table was read from this photo. Measurement points come from the table on the sheet, so make sure the table is in frame.';
+
+  @override
+  String calibBacaFotoSelesai(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah measurement points were filled in from the photo',
+      one: '1 measurement point was filled in from the photo',
+    );
+    return '$_temp0. Check the numbers before submitting.';
+  }
+
+  @override
+  String get pilihTabelJudul => 'Which table should be used?';
+
+  @override
+  String get pilihTabelPengantar =>
+      'This photo has more than one table. Pick the one holding the measurement points — not the instrument identity table.';
+
+  @override
+  String get equipPelangganTidakKetemu => 'Not in the lab\'s customer list?';
+
+  @override
+  String get equipPelangganDaftarBaru => 'Register a new company';
+
+  @override
+  String get pelangganBaruJudul => 'New customer';
+
+  @override
+  String get pelangganBaruPengantar =>
+      'Search the company directory, or type the name and address by hand. Whatever you save here is used straight away — it doesn\'t wait for an admin.';
+
+  @override
+  String get pelangganBaruNama => 'Company name';
+
+  @override
+  String get pelangganBaruAlamat => 'Address';
+
+  @override
+  String get pelangganBaruAlamatBantu =>
+      'Printed in the OWNER block of the certificate.';
+
+  @override
+  String get pelangganBaruCariDirektori => 'Search the directory';
+
+  @override
+  String get pelangganBaruDirektoriJudul => 'Directory results';
+
+  @override
+  String get pelangganBaruDirektoriKosong =>
+      'No company in the directory matches that. Type the name and address by hand.';
+
+  @override
+  String get pelangganBaruDirektoriCatatan =>
+      'The directory lists businesses as they appear on the map, not as they appear on the deed. Check it against the customer\'s order form before saving.';
+
+  @override
+  String get pelangganBaruDaftarkan => 'Register';
+
+  @override
+  String get pelangganBaruNamaWajib => 'Company name is required.';
+
+  @override
+  String get pelangganBaruMiripJudul =>
+      'Already in the list — did you mean one of these?';
+
+  @override
+  String get pelangganBaruMiripPilih => 'Tap one to use it instead.';
+
+  @override
+  String get pelangganBaruTetapBuat => 'Different company — register anyway';
+
+  @override
+  String get pelangganBaruGagal => 'Couldn\'t register the customer.';
+
+  @override
+  String get pelangganBaruDirektoriTiadaLab =>
+      'Company directory isn\'t available for this lab. Type the name and address below.';
+
+  @override
+  String get pelangganBaruDirektoriMati =>
+      'The directory can\'t be reached right now. Type the name and address below, or try again later.';
+
+  @override
+  String get equipPelangganDariSimpanan =>
+      'Offline — showing the copy saved on this phone. Customers added recently may be missing.';
+
+  @override
+  String get statusMenungguPengesahan => 'Awaiting sign-off';
+
+  @override
+  String get aksiLainnya => 'More actions';
+
+  @override
+  String standarSampai(String tanggal) {
+    return 'until $tanggal';
+  }
+
+  @override
+  String standarHabisHari(int hari) {
+    return 'expires in $hari days';
+  }
+
+  @override
+  String get ttdPratinjauCetak => 'Preview on the certificate';
+
+  @override
+  String get ttdPratinjauGaris => 'Signatory name & title are printed here';
+
+  @override
+  String get pelacakanJudul => 'Order tracking';
+
+  @override
+  String get pelacakanCari => 'Search order number or customer';
+
+  @override
+  String get pelacakanCumaTerlambat => 'Late only';
+
+  @override
+  String get pelacakanKosong => 'No orders to track yet.';
+
+  @override
+  String get pelacakanGagalMuat => 'Couldn\'t load orders.';
+
+  @override
+  String pelacakanSelesaiDari(int selesai, int total) {
+    return '$selesai of $total done';
+  }
+
+  @override
+  String pelacakanTerlambat(int hari) {
+    return '$hari d late';
+  }
+
+  @override
+  String pelacakanJanji(String tanggal) {
+    return 'Promised $tanggal';
+  }
+
+  @override
+  String pelacakanAlatDalamPaket(int jumlah) {
+    return 'Instruments in this order ($jumlah)';
+  }
+
+  @override
+  String pelacakanDiserahkanKepada(String nama) {
+    return 'Handed to $nama';
+  }
+
+  @override
+  String get pelacakanTandaiSiapDiambil => 'Mark as ready for pickup';
+
+  @override
+  String get pelacakanTandaiDiserahkan => 'Mark as handed over';
+
+  @override
+  String get pelacakanNamaPenerima => 'Recipient name';
+
+  @override
+  String get pelacakanNamaPenerimaContoh => 'e.g. Budi (QC, PT Maju)';
+
+  @override
+  String get pelacakanSimpanSerahTerima => 'Save handover';
+
+  @override
+  String get penugasanJudul => 'Assignments';
+
+  @override
+  String get penugasanTugasSaya => 'My tasks';
+
+  @override
+  String get penugasanTugaskan => 'Assign';
+
+  @override
+  String get penugasanKosongPembagi =>
+      'No assignments yet. Tap Assign to split the work among technicians.';
+
+  @override
+  String get penugasanKosongTeknisi => 'No tasks for you right now.';
+
+  @override
+  String get penugasanGagalMuat => 'Couldn\'t load assignments.';
+
+  @override
+  String penugasanTarget(String tanggal) {
+    return 'Due $tanggal';
+  }
+
+  @override
+  String get penugasanTim => 'Team';
+
+  @override
+  String get penugasanBelumDilihat => 'Not opened yet';
+
+  @override
+  String penugasanSudahDilihat(String tanggal) {
+    return 'Opened $tanggal';
+  }
+
+  @override
+  String get penugasanKetua => 'Lead';
+
+  @override
+  String get penugasanRincian => 'Work breakdown';
+
+  @override
+  String penugasanSelesaiDari(int selesai, int jumlah) {
+    return '$selesai of $jumlah done';
+  }
+
+  @override
+  String get penugasanKurangi => 'Decrease';
+
+  @override
+  String get penugasanTambah => 'Increase';
+
+  @override
+  String get penugasanJudulIsian => 'Title';
+
+  @override
+  String get penugasanJudulContoh => 'e.g. PT Maju order, 12 calipers';
+
+  @override
+  String get penugasanPilihTarget => 'Set a due date (optional)';
+
+  @override
+  String get penugasanPilihTeknisi => 'Technicians';
+
+  @override
+  String get penugasanKetuaPertama =>
+      'The first one you pick becomes the lead.';
+
+  @override
+  String get penugasanTeknisiKosong => 'No active technicians yet.';
+
+  @override
+  String get penugasanJenisAlat => 'Instrument type';
+
+  @override
+  String get penugasanJumlah => 'Qty';
+
+  @override
+  String get penugasanHapusBaris => 'Remove row';
+
+  @override
+  String get penugasanTambahBaris => 'Add instrument type';
+
+  @override
+  String get penugasanCatatan => 'Note (optional)';
+
+  @override
+  String get penugasanKirim => 'Send assignment';
+
+  @override
+  String get penugasanGalatJudul => 'Fill in the title.';
+
+  @override
+  String get penugasanGalatTeknisi => 'Pick at least one technician.';
+
+  @override
+  String get penugasanGalatBaris =>
+      'Add at least one instrument type with a quantity.';
+
+  @override
+  String get kelolaJudul => 'Manage lab';
+
+  @override
+  String get kelolaGrupDataMaster => 'Master data';
+
+  @override
+  String get kelolaGrupMetode => 'Methods & rooms';
+
+  @override
+  String get kelolaGrupDokumen => 'Documents & system';
+
+  @override
+  String get kelolaPenggunaSub => 'Technician accounts, roles, and codes';
+
+  @override
+  String get kelolaImportSub => 'Bring in old data from Excel workbooks';
+
+  @override
+  String get menuKerjaHarian => 'Daily work';
+
+  @override
+  String get menuPantau => 'Monitor (read only)';
+
+  @override
+  String get menuArsip => 'Archive & data';
+
+  @override
+  String get kelolaSemua => 'All lab settings';
+
+  @override
+  String get kelolaSemuaSub =>
+      'Customers, standards, technicians, methods, formulas, rooms, signatures, organization, Excel import';
+
+  @override
+  String get menuCatatanSuperAdmin =>
+      'All Master Data and technician actions. Approving a session issues the certificate directly. Sessions you filled in yourself (or whose scan you confirmed) still need someone else to approve.';
+
+  @override
+  String get menuCatatanViewer =>
+      'This account can only view. Need to fill in or review? Ask an admin to change your role.';
+
+  @override
+  String get jatuhTempoJudul => 'Due dates';
+
+  @override
+  String jatuhTempoRingkas(int lewat, int dekat) {
+    return '$lewat overdue · $dekat due within 30 days';
+  }
+
+  @override
+  String get jatuhTempoPeringatan =>
+      'Equipment past its due date can no longer vouch for its readings.';
+
+  @override
+  String get jatuhTempoTabLewat => 'Overdue';
+
+  @override
+  String get jatuhTempoTab30 => 'Next 30 days';
+
+  @override
+  String get jatuhTempoUrutLama => 'Longest overdue first';
+
+  @override
+  String get jatuhTempoUrutDekat => 'Soonest first';
+
+  @override
+  String jatuhTempoPer(String tanggal) {
+    return 'As of $tanggal';
+  }
+
+  @override
+  String jatuhTempoLewatHari(int hari) {
+    return '$hari d overdue';
+  }
+
+  @override
+  String get jatuhTempoLewatJadwal => 'Overdue';
+
+  @override
+  String get jatuhTempoHariIni => 'Due today';
+
+  @override
+  String jatuhTempoHariLagi(int hari) {
+    return 'In $hari d';
+  }
+
+  @override
+  String get jatuhTempoTanggalKosong => 'No date set';
+
+  @override
+  String get jatuhTempoKosongLewat => 'No equipment is overdue.';
+
+  @override
+  String jatuhTempoKosongDekat(int hari) {
+    return 'Nothing falls due in the next $hari days.';
+  }
+
+  @override
+  String get jatuhTempoGagal => 'Could not load the due-date list.';
+
+  @override
+  String get jatuhTempoKetuk =>
+      'Tap an item to see details and schedule recalibration.';
+
+  @override
+  String jatuhTempoSn(String sn) {
+    return 'SN $sn';
+  }
+
+  @override
+  String get jadwalJudul => 'Recalibration schedule';
+
+  @override
+  String get jadwalSub => 'Customer equipment due for calibration again';
+
+  @override
+  String get jadwalTabLewat => 'Overdue';
+
+  @override
+  String get jadwalTab30 => '30 days';
+
+  @override
+  String get jadwalTab90 => '90 days';
+
+  @override
+  String get jadwalInfo =>
+      'Change an item\'s due date with the button on its row. Tap the row.';
+
+  @override
+  String get pusatJudul => 'Customer hub';
+
+  @override
+  String get pusatSub => 'Everything the lab knows about one customer';
+
+  @override
+  String get pusatCari => 'Search customers';
+
+  @override
+  String get pusatHasil => 'Results';
+
+  @override
+  String pusatCocok(int jumlah) {
+    return '$jumlah customers found';
+  }
+
+  @override
+  String get pusatKosong => 'No customers yet.';
+
+  @override
+  String get pusatKosongCari => 'No customer matches.';
+
+  @override
+  String get pusatGagal => 'Could not load customers.';
+
+  @override
+  String pusatAlat(int jumlah) {
+    return '$jumlah devices';
+  }
+
+  @override
+  String pusatLewatJadwal(int jumlah) {
+    return '$jumlah overdue';
+  }
+
+  @override
+  String pusatPic(String nama) {
+    return 'Contact $nama';
+  }
+
+  @override
+  String get pusatTanpaPic => 'No contact person';
+
+  @override
+  String get pelangganDetailJudul => 'Customer';
+
+  @override
+  String get pelangganAlamat => 'Address';
+
+  @override
+  String get pelangganPic => 'Customer contact';
+
+  @override
+  String get pelangganTelepon => 'Phone';
+
+  @override
+  String get pelangganEmail => 'Email';
+
+  @override
+  String get pelangganAlatPerlu => 'Equipment due for recalibration';
+
+  @override
+  String get pelangganAlatBersih =>
+      'No equipment is overdue or close to its due date.';
+
+  @override
+  String get pelangganPaket => 'Packages in progress';
+
+  @override
+  String get pelangganPaketKosong => 'No packages in progress.';
+
+  @override
+  String get pelangganGagal => 'Could not load this customer.';
+
+  @override
+  String pelangganPaketJalan(int jumlah) {
+    return '$jumlah packages in progress';
+  }
+
+  @override
+  String berandaSaSapaan(String nama) {
+    return 'Hello, $nama';
+  }
+
+  @override
+  String get berandaSaPeran => 'Super admin · overseer & approver';
+
+  @override
+  String berandaSaTertua(String alat) {
+    return 'Oldest: $alat';
+  }
+
+  @override
+  String berandaSaHariLalu(int hari) {
+    return '$hari d ago';
+  }
+
+  @override
+  String get berandaSaBukaGerbang => 'Open the certificate gate';
+
+  @override
+  String get berandaSaPaket => 'Customer packages in progress';
+
+  @override
+  String get berandaSaSemuaPaket => 'All packages';
+
+  @override
+  String get berandaSaPaketKosong => 'No packages in progress.';
+
+  @override
+  String get berandaSaPerhatian => 'Needs attention';
+
+  @override
+  String berandaSaAlatLewat(int jumlah) {
+    return '$jumlah customer devices overdue for calibration';
+  }
+
+  @override
+  String berandaSaAlatLewatTerlama(int hari) {
+    return 'Longest $hari days.';
+  }
+
+  @override
+  String berandaSaAlatDekat(int jumlah) {
+    return '$jumlah devices due within 30 days';
+  }
+
+  @override
+  String berandaSaPaketTerlambat(int jumlah) {
+    return '$jumlah packages past their promised date';
+  }
+
+  @override
+  String get berandaSaAman => 'Nothing needs attention right now.';
+
+  @override
+  String get berandaSaAksi => 'Quick actions';
+
+  @override
+  String get berandaSaTugaskan => 'Assign a technician';
+
+  @override
+  String get berandaSaGagalBagian => 'This section could not be loaded.';
+
+  @override
+  String get permintaanJudul => 'Customer requests';
+
+  @override
+  String get permintaanCari => 'Search number or company';
+
+  @override
+  String get permintaanStatusBaru => 'New';
+
+  @override
+  String get permintaanStatusDiterima => 'Accepted';
+
+  @override
+  String get permintaanStatusDitolak => 'Rejected';
+
+  @override
+  String get permintaanStatusDibatalkan => 'Cancelled';
+
+  @override
+  String get permintaanTabSemua => 'All';
+
+  @override
+  String get permintaanKosongBaru =>
+      'No new requests. Requests from the customer app will show up here.';
+
+  @override
+  String get permintaanKosong => 'No requests in this tab yet.';
+
+  @override
+  String get permintaanKosongCari => 'No requests match your search.';
+
+  @override
+  String get permintaanGagalMuat => 'Customer requests could not be loaded.';
+
+  @override
+  String permintaanRingkas(int jumlah) {
+    return '$jumlah requests';
+  }
+
+  @override
+  String permintaanJumlahAlat(int jumlah) {
+    return '$jumlah instruments';
+  }
+
+  @override
+  String permintaanMenungguHari(int hari) {
+    return 'Waiting $hari d';
+  }
+
+  @override
+  String get permintaanMasukHariIni => 'Received today';
+
+  @override
+  String permintaanBadge(int jumlah) {
+    return '$jumlah new requests';
+  }
+
+  @override
+  String get permintaanBacaSaja =>
+      'Super admin can view only. Admins accept, reject and reply.';
+
+  @override
+  String get permintaanTabRincian => 'Details';
+
+  @override
+  String get permintaanTabPesan => 'Messages';
+
+  @override
+  String permintaanTabPesanJumlah(int jumlah) {
+    return 'Messages ($jumlah)';
+  }
+
+  @override
+  String get permintaanGagalDetail =>
+      'This request was not found or could not be loaded.';
+
+  @override
+  String get permintaanPemohon => 'Requester';
+
+  @override
+  String get permintaanPengantaran => 'Instrument delivery';
+
+  @override
+  String get permintaanDiantarSendiri => 'Brought in by the customer';
+
+  @override
+  String get permintaanDiambilLab => 'Picked up by the lab';
+
+  @override
+  String get permintaanTanggalDiinginkan => 'Preferred dates';
+
+  @override
+  String get permintaanTanggalHanyaKeinginan =>
+      'The customer\'s wish, not a promise. The lab sets the actual date.';
+
+  @override
+  String permintaanTanggalRentang(String dari, String sampai) {
+    return '$dari – $sampai';
+  }
+
+  @override
+  String permintaanTanggalSejak(String dari) {
+    return 'From $dari';
+  }
+
+  @override
+  String permintaanTanggalSampaiSaja(String sampai) {
+    return 'By $sampai';
+  }
+
+  @override
+  String get permintaanCatatanPelanggan => 'Customer note';
+
+  @override
+  String get permintaanAlasanPenolakan => 'Reason for rejection';
+
+  @override
+  String get permintaanOrderLahir => 'Order';
+
+  @override
+  String permintaanDiputuskanOleh(String nama) {
+    return 'Decided by $nama';
+  }
+
+  @override
+  String permintaanAlatDaftar(int jumlah) {
+    return 'Instruments ($jumlah)';
+  }
+
+  @override
+  String get permintaanAlatTerdaftar => 'Registered';
+
+  @override
+  String get permintaanAlatBaru => 'New instrument';
+
+  @override
+  String get permintaanSerial => 'Serial number';
+
+  @override
+  String get permintaanSerialKosong => 'Serial number not provided';
+
+  @override
+  String get permintaanNoIdentifikasi => 'Identification no.';
+
+  @override
+  String get permintaanRentang => 'Measuring range';
+
+  @override
+  String get permintaanResolusi => 'Resolution';
+
+  @override
+  String get permintaanLokasi => 'Location';
+
+  @override
+  String get permintaanCatatan => 'Note';
+
+  @override
+  String get permintaanPerluDilengkapi => 'Complete when accepting';
+
+  @override
+  String get permintaanTerima => 'Accept';
+
+  @override
+  String get permintaanTolak => 'Reject';
+
+  @override
+  String get permintaanTerimaJudul => 'Accept request';
+
+  @override
+  String get permintaanTerimaInfo =>
+      'An order is created from this request, and new instruments are registered under the customer\'s company.';
+
+  @override
+  String get permintaanLengkapiAlatBaru => 'Complete new instruments';
+
+  @override
+  String get permintaanKategori => 'Category';
+
+  @override
+  String get permintaanKategoriWajib => 'Choose a category';
+
+  @override
+  String get permintaanKategoriGagal =>
+      'The category list could not be loaded.';
+
+  @override
+  String get permintaanKategoriIdKosong =>
+      'Categories cannot be chosen yet: the server did not send category ids.';
+
+  @override
+  String get permintaanSerialWajib => 'Enter the serial number';
+
+  @override
+  String get permintaanSerialBentrokSaran =>
+      'Change the serial number, or reject this request and ask the customer to pick the instrument from their list.';
+
+  @override
+  String get permintaanTanggalMasuk => 'Received on';
+
+  @override
+  String get permintaanJanjiSelesai => 'Promised by (optional)';
+
+  @override
+  String get permintaanCatatanOrder => 'Note for the order (optional)';
+
+  @override
+  String get permintaanTerimaKirim => 'Accept and create order';
+
+  @override
+  String get permintaanGalatLain =>
+      'The request could not be accepted. Check the form.';
+
+  @override
+  String permintaanDiterimaToast(String nomor) {
+    return 'Request accepted. Order $nomor created.';
+  }
+
+  @override
+  String get permintaanDitolakToast =>
+      'Request rejected. The reason was sent to the customer.';
+
+  @override
+  String get permintaanTolakJudul => 'Reject request';
+
+  @override
+  String get permintaanTolakPetunjuk =>
+      'Write for the customer, not an internal note';
+
+  @override
+  String permintaanTolakHelper(int minimal) {
+    return 'The customer reads this as written. At least $minimal characters.';
+  }
+
+  @override
+  String get permintaanTolakKirim => 'Reject request';
+
+  @override
+  String get permintaanPesanKosong => 'No messages yet.';
+
+  @override
+  String get permintaanPesanTulis => 'Write a message to the customer';
+
+  @override
+  String get permintaanPesanKirim => 'Send';
+
+  @override
+  String get permintaanPesanDitutup =>
+      'The conversation is closed because this request was rejected or cancelled.';
+
+  @override
+  String get permintaanPesanGagal => 'Messages could not be loaded.';
+
+  @override
+  String get permintaanPesanKamu => 'You';
+
+  @override
+  String get sertDokStatus => 'Document status';
+
+  @override
+  String get sertDokBerlaku => 'Valid';
+
+  @override
+  String get sertDokDigantikan => 'Superseded';
+
+  @override
+  String get sertDokDibatalkan => 'Cancelled';
+
+  @override
+  String get sertDokBelumTerbit => 'Not yet issued';
+
+  @override
+  String sertDokRevisiKe(int n) {
+    return 'Revision $n';
+  }
+
+  @override
+  String get sertDokMenggantikan => 'replaces';
+
+  @override
+  String get sertDokAlasanRevisi => 'Revision reason (internal)';
+
+  @override
+  String get sertDokDigantikanOleh => 'Superseded by';
+
+  @override
+  String get sertDokDibatalkanPada => 'Cancelled on';
+
+  @override
+  String get sertDokDibatalkanOleh => 'Cancelled by';
+
+  @override
+  String get sertDokAlasanInternal => 'Reason (internal)';
+
+  @override
+  String get sertDokCatatanPelanggan => 'Note for the customer';
+
+  @override
+  String get sertRevisi => 'Revise certificate';
+
+  @override
+  String get sertBatalkan => 'Cancel certificate';
+
+  @override
+  String get sertRevisiTanpaData =>
+      'This certificate was issued before its printed data was stored, so it cannot be revised from the app yet.';
+
+  @override
+  String get revisiJudul => 'Revise certificate';
+
+  @override
+  String get revisiPetunjuk =>
+      'The fields start with the values printed on this certificate. Change only what is wrong; the old certificate stays as it is and a new revision is issued.';
+
+  @override
+  String get revisiFieldPemilik => 'Owner';
+
+  @override
+  String get revisiFieldAlamat => 'Address';
+
+  @override
+  String get revisiFieldMerk => 'Manufacturer';
+
+  @override
+  String get revisiFieldTipe => 'Type';
+
+  @override
+  String get revisiFieldNomorSeri => 'Serial number';
+
+  @override
+  String get revisiFieldLokasi => 'Calibration location';
+
+  @override
+  String get revisiFieldTanggalKalibrasi => 'Calibration date';
+
+  @override
+  String get revisiFieldBerlakuSampai => 'Valid until';
+
+  @override
+  String get revisiAlasan => 'Revision reason';
+
+  @override
+  String get revisiAlasanHelper => 'Internal, not shown to the customer.';
+
+  @override
+  String get revisiCatatan => 'Note for the customer (optional)';
+
+  @override
+  String get revisiCatatanHelper =>
+      'Shown to the customer as written on the revised certificate.';
+
+  @override
+  String get revisiKirim => 'Issue revision';
+
+  @override
+  String get revisiAlasanWajib => 'A revision reason is required.';
+
+  @override
+  String get revisiIsianWajib => 'This field cannot be left empty.';
+
+  @override
+  String get revisiTidakAdaPerubahan =>
+      'Nothing has changed. Change at least one field.';
+
+  @override
+  String get revisiBerlakuSesudah => 'Must be after the calibration date.';
+
+  @override
+  String get revisiPeriksaIsian => 'Check the highlighted fields.';
+
+  @override
+  String revisiTerkirim(String nomor) {
+    return 'Revision $nomor is being issued.';
+  }
+
+  @override
+  String batalJudul(String nomor) {
+    return 'Cancel $nomor?';
+  }
+
+  @override
+  String get batalPenjelasan =>
+      'Cancellation is final and cannot be undone. A previous certificate that was already superseded does not become valid again.';
+
+  @override
+  String get batalJadwalDikosongkan =>
+      'This is the only valid certificate for this instrument. Its recalibration schedule will be cleared.';
+
+  @override
+  String batalJatuhKe(String nomor, String tanggal) {
+    return 'The instrument recalibration schedule will go back to $nomor (valid until $tanggal).';
+  }
+
+  @override
+  String get batalAlasan => 'Cancellation reason';
+
+  @override
+  String get batalAlasanHelper => 'Internal, not shown to the customer.';
+
+  @override
+  String get batalCatatan => 'Note for the customer (optional)';
+
+  @override
+  String get batalCatatanHelper =>
+      'Shown to the customer as written in their app.';
+
+  @override
+  String get batalKirim => 'Cancel certificate';
+
+  @override
+  String get batalAlasanWajib => 'A cancellation reason is required.';
+
+  @override
+  String get batalBerhasil => 'Certificate cancelled.';
+
+  @override
+  String get fotoPelangganBuka => 'Open photo';
+
+  @override
+  String get koreksiJudul => 'Customer corrections';
+
+  @override
+  String koreksiBadge(int jumlah) {
+    return '$jumlah corrections pending';
+  }
+
+  @override
+  String get koreksiTabMenunggu => 'Pending';
+
+  @override
+  String get koreksiTabDiterima => 'Accepted';
+
+  @override
+  String get koreksiTabDitolak => 'Rejected';
+
+  @override
+  String get koreksiTabSemua => 'All';
+
+  @override
+  String get koreksiStatusMenunggu => 'Pending';
+
+  @override
+  String get koreksiStatusDiterima => 'Accepted';
+
+  @override
+  String get koreksiStatusDitolak => 'Rejected';
+
+  @override
+  String get koreksiKosongMenunggu => 'No corrections are waiting.';
+
+  @override
+  String get koreksiKosong => 'No corrections here yet.';
+
+  @override
+  String get koreksiGagalMuat => 'Corrections could not be loaded.';
+
+  @override
+  String get koreksiGagalDetail =>
+      'This correction was not found or could not be loaded.';
+
+  @override
+  String get koreksiJenisAlat => 'Instrument correction';
+
+  @override
+  String get koreksiJenisSertifikat => 'Certificate correction';
+
+  @override
+  String koreksiJumlahPerubahan(int n) {
+    return '$n changes';
+  }
+
+  @override
+  String koreksiJumlahFoto(int n) {
+    return '$n photos';
+  }
+
+  @override
+  String koreksiDetailJudul(int id) {
+    return 'Correction #$id';
+  }
+
+  @override
+  String get koreksiDiajukan => 'Submitted';
+
+  @override
+  String get koreksiTargetAlat => 'Instrument';
+
+  @override
+  String get koreksiTargetSertifikat => 'Certificate';
+
+  @override
+  String koreksiPerubahanJudul(int n) {
+    return 'Requested changes ($n)';
+  }
+
+  @override
+  String get koreksiNilaiLama => 'Old value';
+
+  @override
+  String get koreksiNilaiBaru => 'New value';
+
+  @override
+  String get koreksiCatatanPelanggan => 'Customer note';
+
+  @override
+  String koreksiFoto(int n) {
+    return 'Photos ($n)';
+  }
+
+  @override
+  String get koreksiTanggapan => 'Response';
+
+  @override
+  String get koreksiDitinjau => 'Reviewed';
+
+  @override
+  String get koreksiRevisiLahir => 'Replacement certificate';
+
+  @override
+  String get koreksiTerima => 'Accept';
+
+  @override
+  String get koreksiTolak => 'Reject';
+
+  @override
+  String get koreksiBacaSaja =>
+      'Super admins can only view. Accepting and rejecting corrections is done by admins.';
+
+  @override
+  String get koreksiDiterimaToast => 'Correction accepted and applied.';
+
+  @override
+  String koreksiDiterimaRevisiToast(String nomor) {
+    return 'Correction accepted. Revision $nomor is being issued.';
+  }
+
+  @override
+  String get koreksiDitolakToast => 'Correction rejected.';
+
+  @override
+  String get koreksiTerimaJudul => 'Accept correction';
+
+  @override
+  String get koreksiTerimaPenjelasanAlat =>
+      'The instrument data will be changed right away and recorded in its history. Correct the values below if needed.';
+
+  @override
+  String get koreksiTerimaPenjelasanSertifikat =>
+      'A certificate revision will be issued with the values below. Correct them if needed.';
+
+  @override
+  String koreksiNilaiDiminta(String nilai) {
+    return 'Requested by the customer: $nilai';
+  }
+
+  @override
+  String get koreksiNilaiWajib => 'The value cannot be empty.';
+
+  @override
+  String get koreksiAlasanRevisi => 'Revision reason (optional)';
+
+  @override
+  String koreksiAlasanRevisiHelper(int id) {
+    return 'Empty = \"Correction from customer #$id\".';
+  }
+
+  @override
+  String get koreksiTanggapanOpsional => 'Response for the customer (optional)';
+
+  @override
+  String get koreksiTanggapanHelper => 'Shown to the customer as written.';
+
+  @override
+  String get koreksiTerimaKirim => 'Accept correction';
+
+  @override
+  String get koreksiTanggapanWajib => 'A response is required.';
+
+  @override
+  String get koreksiTolakJudul => 'Reject correction';
+
+  @override
+  String get koreksiTolakPetunjuk =>
+      'Write the reason for rejecting, for the customer';
+
+  @override
+  String get koreksiTolakHelper =>
+      'Required. Shown to the customer as written.';
+
+  @override
+  String get koreksiTolakKirim => 'Reject';
+
+  @override
+  String get permintaanPerjalanan => 'Instrument journey';
+
+  @override
+  String permintaanProgres(int selesai, int total) {
+    return '$selesai of $total instruments done';
+  }
+
+  @override
+  String get permintaanResi => 'Shipping receipt';
+
+  @override
+  String permintaanResiDiisi(String waktu) {
+    return 'Filled in $waktu';
+  }
+
+  @override
+  String get permintaanJadwal => 'Technician schedule';
+
+  @override
+  String get permintaanAlatTiba => 'Instrument arrived at the lab';
+
+  @override
+  String permintaanFotoAlat(int n) {
+    return 'Nameplate photos ($n)';
+  }
+
+  @override
+  String get permintaanJadwalkan => 'Schedule technician';
+
+  @override
+  String get permintaanAlatTibaTombol => 'Mark instrument arrived';
+
+  @override
+  String get alatTibaToast => 'Instrument marked as arrived.';
+
+  @override
+  String get jadwalToast => 'Technician schedule saved.';
+
+  @override
+  String get jadwalJudul2 => 'Schedule technician';
+
+  @override
+  String get jadwalPenjelasan =>
+      'A technician will collect the instrument at the customer location. The customer is notified in their app.';
+
+  @override
+  String get jadwalTanggal => 'Date';
+
+  @override
+  String get jadwalJam => 'Time';
+
+  @override
+  String get jadwalLokasi => 'Location (optional)';
+
+  @override
+  String get jadwalCatatan => 'Note (optional)';
+
+  @override
+  String get jadwalSimpan => 'Save schedule';
+
+  @override
+  String get jadwalWaktuWajib => 'Pick a date and time first.';
+
+  @override
+  String get riwayatPersetujuanJudul => 'Approval history';
+
+  @override
+  String riwayatPersetujuanRingkas(int jumlah) {
+    return 'Rejected $jumlah times';
+  }
+
+  @override
+  String get riwayatPersetujuanKosong => 'No approval history yet.';
+
+  @override
+  String get riwayatPersetujuanGagal => 'Approval history could not be loaded.';
+
+  @override
+  String get riwayatPersetujuanCobaLagi => 'Try again';
+
+  @override
+  String get riwayatJenisDitolak => 'Rejected — needs revision';
+
+  @override
+  String get riwayatJenisDiajukan => 'Submitted';
+
+  @override
+  String get riwayatJenisDiajukanUlang => 'Resubmitted after revision';
+
+  @override
+  String get riwayatJenisDisetujui => 'Approved';
+
+  @override
+  String get riwayatJenisMenungguPengesahan => 'Awaiting endorsement';
+
+  @override
+  String get riwayatJenisKembaliDraft => 'Back to draft';
+
+  @override
+  String get riwayatOlehSistem => 'system';
+
+  @override
+  String riwayatKolomDitandai(String daftar) {
+    return 'Marked fields/cells: $daftar';
+  }
+
+  @override
+  String get riwayatPersetujuanKetuk =>
+      'Tap to see every rejection and its reason';
+
+  @override
+  String get riwayatCariHint =>
+      'Search session no., device, customer, certificate/serial no.';
+
+  @override
+  String get riwayatCariHapus => 'Clear search';
+
+  @override
+  String riwayatCariKosong(String kata) {
+    return 'No history matches \"$kata\".';
+  }
+
+  @override
+  String get riwayatCariKosongSaran =>
+      'Check the spelling, or search by session or certificate number.';
+
+  @override
+  String get riwayatSemuaTersembunyi =>
+      'All of your history is hidden. The data is still stored.';
+
+  @override
+  String riwayatAdaCocokTersembunyi(int jumlah) {
+    return '$jumlah match(es) are in your hidden history.';
+  }
+
+  @override
+  String riwayatTampilkanTersembunyi(int jumlah) {
+    return 'Show hidden ($jumlah)';
+  }
+
+  @override
+  String get riwayatMenuOpsi => 'More options';
+
+  @override
+  String get riwayatSembunyikan => 'Hide from my History';
+
+  @override
+  String get riwayatSembunyikanKeterangan => 'Data & certificate stay stored';
+
+  @override
+  String get riwayatTampilkanLagi => 'Show in History again';
+
+  @override
+  String get riwayatDisembunyikanSnack =>
+      'Hidden from your History. Data & certificate stay stored.';
+
+  @override
+  String get riwayatDitampilkanLagiSnack => 'Shown in History again.';
+
+  @override
+  String get riwayatUrungkan => 'Undo';
+
+  @override
+  String riwayatSembunyikanGagal(String pesan) {
+    return 'Couldn\'t hide: $pesan';
+  }
+
+  @override
+  String riwayatTampilkanLagiGagal(String pesan) {
+    return 'Couldn\'t show again: $pesan';
+  }
+
+  @override
+  String get riwayatSembunyikanDitolak => 'This account can\'t hide history.';
+
+  @override
+  String get riwayatLencanaTersembunyi => 'Hidden';
+
+  @override
+  String get riwayatSertifikatTerbit => 'Issued';
+
+  @override
+  String get riwayatSertifikatDibatalkan => 'Cancelled';
+
+  @override
+  String get riwayatSertifikatDiproses => 'Processing';
+
+  @override
+  String get riwayatSertifikatGagal => 'Generation failed';
+
+  @override
+  String get lkDisimpanDiHp =>
+      'Saved on this device, will be sent automatically when online';
+
+  @override
+  String lkDipulihkanDariHp(String waktu) {
+    return 'Restored from this device — last saved $waktu';
+  }
+
+  @override
+  String get lkBuangSalinanHp => 'Discard';
+
+  @override
+  String get lkBuangSalinanHpJudul => 'Discard the copy on this device?';
+
+  @override
+  String get lkBuangSalinanHpIsi =>
+      'Entries that haven\'t reached the server will be lost, and the worksheet reloads from the server version.';
+
+  @override
+  String get lkBuangSalinanHpBatal => 'Cancel';
+
+  @override
+  String get lkSalinanHpLebihLama =>
+      'The copy on this device is older than the server version, so the server version is used.';
+
+  @override
+  String get drafLokalJudul => 'Not yet synced (on this device)';
+
+  @override
+  String get drafServerJudul => 'Drafts on the server';
+
+  @override
+  String get drafLokalMenunggu => 'Waiting for signal — sent automatically';
+
+  @override
+  String drafLokalPerluDiperbaiki(String pesan) {
+    return 'Needs fixing: $pesan';
+  }
+
+  @override
+  String get drafLokalHanyaDiHp =>
+      'Only on this device — not saved to the server yet';
+
+  @override
+  String get drafLokalTanpaAlat => 'Worksheet without equipment';
+
+  @override
+  String get lkVersiBentrokJudul => 'The server version is newer';
+
+  @override
+  String get lkVersiBentrokIsi =>
+      'This worksheet was changed on the server after the unsent draft on this device was saved. Choose which version to keep — the other one is discarded.';
+
+  @override
+  String get lkPakaiVersiHp => 'Use this device\'s version';
+
+  @override
+  String get lkPakaiVersiServer => 'Use the server version';
+
+  @override
+  String get drafTertundaMengirim =>
+      'Sending drafts that haven\'t reached the server…';
+
+  @override
+  String get drafTertundaLogoutJudul => 'Unsent drafts';
+
+  @override
+  String drafTertundaLogoutIsi(int jumlah) {
+    return '$jumlah drafts not sent yet. They stay saved on this tablet and are sent when you log in again.';
+  }
+
+  @override
+  String get drafTertundaLogoutBatal => 'Cancel';
+
+  @override
+  String get drafTertundaLogoutLanjut => 'Log out';
+
+  @override
+  String lkKakiVersiAcuan(String paket, int nomor) {
+    return 'reference data $paket v$nomor';
+  }
+
+  @override
+  String get acuanJudul => 'Reference data';
+
+  @override
+  String get acuanPaketJudul => 'Reference data packages';
+
+  @override
+  String get acuanPaketKeterangan =>
+      'Standard values, corrections, CMC bands and method constants per instrument, versioned on the server. This screen is read-only.';
+
+  @override
+  String get acuanPaketKosong => 'No reference data packages yet.';
+
+  @override
+  String get acuanPaketKosongPetunjuk =>
+      'Version 1 comes from the initial import on the server: php artisan acuan:impor-awal';
+
+  @override
+  String get acuanBelumDiimpor => 'Not imported yet';
+
+  @override
+  String get acuanBelumDiimporKet =>
+      'The server has a schema for this instrument, but this lab has not imported version 1.';
+
+  @override
+  String acuanVersiNomor(int nomor) {
+    return 'v$nomor';
+  }
+
+  @override
+  String acuanVersiBerlakuSejak(int nomor, String tanggal) {
+    return 'v$nomor · in force since $tanggal';
+  }
+
+  @override
+  String get acuanTanpaVersiAktif => 'No active version';
+
+  @override
+  String get acuanTanpaVersiAktifKet =>
+      'No version of this package is in force today.';
+
+  @override
+  String acuanJumlahLembar(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n sheets',
+      one: '1 sheet',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String acuanJumlahDraf(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n drafts',
+      one: '1 draft',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String acuanTerjadwal(int nomor, String tanggal) {
+    return 'Scheduled: v$nomor from $tanggal';
+  }
+
+  @override
+  String get acuanGagalMuat => 'Reference data could not be loaded.';
+
+  @override
+  String get acuanCobaLagi => 'Try again';
+
+  @override
+  String get acuanButuhIzinJudul => 'Requires data-acuan.lihat permission';
+
+  @override
+  String get acuanButuhIzinKet =>
+      'This account has no access to reference data. Ask the lab admin to grant it. The server rejects direct calls as well.';
+
+  @override
+  String get acuanStatusDraf => 'Draft';
+
+  @override
+  String get acuanStatusDiajukan => 'Submitted';
+
+  @override
+  String get acuanStatusTerjadwal => 'Scheduled';
+
+  @override
+  String get acuanStatusAktif => 'Active';
+
+  @override
+  String get acuanStatusPensiun => 'Retired';
+
+  @override
+  String get acuanStatusDitolak => 'Rejected';
+
+  @override
+  String get acuanStatusDitarik => 'Withdrawn';
+
+  @override
+  String get acuanStatusDibuang => 'Discarded';
+
+  @override
+  String acuanBukanVersiAktif(String status) {
+    return 'This version is $status: it is not the one used for today\'s sessions.';
+  }
+
+  @override
+  String get acuanInfoVersi => 'Version info';
+
+  @override
+  String get acuanGarisWaktu => 'Version timeline';
+
+  @override
+  String get acuanGarisWaktuKosong => 'This package has no versions yet.';
+
+  @override
+  String get acuanSkemaKosong =>
+      'This package has no sheet schema on the server.';
+
+  @override
+  String get acuanLembarKosong => 'This sheet has no data yet.';
+
+  @override
+  String acuanKakiLembar(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n rows',
+      one: '1 row',
+    );
+    return '$_temp0 · values shown exactly as stored, not rounded';
+  }
+
+  @override
+  String get acuanPerluKonfirmasi => 'Needs lab confirmation';
+
+  @override
+  String get acuanKolomKunci => 'Key';
+
+  @override
+  String get acuanNilaiKosong => 'empty';
+
+  @override
+  String get acuanJenisData => 'Data';
+
+  @override
+  String get acuanJenisBentuk => 'Sheet layout';
+
+  @override
+  String get acuanInfoStatus => 'Status';
+
+  @override
+  String get acuanInfoJenis => 'Kind';
+
+  @override
+  String get acuanInfoBerlaku => 'In force';
+
+  @override
+  String acuanBerlakuRentang(String mulai, String sampai) {
+    return '$mulai to $sampai';
+  }
+
+  @override
+  String acuanBerlakuTerbuka(String mulai) {
+    return 'since $mulai, open-ended';
+  }
+
+  @override
+  String get acuanBerlakuBelum => 'Not set';
+
+  @override
+  String get acuanInfoSha => 'Content SHA-256';
+
+  @override
+  String get acuanInfoShaBelum => 'Not locked yet (draft)';
+
+  @override
+  String get acuanInfoSkema => 'Schema';
+
+  @override
+  String get acuanInfoDibuat => 'Created';
+
+  @override
+  String get acuanInfoDisahkan => 'Approved';
+
+  @override
+  String get acuanInfoBelumDisahkan => 'No approval recorded';
+
+  @override
+  String acuanInfoOlehPada(int id, String waktu) {
+    return 'user #$id · $waktu';
+  }
+
+  @override
+  String get acuanInfoAlasan => 'Reason';
+
+  @override
+  String get acuanInfoRujukan => 'References';
+
+  @override
+  String get acuanSelJudul => 'Cell details';
+
+  @override
+  String get acuanSelLembar => 'Sheet';
+
+  @override
+  String get acuanSelKunci => 'Row key';
+
+  @override
+  String get acuanSelNilai => 'Stored value';
+
+  @override
+  String get acuanSelTidakAda => 'Not present in this version';
+
+  @override
+  String get acuanSelTipe => 'Type';
+
+  @override
+  String get acuanSelAsal => 'Master workbook cell';
+
+  @override
+  String get acuanSelAsalKosong => 'Not mapped to a master cell';
+
+  @override
+  String get acuanSelPerluKonfirmasiKet =>
+      'The origin of this value has not been confirmed by the lab yet.';
+
+  @override
+  String get acuanSelRiwayat => 'Cell history';
+
+  @override
+  String get acuanRiwayatPerVersi => 'Value in each version';
+
+  @override
+  String get acuanRiwayatSuntingan => 'Edits';
+
+  @override
+  String get acuanRiwayatSuntinganKosong => 'No edits recorded for this cell.';
+
+  @override
+  String get acuanSumberKetik => 'typed';
+
+  @override
+  String get acuanSumberTempel => 'pasted';
+
+  @override
+  String get acuanSumberImpor => 'imported';
+
+  @override
+  String get acuanSumberAmbilAlih => 'taken over';
+
+  @override
+  String get acuanPenggunaTerhapus => 'account no longer exists';
+
+  @override
+  String get acuanBandingkan => 'Compare versions';
+
+  @override
+  String get acuanBandingLama => 'Older version';
+
+  @override
+  String get acuanBandingBaru => 'Newer version';
+
+  @override
+  String get acuanBandingTidakAdaBeda => 'No differences';
+
+  @override
+  String acuanBandingTidakAdaBedaKet(int lama, int baru) {
+    return 'v$lama and v$baru have identical content in every sheet.';
+  }
+
+  @override
+  String acuanBandingRingkasan(int lembar, int sel, int tambah, int hapus) {
+    return '$lembar sheets changed · $sel cells · $tambah rows added · $hapus rows removed';
+  }
+
+  @override
+  String get acuanBandingTanpaVersiData =>
+      'There is no data version to compare yet.';
+
+  @override
+  String get acuanBandingBarisTambah => 'Rows added';
+
+  @override
+  String get acuanBandingBarisHapus => 'Rows removed';
+
+  @override
+  String get acuanLama => 'old';
+
+  @override
+  String get acuanBaru => 'new';
+
+  @override
+  String get acuanSelisih => 'difference';
+
+  @override
+  String get acuanSelisihRelatif => 'relative';
+
+  @override
+  String get acuanBandingTidakTersedia =>
+      'Version comparison is not available to the technician role.';
+
+  @override
+  String get acuanRiwayatTidakTersedia =>
+      'Cell history is not available to the technician role.';
+
+  @override
+  String get galatPemisahanWewenang =>
+      'You helped fill in this session or confirmed its scanned result, so you cannot approve it yourself. Ask another admin to approve it.';
+
+  @override
+  String get galatNomorOrderWajib =>
+      'The Order Number is still empty. Fill it in before approving.';
+
+  @override
+  String get adminDataJudul => 'Administrative data';
+
+  @override
+  String get adminBelumDiisi => 'Not filled in';
+
+  @override
+  String get adminUbah => 'Edit';
+
+  @override
+  String get adminMetode => 'Calibration method';
+
+  @override
+  String get adminRuangan => 'Room';
+
+  @override
+  String get adminTanggalTerima => 'Received date';
+
+  @override
+  String get adminNomorOrderJudul => 'Fill in the Order Number';
+
+  @override
+  String get adminNomorOrderPetunjuk =>
+      'Printed on the certificate. Filled in by Master Data or super admin, never by the technician.';
+
+  @override
+  String get adminNomorOrderKosong => 'The Order Number is required.';
+
+  @override
+  String get adminNomorOrderWajibSetujui =>
+      'Order Number is empty — Approve will ask for it first.';
+
+  @override
+  String get adminBukaLembar => 'Open technician worksheet';
+
+  @override
+  String get adminGagalMuat => 'Administrative data could not be loaded.';
+
+  @override
+  String get adminPilihKosong => 'Nothing to choose from yet.';
+
+  @override
+  String get lkNomorOrderBacaSaja =>
+      'Filled in by Master Data during review — not by the technician.';
+
+  @override
+  String get lkAlasanKoreksiJudul => 'Reason for correction';
+
+  @override
+  String get lkAlasanKoreksiPetunjuk =>
+      'The technician already submitted this session. Changed readings are kept together with their old values — write what was wrong and where the correct value comes from (min. 10 characters).';
+
+  @override
+  String get lkAlasanKoreksiLabel => 'Reason';
+
+  @override
+  String get lkAlasanKoreksiPendek => 'At least 10 characters.';
+
+  @override
+  String get lkAlasanKoreksiSimpan => 'Save correction';
+
+  @override
+  String get sertEncJudulA => 'A) SEBARAN SUHU';
+
+  @override
+  String get sertEncJudulB => 'B) KINERJA ENKLOSUR';
+
+  @override
+  String sertEncIndikator(String satuan) {
+    return 'Pembacaan Indikator Enklosur ($satuan)';
+  }
+
+  @override
+  String sertEncStandarKoreksi(String satuan) {
+    return 'Standar dan Koreksi Indikator ($satuan)';
+  }
+
+  @override
+  String sertEncSensorNo(String acuan) {
+    return 'Sensor No. ($acuan)';
+  }
+
+  @override
+  String sertEncAcuanSatu(String no) {
+    return 'No. $no Sensor Acuan';
+  }
+
+  @override
+  String sertEncAcuanPerSetPoint(String daftar) {
+    return 'Sensor Acuan per set point: No. $daftar';
+  }
+
+  @override
+  String sertEncTerukur(String satuan) {
+    return 'Terukur ($satuan)';
+  }
+
+  @override
+  String sertEncKoreksi(String satuan) {
+    return 'Koreksi ($satuan)';
+  }
+
+  @override
+  String sertEncU95(String satuan) {
+    return 'U95% ± ($satuan)';
+  }
+
+  @override
+  String sertEncSuhuSetting(String satuan) {
+    return 'Suhu Setting ($satuan)';
+  }
+
+  @override
+  String sertEncSuhuIndikator(String satuan) {
+    return 'Suhu yang diukur Indikator Enklosur ($satuan)';
+  }
+
+  @override
+  String sertEncKeseragaman(String satuan) {
+    return 'Keseragaman ($satuan)';
+  }
+
+  @override
+  String sertEncKestabilan(String satuan) {
+    return 'Kestabilan ($satuan)';
+  }
+
+  @override
+  String sertEncVariasi(String satuan) {
+    return 'Variasi Keseluruhan ($satuan)';
+  }
+
+  @override
+  String sertEncKalimatK(String tanda, String k) {
+    return 'The uncertainty is taken at a confidence level 95 % and coverage factor ( k ) $tanda $k';
+  }
+
+  @override
+  String get adminThermohygroDiBlokKondisi =>
+      'Chosen in the Environmental Condition block above.';
+
+  @override
+  String get adminThermohygro => 'Thermohygro';
+
+  @override
+  String get navKalibrasi => 'Calibration';
+
+  @override
+  String get tekKalibrasiJudul => 'Calibration';
+
+  @override
+  String get tekPerluRevisi => 'Needs revision';
+
+  @override
+  String get tekPerluRevisiKosong => 'Nothing to fix.';
+
+  @override
+  String get tekDrafKosong => 'No drafts.';
+
+  @override
+  String get tekTerkirim => 'Recently submitted';
+
+  @override
+  String get tekTerkirimKosong => 'Nothing submitted yet.';
+
+  @override
+  String get tekGagalMuat => 'Could not load this list.';
+
+  @override
+  String get tekProfilTakDikenal =>
+      'This instrument type is not supported on the worksheet yet.';
+
+  @override
+  String get setujuiJudul => 'Approve & issue';
+
+  @override
+  String get setujuiPetunjuk =>
+      'Master Data types the Order Number and Certificate No.; both are printed on the certificate.';
+
+  @override
+  String get setujuiNomorSertifikatLabel => 'Certificate No.';
+
+  @override
+  String get setujuiNomorSertifikatPetunjuk =>
+      'Unique in this lab. Letters, digits and . _ / - only; must not end in -R1, -R2 (revision numbers are system-made).';
+
+  @override
+  String get setujuiNomorSertifikatKosong => 'Certificate No. is required.';
+
+  @override
+  String get setujuiNomorSertifikatFormat =>
+      'Invalid Certificate No.: letters, digits and . _ / - only, up to 100 characters, no -R<number> suffix.';
+
+  @override
+  String get setujuiNomorRevisiOtomatis =>
+      'The previous certificate was withdrawn: the revision number (…-R1) is generated by the system.';
+
+  @override
+  String get setujuiAksi => 'Approve';
+
+  @override
+  String get galatNomorSertifikatWajib =>
+      'The Certificate No. is empty. Type it before approving.';
+
+  @override
+  String get galatNomorSertifikatTidakValid =>
+      'Invalid Certificate No.: letters, digits and . _ / - only, up to 100 characters, and no -R<number> suffix.';
+
+  @override
+  String galatNomorSertifikatDipakai(String nomor) {
+    return 'This Certificate No. is already used by certificate $nomor. Use another one.';
+  }
+
+  @override
+  String get galatNomorSertifikatDipakaiLain =>
+      'This Certificate No. is already used by another certificate in this lab. Use another one.';
+
+  @override
+  String get tarikAksi => 'Withdraw to worksheet';
+
+  @override
+  String get tarikJudul => 'Withdraw this certificate to the worksheet?';
+
+  @override
+  String get tarikPetunjuk =>
+      'The certificate is marked withdrawn and the session returns to awaiting approval for correction. After re-approval a new certificate ending in -R1 is issued. The technician\'s original entries are kept.';
+
+  @override
+  String get tarikAlasanLabel => 'Reason (at least 10 characters)';
+
+  @override
+  String get tarikAlasanPendek => 'The reason needs at least 10 characters.';
+
+  @override
+  String get tarikSandiLabel => 'Your account password';
+
+  @override
+  String get tarikSandiKosong => 'Password is required.';
+
+  @override
+  String get tarikKirim => 'Withdraw';
+
+  @override
+  String get tarikBerhasil =>
+      'Certificate withdrawn. The session is back to awaiting approval.';
+
+  @override
+  String get galatKonfirmasiSandiSalah => 'Wrong password. Try again.';
+
+  @override
+  String get statusDitarik => 'Withdrawn';
+
+  @override
+  String get stempelDraf => 'Draft';
+
+  @override
+  String get stempelMenunggu => 'Waiting';
+
+  @override
+  String get stempelPerluRevisi => 'Needs revision';
+
+  @override
+  String get stempelDisetujui => 'Approved';
+
+  @override
+  String get stempelPass => 'PASS';
+
+  @override
+  String get stempelFail => 'FAIL';
+
+  @override
+  String get stempelDitarik => 'Withdrawn';
+
+  @override
+  String get stempelAktif => 'Active';
+
+  @override
+  String get stempelNonaktif => 'Inactive';
+
+  @override
+  String get stempelLewatJadwal => 'Overdue';
+
+  @override
+  String get stempelBerlaku => 'Valid';
+
+  @override
+  String get stempelSegera => 'Due soon';
+
+  @override
+  String get stempelMasaBerlakuBerakhir => 'Validity ended';
+
+  @override
+  String get stempelTerbit => 'Issued';
+
+  @override
+  String get stempelSedangDibuat => 'Being generated';
+
+  @override
+  String get stempelGagalDibuat => 'Generation failed';
+
+  @override
+  String get stempelMenungguPersetujuan => 'Awaiting approval';
+
+  @override
+  String get stempelBaru => 'New';
+
+  @override
+  String get stempelDiproses => 'In progress';
+
+  @override
+  String get stempelSelesai => 'Done';
+
+  @override
+  String get stempelDibatalkan => 'Cancelled';
+
+  @override
+  String get stempelDigantikanRevisi => 'Superseded by revision';
+
+  @override
+  String get stempelBelumTerbit => 'Not yet issued';
+
+  @override
+  String stempelSemantik(String kata) {
+    return 'Status: $kata';
+  }
+
+  @override
+  String get navLabBeranda => 'Home';
+
+  @override
+  String get navLabAntrean => 'Queue';
+
+  @override
+  String get navLabAntreanSemantik => 'Approval queue';
+
+  @override
+  String get navLabKalibrasi => 'Calibrate';
+
+  @override
+  String get navLabArsip => 'Archive';
+
+  @override
+  String get navLabLainnya => 'More';
+
+  @override
+  String get navLabProfil => 'Profile';
+
+  @override
+  String get navLabLencana => 'waiting';
+
+  @override
+  String navLabTabHint(int nomor, int jumlah) {
+    return 'Tab $nomor of $jumlah';
+  }
+
+  @override
+  String get bandingkanJudul => 'Compare with original entries';
+
+  @override
+  String get bandingkanTombol => 'Compare with technician\'s original';
+
+  @override
+  String get bandingkanTanpaAsli =>
+      'This worksheet has never been corrected — nothing has changed.';
+
+  @override
+  String bandingkanRingkas(int berubah, int total) {
+    return '$berubah of $total entries changed';
+  }
+
+  @override
+  String get bandingkanAsli => 'Technician\'s original';
+
+  @override
+  String get bandingkanSekarang => 'Now';
+
+  @override
+  String bandingkanDiubahOleh(String nama) {
+    return 'Changed by $nama';
+  }
+
+  @override
+  String bandingkanAlasan(String alasan) {
+    return 'Reason: $alasan';
+  }
+
+  @override
+  String bandingkanDibekukan(String waktu) {
+    return 'Original entries frozen $waktu';
+  }
+
+  @override
+  String get bandingkanGagal => 'The comparison could not be loaded.';
+
+  @override
+  String get bandingkanTidakAdaBerubah => 'No entries changed.';
+
+  @override
+  String bandingkanTidakBerubahJudul(int jumlah) {
+    return '$jumlah entries unchanged';
+  }
+
+  @override
+  String get telusuriJudul => 'Look up certificate no.';
+
+  @override
+  String get telusuriCari => 'Type a certificate no. (min. 2 characters)';
+
+  @override
+  String get telusuriPetunjuk =>
+      'Type at least 2 characters of the certificate number, including revisions such as -R1.';
+
+  @override
+  String get telusuriKosong => 'No certificate matches that number.';
+
+  @override
+  String get telusuriGagal => 'Search failed. Try again.';
+
+  @override
+  String get telusuriStatusBerlaku => 'Issued';
+
+  @override
+  String get telusuriStatusDitarik => 'Withdrawn';
+
+  @override
+  String get telusuriStatusDigantikan => 'Superseded';
+
+  @override
+  String get telusuriStatusDibatalkan => 'Cancelled';
+
+  @override
+  String get telusuriStatusBelumTerbit => 'Not issued yet';
+
+  @override
+  String telusuriTahap(String tahap) {
+    return 'Order stage: $tahap';
+  }
+
+  @override
+  String get telusuriLihatPaket => 'View order';
+
+  @override
+  String get telusuriBukaPdf => 'Open PDF';
+
+  @override
+  String get tahapDiterima => 'Received';
+
+  @override
+  String get tahapDikalibrasi => 'Being calibrated';
+
+  @override
+  String get tahapMenungguPemeriksaan => 'Awaiting admin check';
+
+  @override
+  String get tahapMenungguPengesahan => 'Awaiting approval';
+
+  @override
+  String get tahapSertifikatTerbit => 'Certificate issued';
+
+  @override
+  String get tahapSiapDiambil => 'Ready for pickup';
+
+  @override
+  String get tahapDiserahkan => 'Handed over';
+
+  @override
+  String get arsipBerkasDiubah => 'File name changed.';
+
+  @override
+  String get jtUbahAksi => 'Change due date';
+
+  @override
+  String get jtUbahJudul => 'Change due date';
+
+  @override
+  String get jtUbahDampak => 'What happens';
+
+  @override
+  String get jtUbahDampakSertifikat =>
+      'Instrument has an active certificate: the printed date changes, so a REVISION (-R1, -R2, ...) is created. The old certificate stays as history; the schedule follows once the revision PDF is issued.';
+
+  @override
+  String get jtUbahDampakJadwal =>
+      'No active dated certificate: only the instrument schedule changes, immediately, and it is audit-logged.';
+
+  @override
+  String get jtUbahTanggal => 'New due date';
+
+  @override
+  String get jtUbahPilihTanggal => 'Pick a date';
+
+  @override
+  String get jtUbahAlasan => 'Reason';
+
+  @override
+  String get jtUbahAlasanMin => 'Reason needs at least 5 characters.';
+
+  @override
+  String get jtUbahTanggalKosong => 'Pick a date first.';
+
+  @override
+  String get jtUbahSimpan => 'Save';
+
+  @override
+  String get jtUbahBatal => 'Cancel';
+
+  @override
+  String get jtUbahBerhasilJadwal => 'Due date schedule changed.';
+
+  @override
+  String jtUbahBerhasilRevisi(String nomor) {
+    return 'Revision $nomor created: the printed certificate date changed.';
+  }
+
+  @override
+  String get sertRingNomor => 'Number';
+
+  @override
+  String get sertRingPelanggan => 'Customer';
+
+  @override
+  String get sertRingAlat => 'Instrument';
+
+  @override
+  String get sertRingBerlaku => 'Valid until';
+
+  @override
+  String get sertPdfGagal => 'Couldn\'t load the certificate PDF.';
+
+  @override
+  String get sertPdfLuring => 'Showing the saved copy (offline).';
+
+  @override
+  String kabarBaruJumlah(int n) {
+    return '$n new updates';
+  }
+
+  @override
+  String get kabarBaruKetuk => 'Tap to see them';
+
+  @override
+  String get izinNotifJudul => 'Turn on notifications?';
+
+  @override
+  String get izinNotifIsi =>
+      'So you hear right away when a worksheet comes in, a session is approved or needs revision, or a certificate is issued. Android will ask for your permission next.';
+
+  @override
+  String get izinNotifLanjut => 'Continue';
+
+  @override
+  String get izinNotifNanti => 'Not now';
+
+  @override
+  String fotoReviewBelumDicek(int jumlah) {
+    return '$jumlah yellow numbers not checked yet. Compare each with its photo crop, then tap the check.';
+  }
+
+  @override
+  String get fotoReviewTandaiDicek => 'Mark as checked';
+
+  @override
+  String get fotoReviewSudahDicek => 'Checked';
+
+  @override
+  String get fotoReviewIsiCepat => 'Quick fill, one by one';
+
+  @override
+  String get fotoReviewKonfirmasiLanjut => 'Confirm and next';
+
+  @override
+  String get fotoReviewTutupKeypad => 'Close keypad';
+
+  @override
+  String get fotoReviewKeypadHapus => 'Delete one character';
+
+  @override
+  String get fotoReviewKeypadMinus => 'Minus sign';
+
+  @override
+  String get fotoReviewUsulanMesin =>
+      'Machine suggestion: raw score, not a percentage';
+
+  @override
+  String fotoReviewSisaSel(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah cells left',
+      one: '1 cell left',
+      zero: 'All cells are done',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get lkAsliMemproses =>
+      'Reading the photo on this phone... it is not sent anywhere.';
+
+  @override
+  String get lkAsliBelumSiap =>
+      'This form cannot be scanned yet. Fill it in manually.';
+
+  @override
+  String get lkAsliGeometriBelumLengkap =>
+      'The cell map for this form is incomplete. Fill it in manually.';
+
+  @override
+  String get lkAsliKodeTidakTerbaca =>
+      'The form code (METROLOGY-FM-CAL-xxxx) at the bottom right was not readable. Photograph the whole sheet, upright and well lit.';
+
+  @override
+  String lkAsliFormulirLain(String kode) {
+    return 'This is a different form ($kode), not the one for this instrument. Use the right sheet or fill in manually.';
+  }
+
+  @override
+  String get lkAsliRevisiTidakTerbaca =>
+      'Form revision not readable — retake the photo';
+
+  @override
+  String lkAsliRevisiBeda(String terbaca) {
+    return 'The form revision in the photo ($terbaca) differs from the one in the system. Use the latest revision or fill in manually.';
+  }
+
+  @override
+  String lkAsliJangkarKurang(int jumlah) {
+    return 'Too little printed text ($jumlah) was read to straighten the photo. Retake it with the whole sheet in frame.';
+  }
+
+  @override
+  String get lkAsliJangkarTidakMenyebar =>
+      'The readable parts of the form are bunched on one side. Keep the whole sheet in frame and retake.';
+
+  @override
+  String lkAsliTerisi(int terisi) {
+    return '$terisi cells filled from the photo. Check them again before sending.';
+  }
+
+  @override
+  String get lkAsliKondisiLingkungan => 'Environmental conditions';
+
+  @override
+  String lkAsliTerisiCentangManual(int terisi) {
+    return '$terisi fields filled from the photo. Checkboxes (thermohygro, standards used) stay manual. Check again before sending.';
+  }
+
+  @override
+  String get lkAsliTakAdaSel => 'No numbers could be taken from this photo.';
+
+  @override
+  String get lkAsliGagalUmum =>
+      'The photo could not be processed. Fill in manually or retake it.';
+
+  @override
+  String get lkAsliFotoTerbalik =>
+      'The sheet appears upside down in the photo. Retake it with the sheet upright.';
+
+  @override
+  String get lkAsliPembacaMati =>
+      'The text reader is not working: no cell could be read. Retake the photo or fill in manually.';
+
+  @override
+  String get lkModulPembacaTeksDiunduh =>
+      'The text reader module is still being downloaded by Google Play Services and needs internet once. Connect to the internet and try again, or fill in manually.';
+
+  @override
+  String get lkModulPembacaQrDiunduh =>
+      'The QR reader module is still being downloaded by Google Play Services and needs internet once. Connect to the internet and try again, or fill in manually.';
+
+  @override
+  String get lkGalatIzinKamera =>
+      'Camera permission was denied. Tap the photo button again and choose Allow. If the permission dialog no longer appears, enable Camera in phone Settings → Apps → lab Calibration → Permissions.';
+
+  @override
+  String get lkGalatKameraTidakAda =>
+      'No camera was found on this phone. Fill in the numbers manually.';
+
+  @override
+  String get lkGalatKameraSibuk =>
+      'The camera is still open from a previous attempt. Wait a moment and try again.';
+
+  @override
+  String get lkGalatTanpaPlayServices =>
+      'The on-phone text reader needs Google Play Services enabled and up to date. Update Google Play Services from the Play Store, or fill in the numbers manually.';
+
+  @override
+  String get lkGalatServerBelumTersambung =>
+      'The server cannot be reached yet — it may be starting up (up to 1–2 minutes) or the signal is weak. Wait a moment and try again.';
+
+  @override
+  String get lkFotoTabelGagalUmum =>
+      'The table photo could not be processed. Retake it or fill in manually.';
+
+  @override
+  String get lkServerSedangDinyalakan =>
+      'The server is starting up, please wait…';
+
+  @override
+  String get lkFotoTertinggalJudul => 'Previous photo found';
+
+  @override
+  String get lkFotoTertinggalIsi =>
+      'The phone closed the app while the camera was open, but the photo was kept. Use it only if it is a photo of this sheet; if unsure, take a new photo.';
+
+  @override
+  String get lkFotoTertinggalPakai => 'Use this photo';
+
+  @override
+  String get lkFotoTertinggalBaru => 'New photo';
+
+  @override
+  String get lkKameraMemuat => 'Opening the camera…';
+
+  @override
+  String get lkKameraTutup => 'Close camera';
+
+  @override
+  String get lkKameraJepret => 'Take photo';
+
+  @override
+  String get lkKameraJepretGagal =>
+      'The photo could not be taken. Tap the shutter button again.';
+
+  @override
+  String get lkKameraSenterNyalakan => 'Turn on torch';
+
+  @override
+  String get lkKameraSenterMatikan => 'Turn off torch';
+
+  @override
+  String get lkKameraSenterTidakAda =>
+      'This phone has no torch the app can turn on.';
+
+  @override
+  String get lkKameraIzinJudul => 'Camera permission needed';
+
+  @override
+  String get lkKameraIzinLangkah =>
+      'The camera is used to photograph the worksheet; the photo is read on this phone and never uploaded. Tap Try again, then choose Allow. If the permission dialog no longer appears, enable Camera in the phone Settings → Apps → lab Calibration → Permissions.';
+
+  @override
+  String get lkKameraCobaLagi => 'Try again';
+
+  @override
+  String get lkKameraBantuanAlas =>
+      'Put the sheet on a dark or contrasting surface and keep the whole page inside the frame. Tap the sheet to focus.';
+
+  @override
+  String get lkKameraTipGelapNyalakanSenter =>
+      'Too dark. Turn on the torch (torch icon next to the shutter button).';
+
+  @override
+  String get lkKameraTipGelapTambahCahaya =>
+      'Still too dark. Find a brighter place.';
+
+  @override
+  String get lkKameraTipBuram =>
+      'The image is blurry. Hold the phone still, then tap the sheet to focus.';
+
+  @override
+  String get lkKameraTipBuramGerak =>
+      'The image is smeared because the phone is moving. Hold it still before pressing the shutter.';
+
+  @override
+  String get lkKameraTipBayangan =>
+      'There is a shadow on the sheet. Move the phone or your hand so the light is even.';
+
+  @override
+  String get lkKameraTipAgakGelap =>
+      'A bit dark. A torch or extra light helps the reading.';
+
+  @override
+  String get lkKameraBantuanAlasTabel =>
+      'Put the sheet on a dark or contrasting surface and keep the whole table you are photographing inside the frame. Tap the sheet to focus.';
+
+  @override
+  String get lkKameraTipTerpotongTabel =>
+      'The whole table must be visible. Move the phone back until all four edges of the table are inside the frame.';
+
+  @override
+  String get lkKameraPetunjukMati =>
+      'Automatic hints are not available on this phone. Make sure the sheet is bright, sharp, and fully inside the frame before shooting.';
+
+  @override
+  String get lkKameraTipSilau =>
+      'Too much glare. Move the phone or turn off the torch until the reflection is gone.';
+
+  @override
+  String get lkKameraTipTerpotong =>
+      'The whole page must be visible. Move the phone back until all four edges of the paper are inside the frame.';
+
+  @override
+  String get lkFotoUlang => 'Retake photo';
+
+  @override
+  String get lkFotoUlangJudul => 'This photo cannot be used';
+
+  @override
+  String get lkFotoUlangTutup => 'Close';
+
+  @override
+  String get lkAsliHalamanTerpotong =>
+      'The page is cut off or not fully in the photo. Photograph the WHOLE page: all four paper corners and the form code at the bottom right must be inside the frame, with the sheet on a dark surface so its edges stand out.';
+
+  @override
+  String get aturanAsliBukanAngka =>
+      'Not a plain decimal number; type it yourself';
+
+  @override
+  String get aturanAsliDesimal =>
+      'Decimal places do not match the balance resolution';
+
+  @override
+  String get aturanAsliStandarNominal =>
+      'Standard is far from the piece nominal';
+
+  @override
+  String get aturanAsliMpeBelumAda =>
+      'class MPE not available yet, rough 1% limit used';
+
+  @override
+  String get aturanAsliDuaUut =>
+      'The two UUT readings in this column differ too much';
+
+  @override
+  String get aturanAsliBlokTidakLengkap =>
+      'Column incomplete: this cell is empty while others in the same column are filled';
+
+  @override
+  String get lkAsliPilihAlatDulu =>
+      'Pick the instrument first, then tap the \"Photo worksheet\" camera button above the sheet.';
+
+  @override
+  String pembaruanWindowsSiap(String versi) {
+    return 'Version $versi is ready — restart to install';
+  }
+
+  @override
+  String get pembaruanWindowsKeterangan =>
+      'Save your work first. The app closes and reopens on the new version.';
+
+  @override
+  String get pembaruanWindowsMulaiUlang => 'Restart now';
+
+  @override
+  String get pembaruanWindowsNanti =>
+      'Later — installs the next time the app opens';
+
+  @override
+  String get pembaruanWindowsGagal =>
+      'The update could not be installed yet. Close and reopen the app to try again.';
+
+  @override
+  String get alurAcuanJudul => 'Data reference versions';
+
+  @override
+  String get alurAcuanKelolaSub =>
+      'Submit, simulate and activate reference data versions';
+
+  @override
+  String get alurAcuanBuka => 'Version workflow';
+
+  @override
+  String get alurAcuanKosong => 'No data versions yet.';
+
+  @override
+  String get alurAcuanBacaSajaJudul => 'Read-only in Metrology Studio';
+
+  @override
+  String get alurAcuanBacaSajaKet =>
+      'Submit, simulate, reject and activate are done from the lab app by an admin or super admin. Activation must be done by a second person — not whoever imported the master, edited or submitted the draft.';
+
+  @override
+  String get alurAcuanSimulasiJudul => 'Simulation';
+
+  @override
+  String get alurAcuanSimBelumAda => 'Not run yet';
+
+  @override
+  String get alurAcuanSimTerbaru => 'Up to date';
+
+  @override
+  String get alurAcuanSimKedaluwarsa => 'Outdated — run it again';
+
+  @override
+  String get alurAcuanSimGagal => 'Failed';
+
+  @override
+  String alurAcuanRingkasan(
+    int total,
+    int berubah,
+    int cetak,
+    int terbit,
+    int vonis,
+    int gagal,
+  ) {
+    return '$total sessions · $berubah changed · $cetak printed changes · $terbit already issued · $vonis verdict changes · $gagal failed';
+  }
+
+  @override
+  String alurAcuanBersama(int n) {
+    return '$n shared values across master variants changed';
+  }
+
+  @override
+  String get alurAcuanWajibDiakui => 'Must be acknowledged on activation';
+
+  @override
+  String get alurAcuanButirTerbit =>
+      'Printed numbers of ISSUED certificates change';
+
+  @override
+  String get alurAcuanButirBersama =>
+      'Shared data across master variants changes';
+
+  @override
+  String get alurAcuanButirSesiGagal => 'Some sessions failed to simulate';
+
+  @override
+  String get alurAcuanLihatLaporan => 'View simulation report';
+
+  @override
+  String alurAcuanLog(int n) {
+    return 'Log ($n)';
+  }
+
+  @override
+  String get alurAcuanAksiDibuat => 'Created';
+
+  @override
+  String get alurAcuanAksiAjukan => 'Submitted';
+
+  @override
+  String get alurAcuanAksiSimulasi => 'Simulated';
+
+  @override
+  String get alurAcuanAksiSahkan => 'Activated';
+
+  @override
+  String get alurAcuanAksiTolak => 'Rejected';
+
+  @override
+  String get alurAcuanAksiBuang => 'Discarded';
+
+  @override
+  String get alurAcuanAksiPensiun => 'Retired';
+
+  @override
+  String alurAcuanOleh(int id) {
+    return 'user #$id';
+  }
+
+  @override
+  String get alurAcuanAjukan => 'Submit';
+
+  @override
+  String get alurAcuanJalankanSimulasi => 'Run simulation';
+
+  @override
+  String get alurAcuanTolak => 'Reject';
+
+  @override
+  String get alurAcuanAktifkan => 'Activate';
+
+  @override
+  String get alurAcuanAlasan => 'Reason';
+
+  @override
+  String get alurAcuanAlasanMin => 'At least 10 characters.';
+
+  @override
+  String get alurAcuanRujukan => 'References (optional)';
+
+  @override
+  String get alurAcuanTambahRujukan => 'Add reference';
+
+  @override
+  String get alurAcuanHapusRujukan => 'Remove reference';
+
+  @override
+  String get alurAcuanRujukanJenis => 'Type';
+
+  @override
+  String get alurAcuanRujukanNilai => 'Value';
+
+  @override
+  String get alurAcuanRujukanNilaiWajib =>
+      'Fill in the value or remove the row.';
+
+  @override
+  String get alurAcuanJenisSertifikatStandar => 'Standard certificate';
+
+  @override
+  String get alurAcuanJenisIk => 'Work instruction';
+
+  @override
+  String get alurAcuanJenisLampiran => 'Attachment';
+
+  @override
+  String get alurAcuanJenisSelMaster => 'Master cell';
+
+  @override
+  String get alurAcuanJenisLain => 'Other';
+
+  @override
+  String get alurAcuanKirim => 'Send';
+
+  @override
+  String get alurAcuanBatal => 'Cancel';
+
+  @override
+  String get alurAcuanSimulasiKonfirmasi =>
+      'Recalculate every stored session of this profile with this version? Nothing is written to lab data.';
+
+  @override
+  String get alurAcuanTolakKet =>
+      'A draft is discarded; a submitted version is rejected. Recorded in the log.';
+
+  @override
+  String get alurAcuanBerlakuMulai => 'Effective from';
+
+  @override
+  String get alurAcuanUbahTanggal => 'Change date';
+
+  @override
+  String get alurAcuanSandi => 'Your password (confirmation)';
+
+  @override
+  String get alurAcuanSandiWajib => 'Password is required.';
+
+  @override
+  String get alurAcuanCatatan => 'Note (optional)';
+
+  @override
+  String get alurAcuanPengakuanJudul =>
+      'Acknowledgements (reason per item, min. 10 characters)';
+
+  @override
+  String get alurAcuanAktifkanKet =>
+      'The previous active version retires the day before this date. Sessions already stamped keep their version.';
+
+  @override
+  String get alurAcuanSimulasiHarusTerbaru =>
+      'The last simulation is not up to date. Run the simulation again before activating.';
+
+  @override
+  String alurAcuanSuksesAjukan(int nomor) {
+    return 'v$nomor submitted.';
+  }
+
+  @override
+  String get alurAcuanSuksesSimulasi => 'Simulation finished.';
+
+  @override
+  String alurAcuanSuksesTolak(int nomor) {
+    return 'v$nomor rejected.';
+  }
+
+  @override
+  String alurAcuanSuksesAktifkan(int nomor) {
+    return 'v$nomor activated.';
+  }
+
+  @override
+  String get alurAcuanGalatStatus =>
+      'This version\'s status has changed. Reload and try again.';
+
+  @override
+  String get alurAcuanGalatJenis =>
+      'This workflow only supports data versions (layer 1).';
+
+  @override
+  String get alurAcuanGalatHanyaSuperAdmin =>
+      'Only a super admin can reject a submitted version.';
+
+  @override
+  String get alurAcuanGalatPengesahIkut =>
+      'You took part in this version (imported the master, edited or submitted it). Activation must be done by someone else.';
+
+  @override
+  String get alurAcuanGalatBerlakuLampau =>
+      'The effective date cannot be before today.';
+
+  @override
+  String get alurAcuanGalatSimulasiBelumAda =>
+      'Run the simulation first; a version may not become active before its impact is reviewed.';
+
+  @override
+  String get alurAcuanGalatSimulasiKedaluwarsa =>
+      'The version, or this profile\'s sessions/issued certificates, changed after the last simulation. Run the simulation again.';
+
+  @override
+  String get alurAcuanGalatSimulasiGagal =>
+      'The last simulation failed. Run it again.';
+
+  @override
+  String alurAcuanGalatPengakuan(String butir) {
+    return 'An acknowledgement (min. 10 characters) is required for: $butir';
+  }
+
+  @override
+  String get alurAcuanGalatRentang =>
+      'Another active version starts on or after this date. Pick a later date.';
+
+  @override
+  String get alurAcuanGalatSandi => 'The confirmation password is wrong.';
+
+  @override
+  String get alurAcuanGalatBukanAplikasi =>
+      'This app cannot change data reference versions. Use the lab app.';
+
+  @override
+  String get alurAcuanGalatTidakBerwenang => 'You are not allowed to do this.';
+
+  @override
+  String get alurAcuanGalatTidakDitemukan =>
+      'Version not found or not available to you.';
+
+  @override
+  String get alurAcuanGalatTerlaluSering =>
+      'Too many requests. Wait a moment and try again.';
+
+  @override
+  String get alurAcuanGalatIsian =>
+      'The server rejected the input. Check it and try again.';
+
+  @override
+  String get alurAcuanGalatKoneksi =>
+      'Cannot reach the server. Check the connection and try again.';
+
+  @override
+  String get alurAcuanGalatUmum => 'The action failed. Try again.';
+
+  @override
+  String simAcuanJudul(int nomor) {
+    return 'Simulation report v$nomor';
+  }
+
+  @override
+  String get simAcuanBelumAda => 'This version has not been simulated yet.';
+
+  @override
+  String get simAcuanHanyaBerubah => 'Changed only';
+
+  @override
+  String get simAcuanTidakAdaBerubah => 'No session changes.';
+
+  @override
+  String get simAcuanBerubah => 'Changed';
+
+  @override
+  String get simAcuanCetakBerubah => 'Printed numbers change';
+
+  @override
+  String get simAcuanVonisBerubah => 'Verdict changes';
+
+  @override
+  String get simAcuanGagal => 'Failed';
+
+  @override
+  String get simAcuanTidakBerubah => 'Unchanged';
+
+  @override
+  String simAcuanSertifikatTerbit(String nomor) {
+    return 'Issued certificate: $nomor';
+  }
+
+  @override
+  String get simAcuanTabelCetak => 'Printed on the certificate';
+
+  @override
+  String get simAcuanTabelSelisih => 'Calculated values';
+
+  @override
+  String get simAcuanKolomTitik => 'Point';
+
+  @override
+  String get simAcuanKolomKolom => 'Column';
+
+  @override
+  String get simAcuanKolomLama => 'Old';
+
+  @override
+  String get simAcuanKolomBaru => 'New';
+
+  @override
+  String get simAcuanKolomSelisih => 'Difference';
+
+  @override
+  String simAcuanTitikTidakTerhitung(String titik) {
+    return 'Point $titik is calculated on one side only';
+  }
+
+  @override
+  String simAcuanPembanding(String versi) {
+    return 'Compared with $versi';
+  }
+
+  @override
+  String get simAcuanBersamaJudul => 'Shared data across variants';
+
+  @override
+  String simAcuanMasterLain(String nama) {
+    return 'Other variant master: $nama';
+  }
+
+  @override
+  String get simAcuanSesiJudul => 'Sessions';
+
+  @override
+  String get titikSesiJudul => 'Measurement points';
+
+  @override
+  String titikSesiJudulSatuan(String satuan) {
+    return 'Measurement points ($satuan)';
+  }
+
+  @override
+  String get titikSesiKeterangan =>
+      'Saved on the server — every device sees the same points. Points are never deleted: deactivate with a reason; their readings stay stored.';
+
+  @override
+  String titikSesiAktifRingkas(int aktif, int maks) {
+    return '$aktif active (max. $maks)';
+  }
+
+  @override
+  String titikSesiPengulangan(int n, int min, int maks) {
+    return 'Repetitions: $n× (allowed $min–$maks; change it from the box-count menu above)';
+  }
+
+  @override
+  String titikSesiPengulanganDipatok(int n) {
+    return 'Repetitions fixed by the sheet: $n×';
+  }
+
+  @override
+  String get titikSesiKosong => 'No points yet. Tap Add to start.';
+
+  @override
+  String get titikSesiTambah => 'Add';
+
+  @override
+  String get titikSesiTambahJudul => 'Add point';
+
+  @override
+  String get titikSesiNominal => 'Nominal';
+
+  @override
+  String titikSesiNominalSatuan(String satuan) {
+    return 'Nominal ($satuan)';
+  }
+
+  @override
+  String get titikSesiAsalProfil => 'Sheet default';
+
+  @override
+  String get titikSesiAsalTeknisi => 'Technician';
+
+  @override
+  String get titikSesiAsalPelanggan => 'Customer request';
+
+  @override
+  String get titikSesiAlasanPelanggan =>
+      'Basis of the request (e.g. PO number, min. 5 letters)';
+
+  @override
+  String get titikSesiAlasanOpsional => 'Note (optional)';
+
+  @override
+  String get titikSesiDenganSebelum => 'Also read before adjustment (as-found)';
+
+  @override
+  String get titikSesiFaseSebelumRingkas => 'with as-found';
+
+  @override
+  String get titikSesiTerkunciPertama => 'first point, must stay active';
+
+  @override
+  String titikSesiNonaktifLabel(String alasan) {
+    return 'inactive — $alasan';
+  }
+
+  @override
+  String get titikSesiAksi => 'Point actions';
+
+  @override
+  String get titikSesiUbah => 'Change nominal';
+
+  @override
+  String titikSesiUbahJudul(String nominal) {
+    return 'Change nominal $nominal';
+  }
+
+  @override
+  String get titikSesiNonaktifkan => 'Deactivate';
+
+  @override
+  String titikSesiNonaktifkanJudul(String nominal) {
+    return 'Deactivate point $nominal';
+  }
+
+  @override
+  String get titikSesiNonaktifkanPesan =>
+      'Its readings are NOT deleted — they stay stored and visible in the audit trail, but are not calculated or printed on the certificate.';
+
+  @override
+  String get titikSesiAlasan => 'Reason (min. 5 letters)';
+
+  @override
+  String get titikSesiAktifkan => 'Activate again';
+
+  @override
+  String get titikSesiDiLuarCmc =>
+      'Outside the accredited CMC scope — the certificate is blocked until this point is justified or deactivated.';
+
+  @override
+  String get titikSesiDiLuarCmcBerjustifikasi =>
+      'Outside the CMC scope, justified — the admin will see a warning.';
+
+  @override
+  String get titikSesiJustifikasi => 'CMC justification';
+
+  @override
+  String titikSesiJustifikasiJudul(String nominal) {
+    return 'CMC justification for $nominal';
+  }
+
+  @override
+  String titikSesiJustifikasiTerisi(String teks) {
+    return 'justification: $teks';
+  }
+
+  @override
+  String get titikSesiBatal => 'Cancel';
+
+  @override
+  String get titikSesiSimpan => 'Save';
+
+  @override
+  String titikSesiTakDidukung(String alasan) {
+    return 'Session measurement points are not available for this sheet yet: $alasan';
+  }
+
+  @override
+  String get titikSesiKonflik =>
+      'The measurement points of this session were changed on another device. The latest points are loaded and your readings are still on screen. Check the points, redo your change, then save again.';
+
+  @override
+  String get titikSesiDiperbaruiPerangkatLain =>
+      'Measurement points were updated from another device.';
+
+  @override
+  String titikSesiDitolak(String pesan) {
+    return 'Measurement points rejected: $pesan';
+  }
+
+  @override
+  String titikSesiPengulanganKurang(int n) {
+    return 'Repetitions cannot go below $n: readings up to repetition $n are already stored and are never deleted.';
+  }
+
+  @override
+  String get titikSesiGalatTabel => 'This point table is not on the sheet.';
+
+  @override
+  String get titikSesiGalatTidakBolehTambah =>
+      'This sheet does not accept points outside its printed nominals.';
+
+  @override
+  String get titikSesiGalatKembar =>
+      'That nominal is already used by another point (active or inactive).';
+
+  @override
+  String get titikSesiGalatAktifPenuh =>
+      'The maximum number of active points is reached. Deactivate another point first.';
+
+  @override
+  String get titikSesiGalatAktifMinimum =>
+      'This sheet already has the minimum number of active points.';
+
+  @override
+  String get titikSesiGalatTotalPenuh =>
+      'At most 60 points per session, including inactive ones.';
+
+  @override
+  String get titikSesiGalatAlasanPendek =>
+      'A reason is required, at least 5 letters.';
+
+  @override
+  String get titikSesiGalatAlasanPelanggan =>
+      'A customer-requested point must state its basis (min. 5 letters), e.g. a PO number.';
+
+  @override
+  String get titikSesiGalatTidakBolehNonaktif =>
+      'Points on this sheet cannot be deactivated.';
+
+  @override
+  String get titikSesiGalatPertama =>
+      'The first point cannot be deactivated — session values are read from the first point.';
+
+  @override
+  String get titikSesiGalatPunyaPembacaan =>
+      'This point already has readings, so its nominal cannot change. Deactivate it, then add a new point.';
+
+  @override
+  String get titikSesiGalatDipatok =>
+      'This nominal is fixed by the printed sheet.';
+
+  @override
+  String get titikSesiGalatFase =>
+      'The before-adjustment phase is not available on this sheet.';
+
+  @override
+  String get titikSesiGalatTidakAda => 'Point not found.';
+
+  @override
+  String get titikSesiGalatBarisPenuh =>
+      'All set-point rows are already filled.';
+
+  @override
+  String get titikSesiGalatAngka => 'The nominal is not a number yet.';
+
+  @override
+  String titikSesiBentrokJudul(String nominal) {
+    return 'Point $nominal was deactivated on another device';
+  }
+
+  @override
+  String titikSesiBentrokPesan(String alasan) {
+    return 'Reason: $alasan. This point has numbers on this phone that are not saved yet, and an inactive point cannot take new readings. Choose what to do with them.';
+  }
+
+  @override
+  String get titikSesiBentrokAktifkan => 'Reactivate this point';
+
+  @override
+  String get titikSesiBentrokBuang => 'Discard unsaved numbers on this point';
+
+  @override
+  String get undangAnggota => 'Invite member';
+
+  @override
+  String undangJudul(String perusahaan) {
+    return 'Invite a member to $perusahaan';
+  }
+
+  @override
+  String get undangEmail => 'Member\'s email';
+
+  @override
+  String get undangEmailKosong => 'Enter an email address.';
+
+  @override
+  String get undangEmailTidakValid => 'That email address is not valid.';
+
+  @override
+  String get undangPeran => 'Role';
+
+  @override
+  String get undangPeranPic => 'Main PIC';
+
+  @override
+  String get undangPeranStaf => 'Staff';
+
+  @override
+  String get undangKirim => 'Send invitation';
+
+  @override
+  String get undangBatal => 'Cancel';
+
+  @override
+  String get undangGagalUmum => 'The invitation could not be sent. Try again.';
+
+  @override
+  String get undangKodeJudul => 'Invitation code';
+
+  @override
+  String undangKodeUntuk(String email) {
+    return 'For $email';
+  }
+
+  @override
+  String get undangSalin => 'Copy';
+
+  @override
+  String get undangDisalin => 'Code copied';
+
+  @override
+  String undangBerlaku(String tanggal) {
+    return 'Valid until $tanggal';
+  }
+
+  @override
+  String get undangPeringatan =>
+      'Copy now — the code cannot be viewed again. Valid for 7 days. A new invitation to the same email cancels the old code.';
+
+  @override
+  String get undangPetunjukPelanggan =>
+      'In the METROLOGY Pelanggan app: Sign in → Use invitation code';
+
+  @override
+  String get undangTanpaKode =>
+      'Invitation created, but the code is not available on this server version — use the panel.';
+
+  @override
+  String get undangTutup => 'Done';
+
+  @override
+  String get rskJudul => 'Summary before sending';
+
+  @override
+  String rskTahanPesan(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah required items',
+      one: '1 required item',
+    );
+    return 'Can\'t send yet: $_temp0 to fix first. Tap an item to jump to it.';
+  }
+
+  @override
+  String get rskPeringatanPesan =>
+      'Please look at these before sending. You can still send as it is.';
+
+  @override
+  String get rskBagianWajib => 'Required';
+
+  @override
+  String get rskBagianPeringatan => 'Worth checking';
+
+  @override
+  String rskIdentitasKosong(String label) {
+    return '$label is empty. It is printed on the certificate.';
+  }
+
+  @override
+  String rskOcrPerluDicek(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other:
+          '$jumlah camera readings are not checked yet. Check each one against the instrument; final send is held until all are checked.',
+      one:
+          '1 camera reading is not checked yet. Check each one against the instrument; final send is held until all are checked.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rskTitikTerisi(int terisi, int total) {
+    return 'Points filled: $terisi of $total';
+  }
+
+  @override
+  String get rskKembali => 'Back';
+
+  @override
+  String get rskKirim => 'Send';
+
+  @override
+  String get rskTetapKirim => 'Send anyway';
+
+  @override
+  String get rskLompatKet => 'Tap to go to this field';
+
+  @override
+  String get rskTidakBisaLompat =>
+      'That field could not be found on screen. Scroll to it by hand.';
+
+  @override
+  String get kelolaGrupPengawasan => 'Oversight';
+
+  @override
+  String get buatTekJudul => 'Create technician account';
+
+  @override
+  String get buatTekSub => 'A new login for a technician, active right away';
+
+  @override
+  String get buatTekHanyaAdmin => 'Only admins can create technician accounts.';
+
+  @override
+  String get buatTekIntro =>
+      'The account is active right away with the Technician role. They log in with their employee ID or email. Hand the initial password to them in person.';
+
+  @override
+  String get buatTekNama => 'Full name';
+
+  @override
+  String get buatTekEmployeeId => 'Employee ID';
+
+  @override
+  String get buatTekEmail => 'Email';
+
+  @override
+  String get buatTekDepartment => 'Department (optional)';
+
+  @override
+  String get buatTekPassword => 'Initial password';
+
+  @override
+  String get buatTekPasswordHelper =>
+      'At least 8 characters. It is not shown again once the account is created.';
+
+  @override
+  String get buatTekPasswordUlang => 'Repeat initial password';
+
+  @override
+  String get buatTekSimpan => 'Create account';
+
+  @override
+  String get buatTekNamaKosong => 'Name is required.';
+
+  @override
+  String get buatTekEmployeeIdKosong => 'Employee ID is required.';
+
+  @override
+  String get buatTekEmployeeIdAt =>
+      'The employee ID cannot contain @. At login, an @ is read as an email.';
+
+  @override
+  String get buatTekEmailKosong => 'Email is required.';
+
+  @override
+  String get buatTekEmailSalah => 'That email format does not look right.';
+
+  @override
+  String get buatTekPasswordPendek => 'Password must be at least 8 characters.';
+
+  @override
+  String get buatTekPasswordBeda => 'The two passwords do not match.';
+
+  @override
+  String get buatTekGagal => 'The account was not created. Try again.';
+
+  @override
+  String buatTekBerhasil(String nama, String employeeId) {
+    return 'Technician account $nama created (employee ID $employeeId). Hand the initial password to them in person; it is not shown again.';
+  }
+
+  @override
+  String get auditJudul => 'Change history';
+
+  @override
+  String get auditSub => 'Who changed what, when, and from what to what';
+
+  @override
+  String get auditHanyaAdmin => 'Only admins can view the change history.';
+
+  @override
+  String get auditBacaSaja => 'Read only. History cannot be edited from here.';
+
+  @override
+  String get auditFilter => 'Filter';
+
+  @override
+  String get auditFilterJudul => 'Filter history';
+
+  @override
+  String get auditFilterAksi => 'Action';
+
+  @override
+  String get auditSemua => 'All';
+
+  @override
+  String get auditAksiDibikin => 'Created';
+
+  @override
+  String get auditAksiDiubah => 'Changed';
+
+  @override
+  String get auditAksiDihapus => 'Deleted';
+
+  @override
+  String get auditAksiDipulihkan => 'Restored';
+
+  @override
+  String get auditFilterTipe => 'Data type (table name)';
+
+  @override
+  String get auditFilterTipeHint => 'e.g. standards';
+
+  @override
+  String get auditFilterId => 'Data ID';
+
+  @override
+  String get auditFilterDari => 'From date';
+
+  @override
+  String get auditFilterSampai => 'To date';
+
+  @override
+  String get auditPilihTanggal => 'Pick a date';
+
+  @override
+  String get auditTerapkan => 'Apply';
+
+  @override
+  String get auditReset => 'Reset';
+
+  @override
+  String get auditKosong => 'No history for these filters.';
+
+  @override
+  String get auditGagalMuat => 'Could not load the history.';
+
+  @override
+  String get auditCobaLagi => 'Try again';
+
+  @override
+  String get auditMuatLagi => 'Load more';
+
+  @override
+  String get auditMuatGagal => 'The next page failed to load. Try again.';
+
+  @override
+  String auditOleh(String nama) {
+    return 'by $nama';
+  }
+
+  @override
+  String get auditOlehSistem => 'by the system (automatic)';
+
+  @override
+  String auditEntitas(String tipe, String id) {
+    return '$tipe #$id';
+  }
+
+  @override
+  String get auditTanpaRincian => 'No column details for this action.';
+
+  @override
+  String get auditNilaiKosong => '(empty)';
+
+  @override
+  String get auditNilaiDisembunyikan => '(hidden)';
+
+  @override
+  String get auditSebelum => 'Before';
+
+  @override
+  String get auditSesudah => 'After';
+
+  @override
+  String get auditCatatan => 'Note';
+
+  @override
+  String get auditTutup => 'Close';
+
+  @override
+  String get logoOrgJudul => 'Certificate letterhead logo';
+
+  @override
+  String get logoOrgSub =>
+      'The lab logo printed on the certificate letterhead (PNG or JPG)';
+
+  @override
+  String get logoOrgHanyaAdmin => 'Only admins can manage the logo.';
+
+  @override
+  String get logoOrgInfo =>
+      'This logo is printed on the certificate letterhead. PNG or JPG, 2 MB at most. WEBP and GIF cannot be printed in the PDF.';
+
+  @override
+  String get logoOrgBelum =>
+      'No custom logo yet. The certificate letterhead uses the default logo.';
+
+  @override
+  String get logoOrgUnggah => 'Upload logo';
+
+  @override
+  String get logoOrgGanti => 'Replace logo';
+
+  @override
+  String get logoOrgHapus => 'Delete logo';
+
+  @override
+  String get logoOrgTerunggah => 'Logo uploaded.';
+
+  @override
+  String get logoOrgTerhapus =>
+      'Logo deleted. The letterhead uses the default logo.';
+
+  @override
+  String get logoOrgHapusJudul => 'Delete the logo?';
+
+  @override
+  String get logoOrgHapusIsi =>
+      'The next certificate letterheads will use the default logo. You can upload a logo again at any time.';
+
+  @override
+  String get logoOrgTerlaluBesar =>
+      'That file is over 2 MB. Pick a smaller logo.';
+
+  @override
+  String get logoOrgGagalMuat => 'Could not load the logo.';
+
+  @override
+  String get logoOrgRetry => 'Try again';
+
+  @override
+  String get logoOrgGagal => 'The logo action failed. Try again.';
+
+  @override
+  String get logoOrgPratinjauGagal => 'The logo image could not be shown.';
+
+  @override
+  String get jlJudul => 'Sheet type';
+
+  @override
+  String jlKodeTerbaca(String kode) {
+    return 'Form code read: $kode';
+  }
+
+  @override
+  String get jlKodeTidakTerbaca =>
+      'The form code was not readable. Choose the sheet type yourself.';
+
+  @override
+  String jlKodeTakDikenal(String kode) {
+    return 'This form code ($kode) is not in the sheet list. Choose the sheet type yourself.';
+  }
+
+  @override
+  String jlBeberapaKode(String kode) {
+    return 'Several form codes were read ($kode). Choose the sheet type yourself.';
+  }
+
+  @override
+  String get jlBeberapaJenis =>
+      'This code is used by several sheet types. Pick the one that matches your instrument.';
+
+  @override
+  String get jlSatuJenis =>
+      'Suggested sheet type. Change it if it is not right.';
+
+  @override
+  String get jlDariJudul =>
+      'Suggested from the printed title only (the code was not read). Check it.';
+
+  @override
+  String get jlPilihManual => 'Choose sheet type manually';
+
+  @override
+  String get jlPakai => 'Use this sheet type';
+
+  @override
+  String get jlCatatan =>
+      'This is only a hint. You decide the sheet type; nothing is filled in until you confirm.';
+
+  @override
+  String get jlDaftarManual => 'All sheet types';
+
+  @override
+  String get pindaiLembarTombol => 'Scan worksheet';
+
+  @override
+  String get pindaiLembarKeterangan =>
+      'Photograph the sheet: its type is recognized and its content is filled in as suggestions for you to check';
+
+  @override
+  String get pindaiLembarMembaca => 'Recognizing the sheet type...';
+
+  @override
+  String get pindaiLembarButuhKoneksi =>
+      'The sheet type list needs a connection. Try again or start manually.';
+
+  @override
+  String get gwJudul => 'Archive timeline';
+
+  @override
+  String get gwCariHint => 'Search serial no., certificate no., or order no.';
+
+  @override
+  String get gwCariHapus => 'Clear search';
+
+  @override
+  String get gwCariMinHuruf => 'Type at least 2 characters to search.';
+
+  @override
+  String get gwSemuaPt => 'All customers';
+
+  @override
+  String get gwFilterTanggal => 'Calibration date';
+
+  @override
+  String get gwHapusFilter => 'Clear all filters';
+
+  @override
+  String get gwPilihPt => 'Choose a customer (PT)';
+
+  @override
+  String get gwCariPtHint => 'Search customer name';
+
+  @override
+  String get gwPtKosong => 'No customer found.';
+
+  @override
+  String get gwPtGagal => 'Could not load the customer list.';
+
+  @override
+  String get gwPilihRentang => 'Choose the calibration date range';
+
+  @override
+  String get gwAkar => 'All years';
+
+  @override
+  String gwJumlahDokumen(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah documents',
+      one: '1 document',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String gwTotalDokumen(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah documents in total',
+      one: '1 document in total',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get gwKosong => 'No documents here yet.';
+
+  @override
+  String gwHasilKosong(String kata) {
+    return 'No results for \"$kata\".';
+  }
+
+  @override
+  String get gwHasilKosongFilter => 'No sessions match these filters.';
+
+  @override
+  String get gwHasilKosongSaran =>
+      'Check the spelling, or try another serial, certificate, or order number.';
+
+  @override
+  String gwHasilTotal(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah sessions match',
+      one: '1 session matches',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get gwGabungSeri =>
+      'One row per instrument. Other sessions of the same instrument are folded away; the latest issued certificate is shown.';
+
+  @override
+  String gwSesiLain(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah other sessions of this instrument',
+      one: '1 other session of this instrument',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get gwTutupRiwayatLain => 'Hide other sessions';
+
+  @override
+  String get gwMuatLagi => 'Load more';
+
+  @override
+  String get gwMuatLagiGagal =>
+      'Could not load the next page. Tap to try again.';
+
+  @override
+  String get gwTanpaPt => 'No customer';
+
+  @override
+  String get gwGalat403 => 'This account is not allowed to view this archive.';
+
+  @override
+  String get gwGalat429 => 'Too many requests. Wait a moment, then try again.';
+
+  @override
+  String get gwServerLama =>
+      'The server does not support the unified archive search yet. Contact an admin.';
+
+  @override
+  String gwNoSeri(String nomor) {
+    return 'Serial no. $nomor';
+  }
+
+  @override
+  String gwOrder(String nomor) {
+    return 'Order $nomor';
+  }
+
+  @override
+  String gwTglKalibrasi(String tanggal) {
+    return 'Calibrated $tanggal';
+  }
+
+  @override
+  String gwTglTerbit(String tanggal) {
+    return 'Issued $tanggal';
+  }
+
+  @override
+  String get gwOffline =>
+      'No connection. The archive can only be opened online — check your network, then try again.';
+
+  @override
+  String get gwMemuat => 'Loading';
+
+  @override
+  String get cekTandaPerlu => 'Needs checking';
+
+  @override
+  String get cekTandaSudah => 'Checked';
+
+  @override
+  String get cekSudahSaya => 'I\'ve checked it';
+
+  @override
+  String get cekSudahSayaLanjut => 'I\'ve checked it, next';
+
+  @override
+  String get cekLompat => 'Go to the entry';
+
+  @override
+  String get cekLewati => 'Skip for now';
+
+  @override
+  String cekPanelTahan(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: '$jumlah camera readings still need checking',
+      one: '1 camera reading still needs checking',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get cekPanelAlasan =>
+      'Final send is held until each one is checked, one by one. Saving a draft still works.';
+
+  @override
+  String cekPanelSel(String judul, String nilai) {
+    return '$judul: $nilai';
+  }
+
+  @override
+  String cekPanelSelNomor(String judul, int nomor, String nilai) {
+    return '$judul, repeat $nomor: $nilai';
+  }
+
+  @override
+  String cekPanelSelesai(int jumlah) {
+    return 'All camera readings are checked ($jumlah).';
+  }
+
+  @override
+  String cekKirimDitahan(int jumlah) {
+    String _temp0 = intl.Intl.pluralLogic(
+      jumlah,
+      locale: localeName,
+      other: 'Final send is held: $jumlah camera readings are not checked yet.',
+      one: 'Final send is held: 1 camera reading is not checked yet.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get cekBukaPemeriksa => 'Check next';
+
+  @override
+  String get cekSheetJudul => 'Check camera readings';
+
+  @override
+  String get cekTutup => 'Close';
+
+  @override
+  String cekGridSetPoint(int nomor) {
+    return 'Set point $nomor';
+  }
+
+  @override
+  String cekGridSetPointTitik(String titik) {
+    return 'Set point $titik';
+  }
+
+  @override
+  String cekGridTermokopel(int nomor) {
+    return 'Thermocouple $nomor';
+  }
+
+  @override
+  String cekGridNomorTermokopel(int nomor) {
+    return 'thermocouple $nomor number';
+  }
+
+  @override
+  String get cekGridIndikator => 'Indicator';
+
+  @override
+  String get cekGridSuhuRuang => 'Room temperature';
+
+  @override
+  String get detailVerifikasiLewatLembar =>
+      'This is a draft. Open the worksheet, check each camera reading one by one, then send. The confirm-all button is hidden here on purpose.';
+
+  @override
+  String get biruAwanKembali => 'Back';
+
+  @override
+  String get biruAwanSedangDiproses => 'in progress';
+
+  @override
+  String biruAwanLabelWajib(String label) {
+    return '$label (required)';
+  }
+
+  @override
+  String biruAwanIsianGalat(String pesan) {
+    return 'Error: $pesan';
+  }
+
+  @override
+  String biruAwanChipJumlah(String label, int jumlah) {
+    return '$label, $jumlah';
+  }
+
+  @override
+  String get biruAwanTanpaKeputusan => 'No PASS/FAIL';
+
+  @override
+  String biruAwanLangkahKe(int n, int total) {
+    return 'Step $n of $total';
+  }
+
+  @override
+  String get biruAwanLangkahSelesai => 'done';
+
+  @override
+  String get biruAwanLangkahSekarang => 'current step';
+
+  @override
+  String get biruAwanLangkahBelum => 'not yet';
+
+  @override
+  String get biruAwanCari => 'Search';
+
+  @override
+  String get shellTutupMenu => 'Close menu';
+
+  @override
+  String get masukJudul => 'Sign in to your lab account';
+
+  @override
+  String masukAkreditasi(String nomor) {
+    return 'KAN accreditation $nomor, ISO/IEC 17025';
+  }
+
+  @override
+  String get masukTampilkanSandi => 'Show';
+
+  @override
+  String get masukSembunyikanSandi => 'Hide';
+
+  @override
+  String get splashTagline => 'KAN-accredited calibration';
+
+  @override
+  String get tekBerandaMerek => 'METROLOGY Lab';
+
+  @override
+  String get tekBerandaKeteranganMerek => 'KAN-accredited calibration';
+
+  @override
+  String tekBerandaNotifikasiBelumDibaca(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n unread',
+      one: '1 unread',
+    );
+    return 'Notifications, $_temp0';
+  }
+
+  @override
+  String tekBerandaDrafBelumDikirim(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n drafts not sent yet.',
+      one: '1 draft not sent yet.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get tekBerandaBersih => 'All worksheets have been sent.';
+
+  @override
+  String get tekBerandaJudulNetral => 'Your worksheets';
+
+  @override
+  String get tekHeroLabel => 'New calibration';
+
+  @override
+  String get tekHeroJudul => 'Start with the instrument that arrived today';
+
+  @override
+  String get tekTanpaKoneksi => 'No connection. This list could not be loaded.';
+
+  @override
+  String get tekMemuatDaftar => 'Loading list';
+
+  @override
+  String tekBerandaKirimanMenunggu(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n recent submissions awaiting approval.',
+      one: '1 recent submission awaiting approval.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get biruAwanTutup => 'Close';
+
+  @override
+  String get biruAwanBuka => 'Open';
+
+  @override
+  String get biruAwanJenisSukses => 'Success';
+
+  @override
+  String get biruAwanJenisInfo => 'Information';
+
+  @override
+  String get biruAwanJenisPeringatan => 'Warning';
+
+  @override
+  String get biruAwanJenisGalat => 'Error';
+
+  @override
+  String get biruAwanMemuat => 'Loading';
+
+  @override
+  String get jlBertentangan =>
+      'The printed code and the printed title point to different sheet types. Pick one yourself.';
+
+  @override
+  String get jlSamarCocok =>
+      'The print is a little blurry, but it matches one sheet type. Check it before using it.';
+
+  @override
+  String get jlSamarUsulan =>
+      'The print is blurry. These are the closest suggestions, none is selected for you. Pick the one that matches your instrument.';
+
+  @override
+  String get saHubJudul => 'Super Admin management';
+
+  @override
+  String get saHubKelolaSub => 'Users, customer members, and your own password';
+
+  @override
+  String get saHubPenggunaJudul => 'Users';
+
+  @override
+  String get saHubPenggunaSub =>
+      'Add, edit, reset password, deactivate accounts';
+
+  @override
+  String get saHubPelangganJudul => 'Customers & members';
+
+  @override
+  String get saHubPelangganSub =>
+      'Members, invitations, and the contact person of each customer';
+
+  @override
+  String get saHubGantiSub => 'Change the password of your own account';
+
+  @override
+  String get saHubKosong => 'This account has no screen it can open here yet.';
+
+  @override
+  String get saTanpaIzin =>
+      'This screen is only for accounts the server has granted permission.';
+
+  @override
+  String get saBatal => 'Cancel';
+
+  @override
+  String get saCobaLagi => 'Try again';
+
+  @override
+  String get saMuatLagi => 'Load more';
+
+  @override
+  String saAksiUntuk(String nama) {
+    return 'Actions for $nama';
+  }
+
+  @override
+  String get saGalatUmum => 'The action did not go through. Try again.';
+
+  @override
+  String get saGalatTidakAda =>
+      'That record was not found; it may have changed. The list is reloading.';
+
+  @override
+  String get saGantiJudul => 'Change my password';
+
+  @override
+  String get saGantiIntro =>
+      'Enter your current password, then the new one twice. Other devices using this account are signed out; this device stays signed in.';
+
+  @override
+  String get saGantiLama => 'Current password';
+
+  @override
+  String get saGantiBaru => 'New password';
+
+  @override
+  String get saGantiUlang => 'Repeat new password';
+
+  @override
+  String get saGantiHelper =>
+      'At least 10 characters. The server judges the strength.';
+
+  @override
+  String get saGantiLamaKosong => 'The current password is required.';
+
+  @override
+  String get saGantiBaruKosong => 'The new password is required.';
+
+  @override
+  String get saGantiBeda => 'The new password and its repeat do not match.';
+
+  @override
+  String get saGantiSimpan => 'Change password';
+
+  @override
+  String get saGantiBerhasil => 'Password changed.';
+
+  @override
+  String saGantiSesiLain(int jumlah) {
+    return '$jumlah other devices were signed out.';
+  }
+
+  @override
+  String get saGantiGagal => 'The password could not be changed. Try again.';
+
+  @override
+  String get saPenggunaJudul => 'Users';
+
+  @override
+  String get saPenggunaCari => 'Search name, email, or employee ID';
+
+  @override
+  String get saPeranSemua => 'All roles';
+
+  @override
+  String get saPeranAdmin => 'Admin';
+
+  @override
+  String get saPeranAdminMasterData => 'Admin (Master Data)';
+
+  @override
+  String get saPeranTeknisi => 'Technician';
+
+  @override
+  String get saPeranViewer => 'Viewer';
+
+  @override
+  String get saPenggunaKosong => 'No users match these filters.';
+
+  @override
+  String get saPenggunaGagal => 'The user list could not be loaded.';
+
+  @override
+  String get saTambahPengguna => 'Add user';
+
+  @override
+  String get saAksiUbah => 'Edit details';
+
+  @override
+  String get saAksiSetelSandi => 'Reset password';
+
+  @override
+  String get saAksiNonaktifkan => 'Deactivate account';
+
+  @override
+  String get saAksiAktifkan => 'Reactivate';
+
+  @override
+  String get saAksiSetujui => 'Approve';
+
+  @override
+  String get saAksiTolak => 'Reject';
+
+  @override
+  String saNonaktifJudul(String nama) {
+    return 'Deactivate $nama?';
+  }
+
+  @override
+  String get saNonaktifIsi =>
+      'This account can no longer sign in and all its devices are signed out on their next request. Calibration history and certificates in its name stay as they are. The account can be reactivated.';
+
+  @override
+  String get saNonaktifAksi => 'Deactivate';
+
+  @override
+  String get saNonaktifBerhasil => 'Account deactivated.';
+
+  @override
+  String saAktifJudul(String nama) {
+    return 'Reactivate $nama?';
+  }
+
+  @override
+  String get saAktifIsi =>
+      'They can sign in again with their old password. The role does not change. If a new password is needed, reset it afterwards.';
+
+  @override
+  String get saAktifAksi => 'Reactivate';
+
+  @override
+  String get saAktifBerhasil => 'Account reactivated.';
+
+  @override
+  String get saAlasanWajib => 'Reason (required, 3 to 500 characters)';
+
+  @override
+  String get saAlasanOpsional => 'Reason (optional)';
+
+  @override
+  String get saAlasanCatatan =>
+      'This reason is recorded in the change history under your name.';
+
+  @override
+  String get saAlasanPendek => 'The reason needs at least 3 characters.';
+
+  @override
+  String get saAlasanPanjang => 'The reason can be at most 500 characters.';
+
+  @override
+  String saSetelJudul(String nama) {
+    return 'Reset password for $nama';
+  }
+
+  @override
+  String get saSetelIsi =>
+      'All devices of this person are signed out. Hand the new password to them in person.';
+
+  @override
+  String get saSetelLabel => 'New password';
+
+  @override
+  String get saSetelHelper => 'At least 8 characters. Not shown again.';
+
+  @override
+  String get saSetelPendek => 'The password needs at least 8 characters.';
+
+  @override
+  String get saSetelAksi => 'Reset';
+
+  @override
+  String saSetelBerhasil(String nama) {
+    return 'Password for $nama was reset.';
+  }
+
+  @override
+  String saSetujuiJudul(String nama) {
+    return 'Approve $nama';
+  }
+
+  @override
+  String get saSetujuiIsi => 'Choose the role of this account.';
+
+  @override
+  String get saSetujuiBerhasil => 'Account approved.';
+
+  @override
+  String saTolakJudul(String nama) {
+    return 'Reject $nama?';
+  }
+
+  @override
+  String get saTolakIsi => 'This account is deactivated and cannot sign in.';
+
+  @override
+  String get saTolakBerhasil => 'Applicant rejected.';
+
+  @override
+  String get saGalatSudahNonaktif =>
+      'This account is already inactive. The list is reloading.';
+
+  @override
+  String get saGalatSudahAktif =>
+      'This account is already active. The list is reloading.';
+
+  @override
+  String get saGalatPerluPersetujuan =>
+      'This account is still awaiting approval. Use Approve.';
+
+  @override
+  String get saFormTambahJudul => 'Add user';
+
+  @override
+  String get saFormUbahJudul => 'Edit user';
+
+  @override
+  String get saFormPeran => 'Account role';
+
+  @override
+  String get saFormIntroTambah =>
+      'The account is active right away. They sign in with their employee ID or email. Hand over the initial password in person.';
+
+  @override
+  String get saFormIntroUbah =>
+      'Only the fields you change are sent. The password is not changed here; use Reset password.';
+
+  @override
+  String get saFormBuat => 'Create account';
+
+  @override
+  String get saFormSimpan => 'Save changes';
+
+  @override
+  String saFormBerhasilBuat(String nama, String id) {
+    return 'Account $nama created (employee ID $id). Hand the initial password over in person and ask them to change it via Change password.';
+  }
+
+  @override
+  String get saFormBerhasilUbah => 'Changes saved.';
+
+  @override
+  String get saFormTanpaPerubahan => 'Nothing has been changed.';
+
+  @override
+  String saFormPeranTetap(String peran) {
+    return 'The $peran role cannot be changed here.';
+  }
+
+  @override
+  String get saPelJudul => 'Customers & members';
+
+  @override
+  String get saPelCari => 'Search customer name';
+
+  @override
+  String get saPelKosong => 'No customers match.';
+
+  @override
+  String get saPelGagal => 'The customer list could not be loaded.';
+
+  @override
+  String get saDetGagal => 'The members of this customer could not be loaded.';
+
+  @override
+  String saDetKuota(int aktif, int maks) {
+    return '$aktif of at most $maks active members';
+  }
+
+  @override
+  String get saDetPicAdmin => 'Lab contact admin';
+
+  @override
+  String get saDetPicAdminKosong =>
+      'Not assigned. Notifications for this customer go to all admins.';
+
+  @override
+  String get saDetUbahPic => 'Change contact admin';
+
+  @override
+  String get saPicJudul => 'Choose contact admin';
+
+  @override
+  String get saPicIsi =>
+      'The contact admin receives the submission and equipment verification notifications of this customer.';
+
+  @override
+  String get saPicLepas => 'Remove contact admin';
+
+  @override
+  String get saPicKosong => 'There is no active admin in this lab yet.';
+
+  @override
+  String get saPicGagalMuat => 'The admin list could not be loaded.';
+
+  @override
+  String get saPicBerhasil => 'Contact admin updated.';
+
+  @override
+  String get saPicDilepas => 'Contact admin removed.';
+
+  @override
+  String get saAnggotaJudul => 'Members';
+
+  @override
+  String get saAnggotaKosong =>
+      'No members yet. Invite the first person with the button above.';
+
+  @override
+  String get saPeranPicUtama => 'Main contact';
+
+  @override
+  String get saPeranStaf => 'Staff';
+
+  @override
+  String get saTanpaNamaAnggota => '(account no longer exists)';
+
+  @override
+  String saBergabung(String tanggal) {
+    return 'Joined $tanggal';
+  }
+
+  @override
+  String saDinonaktifkanOleh(String tanggal, String oleh) {
+    return 'Deactivated $tanggal by $oleh';
+  }
+
+  @override
+  String saDinonaktifkanSaja(String tanggal) {
+    return 'Deactivated $tanggal';
+  }
+
+  @override
+  String get saPicTerakhir =>
+      'Last main contact. Invite another main contact before removing this one.';
+
+  @override
+  String get saCabutAkses => 'Remove access';
+
+  @override
+  String saCabutJudul(String nama) {
+    return 'Remove access for $nama?';
+  }
+
+  @override
+  String saCabutIsi(String nama, String perusahaan) {
+    return '$nama can no longer open the data of $perusahaan and their sessions are revoked. A removed member stays on record as history. To restore, invite the same person again.';
+  }
+
+  @override
+  String get saCabutBerhasil => 'Member access removed.';
+
+  @override
+  String get saGalatPicTerakhir =>
+      'This is the only active main contact, so access cannot be removed. Invite another main contact first.';
+
+  @override
+  String get saGalatSudahNonaktifAnggota =>
+      'This member is already inactive. The list is reloading.';
+
+  @override
+  String get saUndanganJudul => 'Pending invitations';
+
+  @override
+  String get saUndanganKosong => 'No invitations are waiting.';
+
+  @override
+  String saUndanganBerlaku(String tanggal) {
+    return 'Valid until $tanggal';
+  }
+
+  @override
+  String saUndanganOleh(String nama) {
+    return 'Invited by $nama';
+  }
+
+  @override
+  String get saBatalkanUndangan => 'Cancel invitation';
+
+  @override
+  String get saBatalkanJudul => 'Cancel the invitation?';
+
+  @override
+  String saBatalkanUntuk(String email) {
+    return 'Invitation for $email.';
+  }
+
+  @override
+  String get saBatalkanIsi =>
+      'The code stops working. To invite again, send a new invitation.';
+
+  @override
+  String get saBatalkanTidak => 'Keep it';
+
+  @override
+  String get saBatalkanBerhasil => 'Invitation cancelled.';
+
+  @override
+  String get saAlatJudul => 'Customer equipment';
+
+  @override
+  String get saAlatKosong => 'This customer has no equipment yet.';
+
+  @override
+  String get saAlatGagal => 'The equipment list could not be loaded.';
+
+  @override
+  String get saAlatLanjutGagal => 'The next equipment could not be loaded.';
+
+  @override
+  String saAlatSeri(String seri) {
+    return 'Serial no. $seri';
+  }
+
+  @override
+  String get saAlatTanpaSeri => 'No serial number';
+
+  @override
+  String saAlatJadwal(String tanggal) {
+    return 'Next calibration $tanggal';
+  }
+
+  @override
+  String get saAlatTanpaJadwal => 'No recalibration scheduled';
+
+  @override
+  String saAlatJumlahSert(int jumlah) {
+    return '$jumlah certificates';
+  }
+
+  @override
+  String get saMemuat => 'Loading';
+
+  @override
+  String get saRiwayatJudul => 'Certificate history';
+
+  @override
+  String get saRiwayatKosong => 'This equipment has no certificates yet.';
+
+  @override
+  String get saRiwayatGagal => 'The certificate history could not be loaded.';
+
+  @override
+  String get saRiwayatLanjutGagal =>
+      'The next certificates could not be loaded.';
+
+  @override
+  String get saRiwayatTanpaTanggal => 'No issue date';
+
+  @override
+  String saRiwayatTerbit(String tanggal) {
+    return 'Issued $tanggal';
+  }
+
+  @override
+  String get saSertTerbit => 'Issued';
+
+  @override
+  String get saSertDigantikan => 'Superseded';
+
+  @override
+  String get saSertDitarik => 'Withdrawn';
+
+  @override
+  String get saSertDibatalkan => 'Cancelled';
+
+  @override
+  String get saSertGagal => 'Failed';
+
+  @override
+  String get saSertMenunggu => 'Awaiting issue';
+
+  @override
+  String get saSertBuka => 'Open certificate preview';
+
+  @override
+  String get saAlatStatusTerkalibrasi => 'Calibrated';
+
+  @override
+  String get saAlatStatusMendekati => 'Due soon';
+
+  @override
+  String get saAlatStatusLewat => 'Overdue';
+
+  @override
+  String get saAlatStatusBelum => 'Never calibrated';
+
+  @override
+  String get saAlatStatusNonaktif => 'Inactive';
+
+  @override
+  String saAlatHariLagi(int hari) {
+    return 'in $hari days';
+  }
+
+  @override
+  String get saAlatHariIni => 'today';
+
+  @override
+  String saAlatTerlambat(int hari) {
+    return '$hari days late';
+  }
+
+  @override
+  String saAlatTerbaru(String nomor) {
+    return 'Latest certificate $nomor';
+  }
+
+  @override
+  String saSertDigantikanOleh(String nomor) {
+    return 'Superseded by $nomor';
+  }
+
+  @override
+  String saSertRevisiDari(String nomor) {
+    return 'Revision of $nomor';
+  }
+
+  @override
+  String saSertDitarikPada(String tanggal) {
+    return 'Withdrawn $tanggal';
+  }
+
+  @override
+  String saSertDibatalkanPada(String tanggal) {
+    return 'Cancelled $tanggal';
+  }
+
+  @override
+  String saPelRingkas(int alat, int sertifikat, int anggota) {
+    return '$alat equipment · $sertifikat certificates · $anggota members';
+  }
+
+  @override
+  String get saPelTanpaAkun => 'No customer account yet';
+
+  @override
+  String get saDetTanpaAkunIsi =>
+      'This company has equipment or certificates, but nobody can see them yet. Invite the first member.';
+
+  @override
+  String get saDetNamaNormalKosong =>
+      'Duplicate-company detection does not work for this company yet. Save the company again in the Customers screen to fix it.';
+
+  @override
+  String get saPindahJudul => 'Move equipment';
+
+  @override
+  String get saPindahTombol => 'Move equipment';
+
+  @override
+  String get saPindahIntro =>
+      'Move equipment and its certificates to another company, for example when a company was misspelled or duplicated. Certificate numbers and contents do not change.';
+
+  @override
+  String get saPindahTujuan => 'Destination company';
+
+  @override
+  String get saPindahTujuanKosong => 'Not chosen yet';
+
+  @override
+  String get saPindahPilihTujuan => 'Choose destination';
+
+  @override
+  String get saPindahGantiTujuan => 'Change destination';
+
+  @override
+  String get saPindahAlatJudul => 'Equipment to move';
+
+  @override
+  String saPindahDipilih(int n) {
+    return '$n equipment selected';
+  }
+
+  @override
+  String get saPindahPilihMuat => 'Select all loaded';
+
+  @override
+  String get saPindahKosongkan => 'Clear selection';
+
+  @override
+  String get saPindahMaks => 'At most 100 items per move.';
+
+  @override
+  String get saPindahAlatKosong => 'This company has no equipment to move.';
+
+  @override
+  String get saPindahLihatPratinjau => 'Preview';
+
+  @override
+  String get saPilihPtJudul => 'Choose destination company';
+
+  @override
+  String get saPilihPtCari => 'Search company name';
+
+  @override
+  String get saPilihPtKosong => 'No other company matches.';
+
+  @override
+  String get saPratinjauJudul => 'Move preview';
+
+  @override
+  String get saPratinjauDari => 'From';
+
+  @override
+  String get saPratinjauKe => 'To';
+
+  @override
+  String saPratinjauAnggotaPt(int n) {
+    return '$n active members';
+  }
+
+  @override
+  String saPratinjauAlat(int n) {
+    return '$n equipment moved';
+  }
+
+  @override
+  String saPratinjauSertTerdampak(int n) {
+    return '$n certificates move along';
+  }
+
+  @override
+  String saPratinjauSertTerlihat(int n) {
+    return '$n of them are visible in the customer app';
+  }
+
+  @override
+  String get saPratinjauMulai => 'Start seeing this equipment';
+
+  @override
+  String get saPratinjauBerhenti => 'Stop seeing this equipment';
+
+  @override
+  String get saPratinjauTidakAda => 'None';
+
+  @override
+  String saPratinjauPaket(int n) {
+    return '$n package/order lines point to this equipment and do NOT move.';
+  }
+
+  @override
+  String get saPeringatanPaket =>
+      'Package/order lines pointing to this equipment do not move.';
+
+  @override
+  String get saPeringatanArsip =>
+      'Old archive files stay in the original company folder until the owner runs the archive tidy-up.';
+
+  @override
+  String get saPeringatanIsi =>
+      'Certificate numbers and contents, including the printed owner name, are not changed.';
+
+  @override
+  String saPindahEksekusi(int n) {
+    return 'Move $n equipment';
+  }
+
+  @override
+  String saPindahKonfirmJudul(int n, String pt) {
+    return 'Move $n equipment to $pt?';
+  }
+
+  @override
+  String saPindahKonfirmIsi(int n) {
+    return '$n certificates move along. Certificates are not changed or deleted; equipment can be moved again if this was a mistake. It is recorded in the change history under your name.';
+  }
+
+  @override
+  String get saPindahAksi => 'Move';
+
+  @override
+  String saPindahBerhasil(int n, String pt) {
+    return '$n equipment moved to $pt.';
+  }
+
+  @override
+  String saPindahBerhasilIsi(int s, int t) {
+    return '$s certificates moved along ($t visible in the customer app).';
+  }
+
+  @override
+  String get saPindahSelesai => 'Done';
+
+  @override
+  String get saPratinjauGagal => 'The preview could not be loaded.';
+
+  @override
+  String get saPratinjauUlang => 'Repeat preview';
+
+  @override
+  String get saGalatAlatSudahPindah =>
+      'Another admin already moved the equipment. Repeat the preview to see the latest state.';
+
+  @override
+  String get saGalatAlatBukanMilik =>
+      'Some equipment no longer belongs to the original company. Repeat the preview.';
+
+  @override
+  String get saGalatPtSama => 'The destination cannot be the original company.';
+
+  @override
+  String get crudGalatKategoriKembar =>
+      'A category with that name already exists.';
+
+  @override
+  String crudGalatKategoriDipakai(String rincian) {
+    return 'This category is still in use$rincian. Deactivate it instead so it is no longer offered.';
+  }
+
+  @override
+  String get crudGalatKategoriNonaktif =>
+      'This category is inactive, so it cannot be used for new data.';
+
+  @override
+  String get crudGalatKodeBentrok =>
+      'Two people created a category at the same time. Please try again.';
+
+  @override
+  String crudGalatBukanDraf(String status) {
+    return 'Only drafts can be archived; this worksheet is $status.';
+  }
+
+  @override
+  String get crudGalatTidakDiarsipkan =>
+      'This draft is no longer archived. The list was reloaded.';
+
+  @override
+  String get crudGalatStatusBerubah =>
+      'The worksheet status changed (it may have been submitted from another device). Reload and try again.';
+
+  @override
+  String get crudGalatHanyaAdmin =>
+      'Only Master Data or Super Admin can open the draft archive.';
+
+  @override
+  String crudGalatPenugasanTidakAktif(String status) {
+    return 'This assignment is already $status, so it can no longer be edited or cancelled.';
+  }
+
+  @override
+  String get crudGalatPenugasanSelesai =>
+      'This assignment is already complete, so it cannot be cancelled.';
+
+  @override
+  String get crudGalatItemSudahDikerjakan =>
+      'A row with recorded progress cannot be removed. Change its quantity instead.';
+
+  @override
+  String get crudGalat403 => 'Your account is not allowed to do this.';
+
+  @override
+  String get crudGalat409 =>
+      'The data changed elsewhere. Reload and try again.';
+
+  @override
+  String get crudGalat429 => 'Too many requests. Wait a moment and try again.';
+
+  @override
+  String get crudGalat500 =>
+      'The server is having trouble. Try again shortly; if it keeps happening, contact the system administrator.';
+
+  @override
+  String get crudGalatKoneksi =>
+      'Cannot reach the server. Check your connection and try again.';
+
+  @override
+  String get crudGalatKoneksiSimpan =>
+      'The connection dropped while saving. The data may already be saved; check the list before creating it again.';
+
+  @override
+  String crudPemakaiAlat(int n) {
+    return '$n equipment';
+  }
+
+  @override
+  String crudPemakaiKemampuan(int n) {
+    return '$n capabilities';
+  }
+
+  @override
+  String crudPemakaiPenugasan(int n) {
+    return '$n assignments';
+  }
+
+  @override
+  String crudPemakaiMetode(int n) {
+    return '$n methods';
+  }
+
+  @override
+  String crudPemakaiRumus(int n) {
+    return '$n formulas';
+  }
+
+  @override
+  String get crudTanpaIzin =>
+      'Your account has no permission for this section.';
+
+  @override
+  String get crudSimpan => 'Save';
+
+  @override
+  String get crudAksiUbah => 'Edit';
+
+  @override
+  String get crudAksiHapus => 'Delete';
+
+  @override
+  String get crudBatalDialog => 'Cancel';
+
+  @override
+  String get crudTutup => 'Close';
+
+  @override
+  String get crudHubJudul => 'Orders & lab data';
+
+  @override
+  String get crudHubKelolaSub =>
+      'Orders, assignments, equipment categories and the draft archive.';
+
+  @override
+  String get crudHubOrderJudul => 'Orders';
+
+  @override
+  String get crudHubOrderSub =>
+      'Record, edit and delete customer equipment orders.';
+
+  @override
+  String get crudHubPenugasanJudul => 'Assignments';
+
+  @override
+  String get crudHubPenugasanSub =>
+      'Edit or cancel assignments that are still active.';
+
+  @override
+  String get crudHubKategoriJudul => 'Equipment categories';
+
+  @override
+  String get crudHubKategoriSub =>
+      'Add, rename, deactivate and delete categories.';
+
+  @override
+  String get crudHubArsipJudul => 'Draft archive';
+
+  @override
+  String get crudHubArsipSub =>
+      'Archived worksheet drafts; restore them when needed.';
+
+  @override
+  String get crudHubKosong => 'No menu is available for this account.';
+
+  @override
+  String get crudOrderJudul => 'Orders';
+
+  @override
+  String get crudOrderCari => 'Search order number or company';
+
+  @override
+  String get crudOrderSemua => 'All';
+
+  @override
+  String get crudOrderKosong => 'There are no orders yet.';
+
+  @override
+  String get crudOrderKosongCari => 'No order matches this search.';
+
+  @override
+  String get crudOrderGagal => 'The order list could not be loaded.';
+
+  @override
+  String get crudOrderBuat => 'Create order';
+
+  @override
+  String crudOrderAlat(int n) {
+    return '$n equipment';
+  }
+
+  @override
+  String crudOrderMasuk(String tanggal) {
+    return 'Received $tanggal';
+  }
+
+  @override
+  String crudOrderJanji(String tanggal) {
+    return 'Due $tanggal';
+  }
+
+  @override
+  String get crudOrderTelat => 'Overdue';
+
+  @override
+  String get crudOrderDetailJudul => 'Order details';
+
+  @override
+  String crudOrderDiterima(String nama) {
+    return 'Received by $nama';
+  }
+
+  @override
+  String get crudOrderCatatan => 'Notes';
+
+  @override
+  String get crudOrderAlatJudul => 'Equipment in this order';
+
+  @override
+  String get crudOrderAlatKosong => 'This order has no equipment yet.';
+
+  @override
+  String get crudOrderBelumDibagi => 'Not assigned';
+
+  @override
+  String crudOrderTeknisiNama(String nama) {
+    return 'Technician: $nama';
+  }
+
+  @override
+  String get crudOrderKondisi => 'Condition on receipt';
+
+  @override
+  String get crudOrderKelengkapan => 'Accessories';
+
+  @override
+  String get crudOrderDetailGagal => 'This order could not be loaded.';
+
+  @override
+  String get crudOrderFormBuat => 'Create order';
+
+  @override
+  String get crudOrderFormUbah => 'Edit order';
+
+  @override
+  String get crudOrderIntroBuat =>
+      'The order number is created automatically by the server on save.';
+
+  @override
+  String crudOrderIntroUbah(String nomor) {
+    return 'Number $nomor does not change. The customer cannot be changed from here.';
+  }
+
+  @override
+  String get crudOrderPelanggan => 'Customer (company)';
+
+  @override
+  String get crudOrderPilihPelanggan => 'Choose a customer';
+
+  @override
+  String get crudOrderCariPelanggan => 'Search customer name';
+
+  @override
+  String get crudOrderPelangganKosong => 'No customer found.';
+
+  @override
+  String get crudOrderPelangganGagal =>
+      'The customer list could not be loaded.';
+
+  @override
+  String get crudOrderPelangganWajib => 'Choose a customer first.';
+
+  @override
+  String get crudOrderTanggalMasuk => 'Date received';
+
+  @override
+  String get crudOrderTanggalJanji => 'Due date (optional)';
+
+  @override
+  String get crudOrderPilihTanggal => 'Choose a date';
+
+  @override
+  String get crudOrderKosongkanTanggal => 'Clear the due date';
+
+  @override
+  String get crudOrderTanggalMasukWajib => 'The received date is required.';
+
+  @override
+  String get crudOrderJanjiSebelumMasuk =>
+      'The due date cannot be before the received date.';
+
+  @override
+  String get crudOrderStatus => 'Status';
+
+  @override
+  String get crudOrderCatatanLabel => 'Notes (optional)';
+
+  @override
+  String get crudOrderCatatanPanjang => 'Notes can be at most 1000 characters.';
+
+  @override
+  String crudOrderAlatBagian(int n) {
+    return 'Equipment ($n)';
+  }
+
+  @override
+  String get crudOrderTambahAlat => 'Add equipment';
+
+  @override
+  String get crudOrderAlatWajib => 'Add at least one piece of equipment.';
+
+  @override
+  String get crudOrderAlatPilihPtDulu =>
+      'Choose a customer first to add equipment of that company.';
+
+  @override
+  String crudOrderBuangAlat(String nama) {
+    return 'Remove $nama from the order';
+  }
+
+  @override
+  String get crudOrderCatatanSesi =>
+      'Equipment already in calibration stays in the order even if removed from this list.';
+
+  @override
+  String crudOrderBerhasilBuat(String nomor) {
+    return 'Order $nomor created.';
+  }
+
+  @override
+  String get crudOrderBerhasilUbah => 'Order updated.';
+
+  @override
+  String get crudOrderGalatUmum =>
+      'The order was not saved. Check the fields marked with errors.';
+
+  @override
+  String get crudItemTeknisi => 'Technician';
+
+  @override
+  String get crudItemPilihTeknisi => 'Choose a technician';
+
+  @override
+  String get crudItemTanpaTeknisi => 'Not assigned';
+
+  @override
+  String get crudItemTeknisiKosong => 'There are no active technicians.';
+
+  @override
+  String get crudItemTeknisiGagal => 'The technician list could not be loaded.';
+
+  @override
+  String get crudItemRincian => 'Receiving details';
+
+  @override
+  String get crudItemKondisi => 'Condition on receipt';
+
+  @override
+  String get crudItemKelengkapan => 'Accessories';
+
+  @override
+  String get crudItemCatatan => 'Equipment notes';
+
+  @override
+  String crudPilihAlatJudul(String pt) {
+    return 'Choose equipment of $pt';
+  }
+
+  @override
+  String get crudPilihAlatCari => 'Search name or serial number';
+
+  @override
+  String get crudPilihAlatKosong => 'No matching equipment for this company.';
+
+  @override
+  String get crudPilihAlatGagal => 'The equipment could not be loaded.';
+
+  @override
+  String get crudPilihAlatSudah => 'Already in the order';
+
+  @override
+  String crudPilihAlatTambah(int n) {
+    return 'Add $n equipment';
+  }
+
+  @override
+  String get crudPilihAlatPilihDulu => 'Choose equipment first';
+
+  @override
+  String crudOrderHapusJudul(String nomor) {
+    return 'Delete order $nomor?';
+  }
+
+  @override
+  String get crudOrderHapusIsi =>
+      'The order and its equipment list will be deleted. An order whose equipment is already in calibration cannot be deleted; set its status to Cancelled so the history stays intact.';
+
+  @override
+  String get crudOrderHapusAksi => 'Delete order';
+
+  @override
+  String get crudOrderHapusBerhasil => 'Order deleted.';
+
+  @override
+  String get crudOrderHapusDitolak =>
+      'This order has equipment that is already in calibration, so it cannot be deleted. Set its status to Cancelled so the history stays intact.';
+
+  @override
+  String get crudOrderAlatDikosongkan =>
+      'The equipment list was cleared because the customer changed.';
+
+  @override
+  String get crudAlasanWajib => 'Reason';
+
+  @override
+  String get crudAlasanOpsional => 'Reason (optional)';
+
+  @override
+  String get crudAlasanCatatan =>
+      'Reason of 5 to 400 characters; recorded in the audit trail.';
+
+  @override
+  String get crudAlasanCatatanOpsional =>
+      'At most 400 characters; recorded in the audit trail.';
+
+  @override
+  String get crudAlasanPendek => 'The reason must be at least 5 characters.';
+
+  @override
+  String get crudAlasanPanjang => 'The reason can be at most 400 characters.';
+
+  @override
+  String get crudPenugasanJudul => 'Assignments';
+
+  @override
+  String get crudPenugasanKosong => 'There are no assignments yet.';
+
+  @override
+  String get crudPenugasanKosongStatus => 'No assignment has this status.';
+
+  @override
+  String get crudPenugasanGagal => 'The assignment list could not be loaded.';
+
+  @override
+  String get crudPenugasanSemua => 'All';
+
+  @override
+  String crudPenugasanTim(String nama) {
+    return 'Team: $nama';
+  }
+
+  @override
+  String crudPenugasanTarget(String tanggal) {
+    return 'Target $tanggal';
+  }
+
+  @override
+  String get crudPenugasanTerlambat => 'Late';
+
+  @override
+  String crudPenugasanProgres(int persen) {
+    return '$persen% complete';
+  }
+
+  @override
+  String crudPenugasanBaris(int n) {
+    return '$n equipment rows';
+  }
+
+  @override
+  String get crudPenugasanTipeGrup => 'Group';
+
+  @override
+  String get crudPenugasanTipePersonal => 'Personal';
+
+  @override
+  String crudPenugasanBatalAlasan(String alasan) {
+    return 'Reason: $alasan';
+  }
+
+  @override
+  String crudPenugasanBatalOleh(String nama) {
+    return 'Cancelled by $nama';
+  }
+
+  @override
+  String crudPenugasanBatalPada(String tanggal) {
+    return 'Cancelled $tanggal';
+  }
+
+  @override
+  String crudPenugasanBatalOlehPada(String nama, String tanggal) {
+    return 'Cancelled by $nama, $tanggal';
+  }
+
+  @override
+  String get crudPenugasanAksiBatalkan => 'Cancel assignment';
+
+  @override
+  String crudPenugasanBatalJudul(String judul) {
+    return 'Cancel the assignment \"$judul\"?';
+  }
+
+  @override
+  String get crudPenugasanBatalIsi =>
+      'The assignment is marked Cancelled. Members, equipment rows and progress stay readable as history, and members are notified.';
+
+  @override
+  String get crudPenugasanBatalAksi => 'Cancel assignment';
+
+  @override
+  String get crudPenugasanBatalBerhasil => 'Assignment cancelled.';
+
+  @override
+  String get crudPenugasanUbahJudul => 'Edit assignment';
+
+  @override
+  String get crudPenugasanUbahIntro =>
+      'Only active assignments can be edited. Progress already reported by technicians does not change.';
+
+  @override
+  String get crudPenugasanJudulLabel => 'Title';
+
+  @override
+  String get crudPenugasanJudulWajib => 'The title is required.';
+
+  @override
+  String get crudPenugasanJudulPanjang =>
+      'The title can be at most 150 characters.';
+
+  @override
+  String get crudPenugasanTanggalTarget => 'Target date (optional)';
+
+  @override
+  String get crudPenugasanKosongkanTarget => 'Clear the target';
+
+  @override
+  String get crudPenugasanTanggalLewat =>
+      'A new target date cannot be before today.';
+
+  @override
+  String get crudPenugasanCatatanLabel => 'Notes (optional)';
+
+  @override
+  String get crudPenugasanCatatanPanjang =>
+      'Notes can be at most 1000 characters.';
+
+  @override
+  String get crudPenugasanTeknisiBagian => 'Technicians';
+
+  @override
+  String get crudPenugasanTeknisiIntro =>
+      'The first one chosen becomes the leader.';
+
+  @override
+  String get crudPenugasanKetua => 'Leader';
+
+  @override
+  String get crudPenugasanTeknisiWajib => 'Choose at least one technician.';
+
+  @override
+  String get crudPenugasanTeknisiMaks => 'At most 20 technicians.';
+
+  @override
+  String crudPenugasanTeknisiNonaktif(String nama) {
+    return '$nama (inactive)';
+  }
+
+  @override
+  String crudPenugasanBarisBagian(int n) {
+    return 'Equipment rows ($n)';
+  }
+
+  @override
+  String get crudPenugasanBarisWajib => 'Add at least one row.';
+
+  @override
+  String get crudPenugasanBarisMaks => 'At most 50 rows.';
+
+  @override
+  String get crudPenugasanTambahBaris => 'Add a row';
+
+  @override
+  String get crudPenugasanJenisAlat => 'Equipment type';
+
+  @override
+  String get crudPenugasanJenisWajib => 'The equipment type is required.';
+
+  @override
+  String get crudPenugasanJenisPanjang =>
+      'The equipment type can be at most 120 characters.';
+
+  @override
+  String get crudPenugasanJumlah => 'Quantity';
+
+  @override
+  String get crudPenugasanJumlahSalah => 'The quantity must be 1 to 999.';
+
+  @override
+  String crudPenugasanSelesaiN(int n) {
+    return 'Done $n';
+  }
+
+  @override
+  String crudPenugasanPaket(String nomor) {
+    return 'Package $nomor';
+  }
+
+  @override
+  String get crudPenugasanBarisCatatan => 'Row notes (optional)';
+
+  @override
+  String crudPenugasanBuangBaris(String nama) {
+    return 'Remove row $nama';
+  }
+
+  @override
+  String get crudPenugasanBarisTerkunci =>
+      'Progress is recorded: this row cannot be removed.';
+
+  @override
+  String get crudPenugasanBerhasilUbah => 'Assignment updated.';
+
+  @override
+  String get crudPenugasanGalatUmum =>
+      'The assignment was not saved. Check the fields marked with errors.';
+
+  @override
+  String get crudPenugasanTeknisiGagal =>
+      'The technician list could not be loaded.';
+
+  @override
+  String get crudKategoriJudul => 'Equipment categories';
+
+  @override
+  String get crudKategoriKosong => 'There are no categories yet.';
+
+  @override
+  String get crudKategoriKosongSaring => 'No category has this status.';
+
+  @override
+  String get crudKategoriGagal => 'The category list could not be loaded.';
+
+  @override
+  String get crudKategoriSemua => 'All';
+
+  @override
+  String get crudKategoriTambah => 'Add category';
+
+  @override
+  String crudKategoriKode(String kode) {
+    return 'Code: $kode';
+  }
+
+  @override
+  String crudKategoriTanpaCmc(int n) {
+    return '$n without CMC';
+  }
+
+  @override
+  String crudKategoriNonaktifSejak(String tanggal) {
+    return 'Inactive since $tanggal';
+  }
+
+  @override
+  String get crudKategoriAksiUbahNama => 'Rename';
+
+  @override
+  String get crudKategoriAksiNonaktifkan => 'Deactivate';
+
+  @override
+  String get crudKategoriAksiAktifkan => 'Reactivate';
+
+  @override
+  String get crudKategoriAksiHapus => 'Delete';
+
+  @override
+  String get crudKategoriFormTambahJudul => 'Add category';
+
+  @override
+  String get crudKategoriFormTambahIsi =>
+      'A category is a measurement group, e.g. Pressure or Mass.';
+
+  @override
+  String crudKategoriFormUbahJudul(String nama) {
+    return 'Rename $nama';
+  }
+
+  @override
+  String get crudKategoriFormUbahIsi =>
+      'Only the name changes; the category code never changes.';
+
+  @override
+  String get crudKategoriNamaLabel => 'Category name';
+
+  @override
+  String get crudKategoriNamaCatatan =>
+      'The code is created automatically from the name and does not change afterwards.';
+
+  @override
+  String get crudKategoriNamaPendek =>
+      'The name must be at least 2 characters.';
+
+  @override
+  String get crudKategoriNamaPanjang =>
+      'The name can be at most 100 characters.';
+
+  @override
+  String get crudKategoriSimpanTambah => 'Add';
+
+  @override
+  String get crudKategoriSimpanUbah => 'Save name';
+
+  @override
+  String get crudKategoriBerhasilBuat => 'Category created.';
+
+  @override
+  String get crudKategoriBerhasilUbah => 'Category renamed.';
+
+  @override
+  String get crudGalatKategoriKembarNonaktif =>
+      'A category with that name already exists but is inactive. Reactivate it from the list.';
+
+  @override
+  String crudKategoriNonaktifJudul(String nama) {
+    return 'Deactivate $nama?';
+  }
+
+  @override
+  String get crudKategoriNonaktifIsi =>
+      'The category is no longer offered for new equipment, assignments and equipment names. Existing equipment still shows it. It can be reactivated.';
+
+  @override
+  String get crudKategoriNonaktifAksi => 'Deactivate';
+
+  @override
+  String get crudKategoriNonaktifBerhasil => 'Category deactivated.';
+
+  @override
+  String crudKategoriAktifJudul(String nama) {
+    return 'Reactivate $nama?';
+  }
+
+  @override
+  String get crudKategoriAktifIsi =>
+      'The category is offered again for new data.';
+
+  @override
+  String get crudKategoriAktifAksi => 'Reactivate';
+
+  @override
+  String get crudKategoriAktifBerhasil => 'Category reactivated.';
+
+  @override
+  String crudKategoriHapusJudul(String nama) {
+    return 'Delete $nama?';
+  }
+
+  @override
+  String get crudKategoriHapusIsi =>
+      'A category not used by anything is removed from the list and recorded in the audit. One still in use cannot be deleted; deactivate it instead.';
+
+  @override
+  String get crudKategoriHapusAksi => 'Delete category';
+
+  @override
+  String get crudKategoriHapusBerhasil => 'Category deleted.';
+
+  @override
+  String get crudArsipJudul => 'Draft archive';
+
+  @override
+  String get crudArsipIntro =>
+      'Archived drafts disappear from the technician lists, but their readings and session numbers stay stored. Restore them when needed.';
+
+  @override
+  String get crudArsipCari => 'Search session number, equipment or company';
+
+  @override
+  String get crudArsipKosong => 'No drafts have been archived yet.';
+
+  @override
+  String get crudArsipKosongCari => 'No archived draft matches this search.';
+
+  @override
+  String get crudArsipGagal => 'The draft archive could not be loaded.';
+
+  @override
+  String crudArsipAlasan(String alasan) {
+    return 'Reason: $alasan';
+  }
+
+  @override
+  String crudArsipOleh(String nama, String tanggal) {
+    return 'Archived by $nama, $tanggal';
+  }
+
+  @override
+  String crudArsipOlehTanpaNama(String tanggal) {
+    return 'Archived $tanggal';
+  }
+
+  @override
+  String get crudArsipAksiPulihkan => 'Restore';
+
+  @override
+  String crudArsipPulihkanJudul(String nomor) {
+    return 'Restore draft $nomor?';
+  }
+
+  @override
+  String get crudArsipPulihkanIsi =>
+      'The draft returns to its owner\'s list with the same content as before it was archived.';
+
+  @override
+  String get crudArsipPulihkanAksi => 'Restore draft';
+
+  @override
+  String get crudArsipPulihkanBerhasil => 'Draft restored.';
+
+  @override
+  String get crudArsipTanpaNomor => 'No session number';
+
+  @override
+  String crudDrafArsipkanTooltip(String nama) {
+    return 'Archive draft $nama';
+  }
+
+  @override
+  String crudDrafArsipkanJudul(String nama) {
+    return 'Archive draft $nama?';
+  }
+
+  @override
+  String get crudDrafArsipkanIsi =>
+      'The draft disappears from lists, the dashboard and reports. Its readings, session number and results are not deleted, and Master Data can restore it.';
+
+  @override
+  String get crudDrafArsipkanAksi => 'Archive';
+
+  @override
+  String get crudDrafArsipkanBerhasil => 'Draft archived.';
+
+  @override
+  String get crudGalatPernahDikirim =>
+      'This draft comes from a worksheet that was once submitted and returned, so it cannot be archived. Continue the worksheet and submit it again.';
+
+  @override
+  String get pindaiPilihSatuJudul => 'Pick one';
+
+  @override
+  String get pindaiJenisLain => 'Other type...';
+
+  @override
+  String get pindaiTakDikenaliJudul => 'Can\'t tell which sheet this is';
+
+  @override
+  String get pindaiTakDikenaliPesan =>
+      'The app is not sure which sheet this is, so it will not guess. Retake the photo with the title and form code at the top of the sheet clearly visible, or start from \"Start calibration\".';
+
+  @override
+  String get pindaiBelumBisaJudul => 'Can\'t be read automatically yet';
+
+  @override
+  String pindaiBelumBisaPesan(String jenis) {
+    return 'The $jenis sheet was recognized, but the app cannot read it automatically yet. Start from \"Start calibration\" and fill it in by hand.';
+  }
+
+  @override
+  String get pindaiPerluKonfirmasi =>
+      'The form code was read clearly, but the printed revision differs from the one the app holds. Make sure this is the right type.';
+
+  @override
+  String get pindaiPilihAlatJudul => 'Pick the instrument';
+
+  @override
+  String pindaiPilihAlatPesan(String jenis, int jumlah) {
+    return 'There are $jumlah $jenis instruments. Pick the one being calibrated.';
+  }
+
+  @override
+  String get pindaiCariAlat => 'Search instruments';
+
+  @override
+  String get pindaiPilihAlatNanti => 'Choose later on the sheet';
+
+  @override
+  String get pindaiMenyiapkanLembar => 'Preparing the sheet...';
+
+  @override
+  String pindaiBannerOtomatis(String jenis) {
+    return 'Recognized automatically: $jenis (from the photo). Wrong?';
+  }
+
+  @override
+  String pindaiBannerDipilih(String jenis) {
+    return 'Sheet type: $jenis (picked from the photo). Wrong?';
+  }
+
+  @override
+  String get pindaiGantiJenis => 'Change type';
+
+  @override
+  String get pindaiBannerPilihAlat =>
+      'Pick the instrument below, then tap \"Fill from photo\".';
+
+  @override
+  String get pindaiGantiJenisJudul => 'Change sheet type';
+
+  @override
+  String pindaiGantiJenisPesan(String jenis) {
+    return 'Now: $jenis. Pick the right type and the same photo is read again. Entries that are not saved yet do not carry over.';
+  }
+
+  @override
+  String get lkIsiDariFoto => 'Fill from photo';
+
+  @override
+  String pindaiBannerRingkas(String jenis) {
+    return '$jenis · from photo';
+  }
+
+  @override
+  String get identitasMencocokkan =>
+      'Matching the instrument to registered data…';
+
+  @override
+  String identitasAlatTerdaftar(String nama) {
+    return 'Registered instrument: $nama';
+  }
+
+  @override
+  String get identitasPakaiAlat => 'Use this instrument';
+
+  @override
+  String get identitasMaksudAnda => 'Did you mean?';
+
+  @override
+  String identitasSeriDiKertas(String seri) {
+    return 'Serial number on the paper: $seri';
+  }
+
+  @override
+  String get identitasBukanSatuPun => 'None of these, new instrument';
+
+  @override
+  String get identitasAlatBaruPetunjuk =>
+      'Filled from the paper. Check it, then create.';
+
+  @override
+  String get identitasBuatLanjut => 'Create and continue';
+
+  @override
+  String get identitasSedangMembuat => 'Creating…';
+
+  @override
+  String get identitasBatal => 'Cancel';
+
+  @override
+  String get identitasTutup => 'Dismiss';
+
+  @override
+  String get identitasSeriWajib =>
+      'Serial number not readable. Type it from the instrument body.';
+
+  @override
+  String identitasJenisAlat(String jenis) {
+    return 'Type: $jenis';
+  }
+
+  @override
+  String get identitasAlamat => 'Address';
+
+  @override
+  String identitasBedaBaris(String label, String kertas, String terdaftar) {
+    return '$label: paper \"$kertas\", registered \"$terdaftar\"';
+  }
+
+  @override
+  String get identitasPakaiTerdaftar => 'Use registered';
+
+  @override
+  String get identitasTidakTerbaca =>
+      'The identity on the paper could not be read. Pick an instrument below, or create a new one.';
+
+  @override
+  String get identitasGagalCocok =>
+      'Could not match the instrument (server unreachable). Pick one below.';
+
+  @override
+  String identitasGagalBuat(String pesan) {
+    return 'Instrument not created: $pesan';
+  }
+
+  @override
+  String get identitasGagalUmum =>
+      'Not done yet. Check the signal and try again.';
+
+  @override
+  String identitasSeriSudahTerdaftar(String alat, String pt) {
+    return 'This serial number is already registered to \"$alat\" ($pt). Use that instrument, or change the serial number.';
+  }
+
+  @override
+  String identitasSeriAlatLain(String alat, String pt) {
+    return 'This serial number is registered to another instrument: \"$alat\" ($pt), not this worksheet\'s instrument type. It is not used and no new instrument is created. Check the serial number.';
+  }
+
+  @override
+  String identitasSeriPemilikBeda(String pemilik) {
+    return 'Owner on the paper: $pemilik. The registered owner is different; check before using it.';
+  }
+
+  @override
+  String get identitasPtMirip =>
+      'Similar companies exist. Pick an existing one, or create a new company anyway.';
+
+  @override
+  String get identitasPtBaru => 'Create as a new company';
+
+  @override
+  String identitasPtBaruAkanDidaftarkan(String nama) {
+    return 'A new company will be registered: $nama';
+  }
+
+  @override
+  String identitasTanggalKalibrasi(String tanggal) {
+    return 'Calibration date on the paper: $tanggal';
+  }
+
+  @override
+  String identitasTanggalTerima(String tanggal) {
+    return 'Received date on the paper: $tanggal';
+  }
+
+  @override
+  String get identitasPakaiTanggal => 'Use this date';
+
+  @override
+  String get identitasLengkapiNanti =>
+      'Range and resolution can be completed later in Instrument master.';
+
+  @override
+  String get identitasBukaAlatBaru => 'Check and create the instrument';
+
+  @override
+  String get ditahanJudul => 'Issuance on hold';
+
+  @override
+  String get ditahanIsi =>
+      'Certificate issuance for this instrument type is on hold, waiting for the Technical Manager. The worksheet can still be filled in and calculated.';
+
+  @override
+  String ditahanRujukan(String rujukan) {
+    return 'TM reference: $rujukan';
+  }
+
+  @override
+  String ditahanVarian(String varian) {
+    return 'Applies to: $varian';
+  }
+
+  @override
+  String get ditahanSelengkapnya => 'Read the full reason';
+
+  @override
+  String get ditahanSetujuTertahan =>
+      'Approve becomes available once the Technical Manager lifts the hold.';
+
+  @override
+  String get ditahanDialogJudul => 'Certificate issuance is on hold';
+
+  @override
+  String get ditahanDialogIsi =>
+      'This certificate cannot be issued yet. The session is still waiting for approval and the certificate number you typed is not used.';
+
+  @override
+  String get ditahanDialogAlasan => 'Reason';
+
+  @override
+  String get ditahanDialogTutup => 'Got it';
+
+  @override
+  String get crudPenugasanAksiSelesaikan => 'Complete';
+
+  @override
+  String get crudPenugasanAksiBukaLagi => 'Reopen';
+
+  @override
+  String get crudPenugasanSiapDitutup => 'Ready to complete';
+
+  @override
+  String crudPenugasanSelesaiPada(String tanggal) {
+    return 'Completed $tanggal';
+  }
+
+  @override
+  String crudPenugasanSelesaiJudul(String judul) {
+    return 'Complete the assignment \"$judul\"?';
+  }
+
+  @override
+  String get crudPenugasanSelesaiIsi =>
+      'All equipment rows are done. The assignment is marked Completed and its members are notified. Only a super admin can reopen it.';
+
+  @override
+  String get crudPenugasanSelesaiAksi => 'Complete';
+
+  @override
+  String get crudPenugasanSelesaiBerhasil => 'Assignment completed.';
+
+  @override
+  String get crudPenugasanSudahSelesai =>
+      'This assignment was already completed.';
+
+  @override
+  String crudPenugasanBukaLagiJudul(String judul) {
+    return 'Reopen the assignment \"$judul\"?';
+  }
+
+  @override
+  String get crudPenugasanBukaLagiIsi =>
+      'The assignment becomes Active again: technicians can report progress and it can be completed again. Reported progress does not change. Members are notified with your reason.';
+
+  @override
+  String get crudPenugasanBukaLagiAksi => 'Reopen';
+
+  @override
+  String get crudPenugasanBukaLagiBerhasil => 'Assignment reopened.';
+
+  @override
+  String crudGalatPenugasanBelumTuntas(int persen) {
+    return 'This assignment is only $persen% complete. Have the technician report progress on every row first, then try again.';
+  }
+
+  @override
+  String get crudGalatPenugasanBelumTuntasUmum =>
+      'This assignment is not complete yet. Have the technician report progress on every row first, then try again.';
+
+  @override
+  String get crudGalatPenugasanTidakSelesai =>
+      'This assignment is not marked Completed, so it cannot be reopened. A cancelled assignment is never reopened; create a new one.';
+
+  @override
+  String get perhitSesiTidakAda =>
+      'This session no longer exists on the server. It may have been archived or deleted by an admin.';
+
+  @override
+  String get crudPenugasanSudahAktif => 'This assignment was already reopened.';
+}
